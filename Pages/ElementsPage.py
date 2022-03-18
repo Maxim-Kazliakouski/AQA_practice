@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 from Locators.ElementsPage_locators import ElementPageLocators
 from Pages.BasePage import BasePage
 
@@ -46,3 +48,8 @@ class ElementsPage(BasePage):
         generating_checkbox_list = self.generating_text_to_list(checkbox_list)
         new_checkbox_list = self.generating_checkbox_info(generating_checkbox_list)
         return new_checkbox_list
+
+    def click_on_checkbox(self, checkbox_name):
+        checkbox = self.browser.find_element(By.XPATH, f"//span[contains(text(),'{checkbox_name}')]")
+        checkbox.click()
+

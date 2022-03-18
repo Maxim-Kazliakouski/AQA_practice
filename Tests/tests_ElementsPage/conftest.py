@@ -178,25 +178,20 @@ def browser(request):
             browser.implicitly_wait(5)
     elif browser_name == 'opera':
         if headless == 'true':
-            # options = webdriver.Opera
-            # options.headless = True
-            # s = Service('Tools/operadriver')
+            options = webdriver.Opera
+            options.headless = True
             browser = webdriver.Opera(executable_path='Tools/operadriver')
             # params for docker
-            options = webdriver.Opera()
-            options.add_argument('--no-sandbox')
-            options.add_argument('--headless')
-            options.add_argument('--disable-gpu')
+            # options = webdriver.Opera()
+            # options.add_argument('--no-sandbox')
+            # options.add_argument('--headless')
+            # options.add_argument('--disable-gpu')
             browser.maximize_window()
             browser.implicitly_wait(5)
         else:
-            options = webdriver.ChromeOptions()
+            options = webdriver.Opera()
             options.headless = False
-            # s = Service('Tools/operadriver')
-            # webdriver_service = service.Service('Tools/operadriver')
-            # webdriver_service.start()
-            # browser = webdriver.Remote(webdriver_service.service_url, webdriver.DesiredCapabilities.OPERA)
-            browser = webdriver.Chrome(executable_path='Tools/operadriver', options=options)
+            browser = webdriver.Opera(executable_path='Tools/operadriver')
             browser.maximize_window()
             browser.implicitly_wait(5)
     elif browser_name == 'safari':

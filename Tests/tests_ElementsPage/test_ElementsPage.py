@@ -248,6 +248,7 @@ class Test_ElementsPage:
                     logs_elements_page.error("The plus button doesn't expand the all checkboxes list")
                     raise err
 
+            @pytest.mark.webtest
             def test_minus_button(self, browser, logs_elements_page):
                 link = TestDataElementsPage.CHECK_BOX_URL
                 page = ElementsPage(browser, link)
@@ -264,3 +265,17 @@ class Test_ElementsPage:
                 except AssertionError as err:
                     logs_elements_page.error("The minus button doesn't work and checkboxes list still appears")
                     raise err
+
+            def test_partly_chosen_checkboxes(self, browser, logs_elements_page, enable_checkbox_home):
+                link = TestDataElementsPage.CHECK_BOX_URL
+                page = ElementsPage(browser, link)
+                page.click_on_element(ElementPageLocators.PLUS_BUTTON)
+                page.click_on_checkbox('WorkSpace')
+                chosen_checkboxes = page.getting_info_about_selected_checkboxes()
+                try:
+                    assert chosen_checkboxes == TestDataElementsPage.CHECKBOX_LIST_WITHOUT_WORKSPACE_CHECKBOX,\
+                    "The checkbox list doesn't match with test data, please compare the checkbox list on the webpage and in test data "
+                except AssertionError as err:
+                    logs_elements_page.error("The checkbox list doesn't match with test data, please compare the checkbox list on the webpage and in test data ")
+                    raise err
+

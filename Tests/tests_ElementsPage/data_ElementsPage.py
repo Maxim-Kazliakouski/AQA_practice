@@ -23,5 +23,6 @@ class TestDataElementsPage:
     CHECKBOX_LIST = ['home', 'desktop', 'notes', 'commands', 'documents', 'workspace', 'react', 'angular', 'veu', 'office', 'public', 'private', 'classified', 'general', 'downloads', 'wordFile', 'excelFile']
     ENABLE_PLUS_BUTTON = 'rct-icon rct-icon-expand-open'
     ENABLE_MINUS_BUTTON = 'rct-icon rct-icon-expand-close'
+    CHECKBOX_LIST_WITHOUT_WORKSPACE_CHECKBOX = ['desktop', 'notes', 'commands', 'office', 'public', 'private', 'classified', 'general', 'downloads', 'wordFile', 'excelFile']
 
 

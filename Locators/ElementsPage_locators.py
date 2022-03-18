@@ -26,4 +26,3 @@ class ElementPageLocators:
     PLUS_BUTTON = By.XPATH, '//*[@id="tree-node"]/div/button[1]'
     PLUS_BUTTON_ON_OFF = By.CSS_SELECTOR, '#tree-node>ol>li>span>button>svg'
     MINUS_BUTTON = By.XPATH, '//*[@id="tree-node"]/div/button[2]'
-
