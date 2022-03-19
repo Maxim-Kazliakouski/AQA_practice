@@ -2,6 +2,8 @@ class TestDataElementsPage:
     # URLs
     TEXT_BOX_URL = 'https://demoqa.com/text-box'
     CHECK_BOX_URL = 'https://demoqa.com/checkbox'
+    RADIO_BUTTON_URL = 'https://demoqa.com/radio-button'
+    WEB_TABLES_URL = 'https://demoqa.com/webtables'
 
     # for text box section
     FULL_NAME = ['ABCDEFGHIJKLMNOPQRSTUVWZYZ',
@@ -24,5 +26,18 @@ class TestDataElementsPage:
     ENABLE_PLUS_BUTTON = 'rct-icon rct-icon-expand-open'
     ENABLE_MINUS_BUTTON = 'rct-icon rct-icon-expand-close'
     CHECKBOX_LIST_WITHOUT_WORKSPACE_CHECKBOX = ['desktop', 'notes', 'commands', 'office', 'public', 'private', 'classified', 'general', 'downloads', 'wordFile', 'excelFile']
+
+    # for web tables
+    # data for creating new record
+    FIRST_NAME = 'Max'
+    LAST_NAME = 'Kazliakouski'
+    EMAIL = '123@mail.com'
+    AGE = 30
+    SALARY = 2000
+    DEPARTMENT = 'IT'
+
+
+
+
 
 

@@ -38,7 +38,7 @@ def adding_email():
     page.open_page(link)
     # adding function for blocking advertisement if it is
     page.removing_advertisement()
-    page.click_on_element(ElementPageLocators.TEXT_BOX_SECTION)
+    page.go_to_section(ElementPageLocators.TEXT_BOX_SECTION)
     page.entering_symbols_into_field(ElementPageLocators.EMAIL, TestDataElementsPage.EMAIL_POSITIVE)
     page.scrolling_for_one_screen()
     page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
@@ -51,7 +51,7 @@ def adding_fullname():
     page.open_page(link)
     # adding function for blocking advertisement if it is
     page.removing_advertisement()
-    page.click_on_element(ElementPageLocators.TEXT_BOX_SECTION)
+    page.go_to_section(ElementPageLocators.TEXT_BOX_SECTION)
     page.entering_symbols_into_field(ElementPageLocators.FULL_NAME_FIELD, TestDataElementsPage.FULL_NAME)
     page.scrolling_for_one_screen()
     page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
@@ -64,7 +64,7 @@ def adding_current_address():
     page.open_page(link)
     # adding function for blocking advertisement if it is
     page.removing_advertisement()
-    page.click_on_element(ElementPageLocators.TEXT_BOX_SECTION)
+    page.go_to_section(ElementPageLocators.TEXT_BOX_SECTION)
     page.entering_symbols_into_field(ElementPageLocators.CURRENT_ADDRESS, TestDataElementsPage.CURRENT_ADDRESS)
     page.scrolling_for_one_screen()
     page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
@@ -77,7 +77,7 @@ def adding_permanent_address():
     page.open_page(link)
     # adding function for blocking advertisement if it is
     page.removing_advertisement()
-    page.click_on_element(ElementPageLocators.TEXT_BOX_SECTION)
+    page.go_to_section(ElementPageLocators.TEXT_BOX_SECTION)
     page.entering_symbols_into_field(ElementPageLocators.PERMANENT_ADDRESS, TestDataElementsPage.PERMANENT_ADDRESS)
     page.scrolling_for_one_screen()
     page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
@@ -91,8 +91,6 @@ def enable_checkbox_home():
     # adding function for blocking advertisement if it is
     page.removing_advertisement()
     page.click_on_element(ElementPageLocators.HOME_CHECK_BOX)
-
-
 
 
 def pytest_addoption(parser):

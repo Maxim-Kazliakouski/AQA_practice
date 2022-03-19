@@ -1,7 +1,9 @@
 from selenium.webdriver.common.by import By
-
 from Locators.ElementsPage_locators import ElementPageLocators
 from Pages.BasePage import BasePage
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException
+
+from Tests.tests_ElementsPage.data_ElementsPage import TestDataElementsPage
 
 
 class ElementsPage(BasePage):
@@ -52,4 +54,58 @@ class ElementsPage(BasePage):
     def click_on_checkbox(self, checkbox_name):
         checkbox = self.browser.find_element(By.XPATH, f"//span[contains(text(),'{checkbox_name}')]")
         checkbox.click()
+
+    def go_to_section(self, section_name):
+        section = self.browser.find_element(By.XPATH, f"//span[contains(text(),'{section_name}')]")
+        section.click()
+
+    def click_on_radiobutton(self, radiobutton_name):
+        radiobutton = self.browser.find_element(By.XPATH, f"//label[contains(text(),'{radiobutton_name}')]")
+        radiobutton.click()
+
+    def getting_text_after_choosing_radiobutton(self, radiobutton_name, logs_elements_page):
+        try:
+            radiobutton = self.browser.find_element(By.XPATH, f"//span[contains(text(),'{radiobutton_name}')]")
+            return radiobutton.text
+        except NoSuchElementException as err:
+            logs_elements_page.error('There is no such element like info from radiobutton')
+            raise err
+
+    def is_element_present_on_the_page(self, locator, logs_elements_page):
+        try:
+            self.search_element(locator)
+        except NoSuchElementException:
+            logs_elements_page.error(f"There is no element on the page by the following locators{locator}")
+        except TimeoutException:
+            logs_elements_page.error(f"There is no element on the page by the following locators{locator}")
+            return False
+        return True
+
+    def deleting_records(self, record_number):
+        delete_button = self.browser.find_element(By.ID, f"delete-record-{record_number}")
+        delete_button.click()
+
+    def splitting_list_by_6chunks(self, content, chunk=6):
+        for i in range(0, len(content), chunk):
+            yield content[i:i + chunk]
+        return content
+
+    def sending_keys_into_search_field(self, locator, content):
+        search_field = self.search_element(locator)
+        search_field.send_keys(content)
+
+    def adding_new_records(self):
+        self.sending_keys_into_search_field(ElementPageLocators.FIRST_NAME_FIELD, TestDataElementsPage.FIRST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.LAST_NAME_FIELD, TestDataElementsPage.LAST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.EMAIL_FIELD, TestDataElementsPage.EMAIL)
+        self.sending_keys_into_search_field(ElementPageLocators.AGE_FIELD, TestDataElementsPage.AGE)
+        self.sending_keys_into_search_field(ElementPageLocators.SALARY_FIELD, TestDataElementsPage.SALARY)
+        self.sending_keys_into_search_field(ElementPageLocators.DEPARTMENT_FIELD, TestDataElementsPage.DEPARTMENT)
+
+
+
+
+
+
+
 
