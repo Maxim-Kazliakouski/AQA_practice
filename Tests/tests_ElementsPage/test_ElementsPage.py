@@ -349,7 +349,7 @@ class Test_ElementsPage:
             except AssertionError as err:
                 logs_elements_page.error("The registration form isn't appeared")
                 raise err
-
+        @pytest.mark.webtest
         def test_deleting_records(self, browser, logs_elements_page):
             link = TestDataElementsPage.WEB_TABLES_URL
             page = ElementsPage(browser, link)
@@ -396,7 +396,6 @@ class Test_ElementsPage:
                 logs_elements_page.error(f"There in no such incoming '{final_table_content[0][0]}' after searching")
                 raise err
 
-        @pytest.mark.webtest
         def test_adding_new_record(self, browser, logs_elements_page):
             link = TestDataElementsPage.WEB_TABLES_URL
             page = ElementsPage(browser, link)
