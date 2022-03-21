@@ -63,7 +63,21 @@ class ElementPageLocators:
     INFO_AFTER_CLICKING_BUTTON = By.ID, 'dynamicClickMessage'
 
     # links section
-    HOME_LINK = [(By.ID, 'simpleLink'), (By.ID, 'dynamicLink')]
+    SIMPLE_LINK = By.ID, 'simpleLink'
+    DYNAMIC_LINK = By.ID, 'dynamicLink'
+    HOME_LINK = [SIMPLE_LINK, DYNAMIC_LINK]
+    CREATED_LINK = By.ID, 'created'
+    NO_CONTENT_LINK = By.ID, 'no-content'
+    MOVED_LINK = By.ID, 'moved'
+    BAD_REQUEST_LINK = By.ID, 'bad-request'
+    UNAUTHORIZED_LINK = By.ID, 'unauthorized'
+    FORBIDDEN_LINK = By.ID, 'forbidden'
+    INVALID_URL_LINK = By.ID, 'invalid-url'
+    INFO_MESSAGE = By.ID, 'linkResponse'
+
+
+
+
 
 
 
