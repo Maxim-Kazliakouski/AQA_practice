@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from Locators.ElementsPage_locators import ElementPageLocators
 from Pages.BasePage import BasePage
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException
-
+from selenium.webdriver import ActionChains
 from Tests.tests_ElementsPage.data_ElementsPage import TestDataElementsPage
 
 
@@ -94,7 +94,7 @@ class ElementsPage(BasePage):
         search_field = self.search_element(locator)
         search_field.send_keys(content)
 
-    def adding_new_records(self):
+    def adding_new_record(self):
         self.sending_keys_into_search_field(ElementPageLocators.FIRST_NAME_FIELD, TestDataElementsPage.FIRST_NAME)
         self.sending_keys_into_search_field(ElementPageLocators.LAST_NAME_FIELD, TestDataElementsPage.LAST_NAME)
         self.sending_keys_into_search_field(ElementPageLocators.EMAIL_FIELD, TestDataElementsPage.EMAIL)
@@ -102,10 +102,58 @@ class ElementsPage(BasePage):
         self.sending_keys_into_search_field(ElementPageLocators.SALARY_FIELD, TestDataElementsPage.SALARY)
         self.sending_keys_into_search_field(ElementPageLocators.DEPARTMENT_FIELD, TestDataElementsPage.DEPARTMENT)
 
+    def adding_new_record_without_first_name(self):
+        self.sending_keys_into_search_field(ElementPageLocators.LAST_NAME_FIELD, TestDataElementsPage.LAST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.EMAIL_FIELD, TestDataElementsPage.EMAIL)
+        self.sending_keys_into_search_field(ElementPageLocators.AGE_FIELD, TestDataElementsPage.AGE)
+        self.sending_keys_into_search_field(ElementPageLocators.SALARY_FIELD, TestDataElementsPage.SALARY)
+        self.sending_keys_into_search_field(ElementPageLocators.DEPARTMENT_FIELD, TestDataElementsPage.DEPARTMENT)
 
+    def adding_new_record_without_last_name(self):
+        self.sending_keys_into_search_field(ElementPageLocators.FIRST_NAME_FIELD, TestDataElementsPage.FIRST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.EMAIL_FIELD, TestDataElementsPage.EMAIL)
+        self.sending_keys_into_search_field(ElementPageLocators.AGE_FIELD, TestDataElementsPage.AGE)
+        self.sending_keys_into_search_field(ElementPageLocators.SALARY_FIELD, TestDataElementsPage.SALARY)
+        self.sending_keys_into_search_field(ElementPageLocators.DEPARTMENT_FIELD, TestDataElementsPage.DEPARTMENT)
 
+    def adding_new_record_without_email(self):
+        self.sending_keys_into_search_field(ElementPageLocators.FIRST_NAME_FIELD, TestDataElementsPage.FIRST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.LAST_NAME_FIELD, TestDataElementsPage.LAST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.AGE_FIELD, TestDataElementsPage.AGE)
+        self.sending_keys_into_search_field(ElementPageLocators.SALARY_FIELD, TestDataElementsPage.SALARY)
+        self.sending_keys_into_search_field(ElementPageLocators.DEPARTMENT_FIELD, TestDataElementsPage.DEPARTMENT)
 
+    def adding_new_record_without_age(self):
+        self.sending_keys_into_search_field(ElementPageLocators.FIRST_NAME_FIELD, TestDataElementsPage.FIRST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.LAST_NAME_FIELD, TestDataElementsPage.LAST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.EMAIL_FIELD, TestDataElementsPage.EMAIL)
+        self.sending_keys_into_search_field(ElementPageLocators.SALARY_FIELD, TestDataElementsPage.SALARY)
+        self.sending_keys_into_search_field(ElementPageLocators.DEPARTMENT_FIELD, TestDataElementsPage.DEPARTMENT)
 
+    def adding_new_record_without_salary(self):
+        self.sending_keys_into_search_field(ElementPageLocators.FIRST_NAME_FIELD, TestDataElementsPage.FIRST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.LAST_NAME_FIELD, TestDataElementsPage.LAST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.EMAIL_FIELD, TestDataElementsPage.EMAIL)
+        self.sending_keys_into_search_field(ElementPageLocators.AGE_FIELD, TestDataElementsPage.AGE)
+        self.sending_keys_into_search_field(ElementPageLocators.DEPARTMENT_FIELD, TestDataElementsPage.DEPARTMENT)
 
+    def adding_new_record_without_department(self):
+        self.sending_keys_into_search_field(ElementPageLocators.FIRST_NAME_FIELD, TestDataElementsPage.FIRST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.LAST_NAME_FIELD, TestDataElementsPage.LAST_NAME)
+        self.sending_keys_into_search_field(ElementPageLocators.EMAIL_FIELD, TestDataElementsPage.EMAIL)
+        self.sending_keys_into_search_field(ElementPageLocators.AGE_FIELD, TestDataElementsPage.AGE)
+        self.sending_keys_into_search_field(ElementPageLocators.SALARY_FIELD, TestDataElementsPage.SALARY)
 
+    def double_clicking(self, locator):
+        action = ActionChains(self.browser)
+        element = self.browser.find_element(*locator)
+        action.double_click(element).perform()
 
+    def getting_info(self, locator):
+        result = self.search_element(locator).text
+        return result
+
+    def right_click(self, locator):
+        action = ActionChains(self.browser)
+        element = self.browser.find_element(*locator)
+        action.context_click(element).perform()
