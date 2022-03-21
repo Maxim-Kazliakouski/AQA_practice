@@ -4,6 +4,9 @@ class TestDataElementsPage:
     CHECK_BOX_URL = 'https://demoqa.com/checkbox'
     RADIO_BUTTON_URL = 'https://demoqa.com/radio-button'
     WEB_TABLES_URL = 'https://demoqa.com/webtables'
+    BUTTONS_URL = 'https://demoqa.com/buttons'
+    LINKS_URL = 'https://demoqa.com/links'
+    MAIN_URL = 'https://demoqa.com/'
 
     # for text box section
     FULL_NAME = ['ABCDEFGHIJKLMNOPQRSTUVWZYZ',
@@ -11,12 +14,20 @@ class TestDataElementsPage:
                  '1234567890',
                  '!@#$%^&*()_+-{}"|:"±§`,.<>?']
 
-    EMAIL_POSITIVE = 'user@mail.com'
+    EMAIL_POSITIVE = ['user@mail.com',
+                      '1.23@m_ail.com',
+                      '1_23@mail.com',
+                      '1_23@ma.il.com',
+                      '123@m_ail.com'
+                      ]
     EMAIL_NEGATIVE = ['@mail.com',
                       '123mail.com',
                       '123@.com',
                       '123@mail.c',
-                      '123@mail']
+                      '123@mail',
+                      '12 3@mail.com',
+                      '123@',
+                      ]
     CURRENT_ADDRESS = 'c.Minsk, str.Gaja 100, 24'
     PERMANENT_ADDRESS = 'c.Moscow, str.Parkovaya 50, 40'
 
@@ -35,6 +46,13 @@ class TestDataElementsPage:
     AGE = 30
     SALARY = 2000
     DEPARTMENT = 'IT'
+
+    # for buttons page
+    MESSAGE_AFTER_DOUBLE_CLICKING = 'You have done a double click'
+    MESSAGE_AFTER_RIGHT_CLICKING = 'You have done a right click'
+    MESSAGE_AFTER_CLICK_BUTTON = 'You have done a dynamic click'
+
+
 
 
 
