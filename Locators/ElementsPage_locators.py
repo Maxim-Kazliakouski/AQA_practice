@@ -7,6 +7,8 @@ class ElementPageLocators:
     CHECK_BOX_SECTION = 'Check Box'
     RADIO_BUTTON_SECTION = 'Radio Button'
     WEB_TABLES_SECTION = 'Web Tables'
+    BUTTONS_SECTION = 'Buttons'
+    LINKS_SECTION = 'Links'
 
     # TEXT_BOX_SECTION = By.XPATH, "//span[contains(text(),'Text Box')]"
     # CHECK_BOX_SECTION = By.XPATH, "//span[contains(text(),'Check Box')]"
@@ -50,5 +52,24 @@ class ElementPageLocators:
     AGE_FIELD = By.ID, 'age'
     SALARY_FIELD = By.ID, 'salary'
     DEPARTMENT_FIELD = By.ID, 'department'
+    FIELD_VALIDATION = By.CLASS_NAME, 'was-validated'
+
+    # buttons section
+    DOUBLE_CLICK_ME_BUTTON = By.ID, 'doubleClickBtn'
+    INFO_AFTER_DOUBLE_CLICKING = By.ID, 'doubleClickMessage'
+    RIGHT_CLICK_BUTTON = By.ID, 'rightClickBtn'
+    INFO_AFTER_RIGHT_CLICKING = By.ID, 'rightClickMessage'
+    CLICK_BUTTON = By.XPATH, '/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[3]/button'
+    INFO_AFTER_CLICKING_BUTTON = By.ID, 'dynamicClickMessage'
+
+    # links section
+    HOME_LINK = [(By.ID, 'simpleLink'), (By.ID, 'dynamicLink')]
+
+
+
+
+
+
+
 
 
