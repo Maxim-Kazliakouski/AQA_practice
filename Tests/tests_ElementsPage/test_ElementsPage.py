@@ -1,5 +1,6 @@
 import time
 import pytest
+import requests
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException
 from selenium.common.exceptions import TimeoutException
 from Locators.ElementsPage_locators import ElementPageLocators
@@ -7,7 +8,6 @@ from Locators.MainPage_locators import MainPageLocators
 from Pages.ElementsPage import ElementsPage
 from Tests.tests_ElementsPage.data_ElementsPage import TestDataElementsPage
 from Tests.tests_MainPage.data_MainPage import TestDataMainPage
-from selenium.webdriver import ActionChains
 
 
 class Test_ElementsPage:
@@ -635,8 +635,10 @@ class Test_ElementsPage:
                 logs_elements_page.error("User isn't on the links page https://demoqa.com/links")
                 raise err
 
-        @pytest.mark.webtest
-        @pytest.mark.parametrize('links', ElementPageLocators.HOME_LINK)
+        # for beautifully displaying test data in console
+        link_ids = [f'Link{t}' for t in ElementPageLocators.HOME_LINK]
+
+        @pytest.mark.parametrize('links', ElementPageLocators.HOME_LINK, ids=link_ids)
         def test_open_links_in_new_tabs(self, browser, logs_elements_page, links):
             link = TestDataElementsPage.LINKS_URL
             page = ElementsPage(browser, link)
@@ -651,6 +653,42 @@ class Test_ElementsPage:
                     "The url in second tab doesn't match with https://demoqa.com/"
             except AssertionError as err:
                 raise err
+
+        @pytest.mark.parametrize('requests_api, response_api', TestDataElementsPage.REQUESTS)
+        def test_api_created_request(self, browser, logs_elements_page, requests_api, response_api):
+            response = requests.get(requests_api)
+            status_code = response.status_code
+            try:
+                assert status_code == response_api,\
+                    f"The item hasn't been created, status code {status_code}"
+            except AssertionError as err:
+                logs_elements_page.error(f"The item hasn't been created, status code {status_code}")
+                raise err
+
+        req_ids = [f'Locator{t}, code({i}), text({x})' for t, i, x in TestDataElementsPage.REQUESTS_FOR_GETTING_INFO]
+
+        @pytest.mark.webtest
+        @pytest.mark.parametrize('locator, status_code, status_text', TestDataElementsPage.REQUESTS_FOR_GETTING_INFO, ids=req_ids)
+        def test_getting_message_after_api_request(self, browser, logs_elements_page, locator, status_code, status_text):
+            link = TestDataElementsPage.LINKS_URL
+            page = ElementsPage(browser, link)
+            page.open_page(link)
+            # adding function for blocking advertisement if it is
+            page.removing_advertisement()
+            page.scrolling_for_one_screen()
+            page.click_on_element(locator)
+            info = page.getting_info(ElementPageLocators.INFO_MESSAGE)
+            try:
+                assert info == f"Link has responded with staus {status_code} and status text {status_text}",\
+                    f"There is no info after clicking on link, user gets {status_code} {status_text}"
+            except AssertionError as err:
+                logs_elements_page.error(f"There is no info after clicking on link, user gets {status_code} {status_text}")
+                raise err
+
+
+
+
+
 
 
 
