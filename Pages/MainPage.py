@@ -1,5 +1,6 @@
 from Locators.MainPage_locators import MainPageLocators
 from Pages.BasePage import BasePage
+from selenium.webdriver.common.by import By
 
 
 class MainPage(BasePage):
@@ -20,3 +21,7 @@ class MainPage(BasePage):
         windows = self.browser.window_handles
         # Switching to second tab
         self.browser.switch_to.window(windows[1])
+
+    def go_to_section(self, section_name):
+        section = self.browser.find_element(By.XPATH, f"//span[contains(text(),'{section_name}')]")
+        section.click()
