@@ -9,6 +9,7 @@ class ElementPageLocators:
     WEB_TABLES_SECTION = 'Web Tables'
     BUTTONS_SECTION = 'Buttons'
     LINKS_SECTION = 'Links'
+    UPLOAD_SECTION = 'Upload and Download'
 
     # TEXT_BOX_SECTION = By.XPATH, "//span[contains(text(),'Text Box')]"
     # CHECK_BOX_SECTION = By.XPATH, "//span[contains(text(),'Check Box')]"
@@ -74,6 +75,12 @@ class ElementPageLocators:
     FORBIDDEN_LINK = By.ID, 'forbidden'
     INVALID_URL_LINK = By.ID, 'invalid-url'
     INFO_MESSAGE = By.ID, 'linkResponse'
+
+    # upload/download section
+    DOWNLOAD_BUTTON = By.ID, 'downloadButton'
+    UPLOAD_BUTTON = By.XPATH, "//input[@type='file']"
+    INFO_MESSAGE_AFTER_UPLOADING_FILE = By.ID, "uploadedFilePath"
+
 
 
 
