@@ -1,6 +1,7 @@
 import time
 import pytest
 import logging
+import subprocess
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -93,6 +94,17 @@ def enable_checkbox_home():
     page.click_on_element(ElementPageLocators.HOME_CHECK_BOX)
 
 
+@pytest.fixture(scope='function')
+def removing_file_after_downloading():
+    print('Removing files, if they are after previous tests...')
+    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/text.txt']))
+    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/sampleFile.jpeg']))
+    yield
+    print('\nRemoving permanent files...')
+    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/text.txt']))
+    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/sampleFile.jpeg']))
+
+
 def pytest_addoption(parser):
     parser.addoption('--browser.name', action='store', default='chrome',
                      help="Choose browser: chrome or safari")
@@ -109,7 +121,7 @@ def clearing_results_folder():
     os.system("rm -rf /Volumes/MacOS/Users/maxkazliakouski/.jenkins/workspace/POM_tests/allure-results/*")
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='class')
 def browser(request):
     browser_name = request.config.getoption('browser.name')
     headless = request.config.getoption('headmode')
@@ -120,6 +132,9 @@ def browser(request):
         # here we set in commandline choosing for headless mode
         if headless == 'true':
             options = webdriver.ChromeOptions()
+            prefs = {"download.default_directory": "/Users/max_kazliakouski/Downloads/"}
+            # example: prefs = {"download.default_directory" : "C:\Tutorial\down"};
+            options.add_experimental_option("prefs", prefs)
             # adding browser options!!! important
             options.add_argument(
                 "user-data-dir=/Users/max_kazliakouski/Library/Application Support/Google/Chrome/Default")

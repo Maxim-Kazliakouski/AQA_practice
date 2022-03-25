@@ -10,6 +10,7 @@ class TestDataElementsPage:
     BUTTONS_URL = 'https://demoqa.com/buttons'
     LINKS_URL = 'https://demoqa.com/links'
     MAIN_URL = 'https://demoqa.com/'
+    UPLOAD_URL = 'https://demoqa.com/upload-download'
 
     # for text box section
     FULL_NAME = ['ABCDEFGHIJKLMNOPQRSTUVWZYZ',
@@ -36,10 +37,12 @@ class TestDataElementsPage:
 
     # for check box section
     ENABLE_CHECKBOX_HOME = 'rct-icon rct-icon-check'
-    CHECKBOX_LIST = ['home', 'desktop', 'notes', 'commands', 'documents', 'workspace', 'react', 'angular', 'veu', 'office', 'public', 'private', 'classified', 'general', 'downloads', 'wordFile', 'excelFile']
+    CHECKBOX_LIST = ['home', 'desktop', 'notes', 'commands', 'documents', 'workspace', 'react', 'angular', 'veu',
+                     'office', 'public', 'private', 'classified', 'general', 'downloads', 'wordFile', 'excelFile']
     ENABLE_PLUS_BUTTON = 'rct-icon rct-icon-expand-open'
     ENABLE_MINUS_BUTTON = 'rct-icon rct-icon-expand-close'
-    CHECKBOX_LIST_WITHOUT_WORKSPACE_CHECKBOX = ['desktop', 'notes', 'commands', 'office', 'public', 'private', 'classified', 'general', 'downloads', 'wordFile', 'excelFile']
+    CHECKBOX_LIST_WITHOUT_WORKSPACE_CHECKBOX = ['desktop', 'notes', 'commands', 'office', 'public', 'private',
+                                                'classified', 'general', 'downloads', 'wordFile', 'excelFile']
 
     # for web tables
     # data for creating new record
@@ -72,19 +75,15 @@ class TestDataElementsPage:
                 (INVALID_URL, 404)
                 ]
     REQUESTS_FOR_GETTING_INFO = [
-                                 (ElementPageLocators.CREATED_LINK, 201, 'Created'),
-                                 (ElementPageLocators.NO_CONTENT_LINK, 204, 'No Content'),
-                                 (ElementPageLocators.MOVED_LINK, 301, 'Moved Permanently'),
-                                 (ElementPageLocators.BAD_REQUEST_LINK, 400, 'Bad Request'),
-                                 (ElementPageLocators.UNAUTHORIZED_LINK, 401, 'Unauthorized'),
-                                 (ElementPageLocators.FORBIDDEN_LINK, 403, 'Forbidden'),
-                                 (ElementPageLocators.INVALID_URL_LINK, 404, 'Not Found')
-                                 ]
+        (ElementPageLocators.CREATED_LINK, 201, 'Created'),
+        (ElementPageLocators.NO_CONTENT_LINK, 204, 'No Content'),
+        (ElementPageLocators.MOVED_LINK, 301, 'Moved Permanently'),
+        (ElementPageLocators.BAD_REQUEST_LINK, 400, 'Bad Request'),
+        (ElementPageLocators.UNAUTHORIZED_LINK, 401, 'Unauthorized'),
+        (ElementPageLocators.FORBIDDEN_LINK, 403, 'Forbidden'),
+        (ElementPageLocators.INVALID_URL_LINK, 404, 'Not Found')
+    ]
 
-
-
-
-
-
-
-
+    # for upload and download page
+    DOWNLOAD_FILE_NAME = 'sampleFile.jpeg'
+    UPLOAD_PATH = "C:\\fakepath\\eng.srt"

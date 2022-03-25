@@ -1,6 +1,9 @@
+import os
 import time
 import pytest
 import requests
+import subprocess
+from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException
 from selenium.common.exceptions import TimeoutException
 from Locators.ElementsPage_locators import ElementPageLocators
@@ -62,7 +65,7 @@ class Test_ElementsPage:
                 email = page.search_element(ElementPageLocators.OUTPUT_EMAIL).text
                 page.generating_text_to_list(email)
                 try:
-                    assert email == f'Email:{emails}',\
+                    assert email == f'Email:{emails}', \
                         "The entering username and outputting doesn't match"
                 except AssertionError as err:
                     logs_elements_page.error("The entering username and outputting doesn't match")
@@ -219,7 +222,7 @@ class Test_ElementsPage:
                 check_box = page.search_element(ElementPageLocators.HOME_CHECK_ENABLE_DISABLE)
                 enable_checkbox = check_box.get_attribute('class')
                 try:
-                    assert enable_checkbox == TestDataElementsPage.ENABLE_CHECKBOX_HOME,\
+                    assert enable_checkbox == TestDataElementsPage.ENABLE_CHECKBOX_HOME, \
                         "The checkbox 'HOME' still unchecked"
                 except AssertionError as err:
                     logs_elements_page.error("The checkbox 'HOME' still unchecked")
@@ -348,7 +351,7 @@ class Test_ElementsPage:
                 page.removing_advertisement()
                 page.click_on_element(ElementPageLocators.EDIT_BUTTON)
                 element_on_page = page.is_element_present_on_the_page(ElementPageLocators.REGISTRATION_FORM,
-                                                                  logs_elements_page)
+                                                                      logs_elements_page)
                 try:
                     assert element_on_page, "The registration form isn't appeared"
                 except AssertionError as err:
@@ -363,7 +366,7 @@ class Test_ElementsPage:
                 page.removing_advertisement()
                 page.deleting_records(2)
                 department = page.is_element_present_on_the_page(ElementPageLocators.COMPLIANCE_DEPARTMENT,
-                                                             logs_elements_page)
+                                                                 logs_elements_page)
                 try:
                     assert department == False, "The 'COMPLIANCE' department still on the page"
                 except AssertionError as err:
@@ -377,7 +380,8 @@ class Test_ElementsPage:
                 # adding function for blocking advertisement if it is
                 page.removing_advertisement()
                 page.click_on_element(ElementPageLocators.ADD_BUTTON)
-                reg_form = page.is_element_present_on_the_page(ElementPageLocators.REGISTRATION_FORM, logs_elements_page)
+                reg_form = page.is_element_present_on_the_page(ElementPageLocators.REGISTRATION_FORM,
+                                                               logs_elements_page)
                 try:
                     assert reg_form, "The Registration form doesn't appear, 'ADD' button doesn't work"
                 except AssertionError as err:
@@ -444,7 +448,8 @@ class Test_ElementsPage:
                 page.click_on_element(ElementPageLocators.ADD_BUTTON)
                 page.adding_new_record_without_first_name()
                 page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
-                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION, logs_elements_page)
+                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION,
+                                                                    logs_elements_page)
                 try:
                     assert ui_validation, "The user has been created without first name, it's wrong"
                 except AssertionError as err:
@@ -460,7 +465,8 @@ class Test_ElementsPage:
                 page.click_on_element(ElementPageLocators.ADD_BUTTON)
                 page.adding_new_record_without_last_name()
                 page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
-                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION, logs_elements_page)
+                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION,
+                                                                    logs_elements_page)
                 try:
                     assert ui_validation, "The user has been created without last name, it's wrong"
                 except AssertionError as err:
@@ -476,7 +482,8 @@ class Test_ElementsPage:
                 page.click_on_element(ElementPageLocators.ADD_BUTTON)
                 page.adding_new_record_without_email()
                 page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
-                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION, logs_elements_page)
+                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION,
+                                                                    logs_elements_page)
                 try:
                     assert ui_validation, "The user has been created without email, it's wrong"
                 except AssertionError as err:
@@ -492,7 +499,8 @@ class Test_ElementsPage:
                 page.click_on_element(ElementPageLocators.ADD_BUTTON)
                 page.adding_new_record_without_age()
                 page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
-                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION, logs_elements_page)
+                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION,
+                                                                    logs_elements_page)
                 try:
                     assert ui_validation, "The user has been created without age, it's wrong"
                 except AssertionError as err:
@@ -508,7 +516,8 @@ class Test_ElementsPage:
                 page.click_on_element(ElementPageLocators.ADD_BUTTON)
                 page.adding_new_record_without_salary()
                 page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
-                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION, logs_elements_page)
+                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION,
+                                                                    logs_elements_page)
                 try:
                     assert ui_validation, "The user has been created without salary, it's wrong"
                 except AssertionError as err:
@@ -524,7 +533,8 @@ class Test_ElementsPage:
                 page.click_on_element(ElementPageLocators.ADD_BUTTON)
                 page.adding_new_record_without_department()
                 page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
-                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION, logs_elements_page)
+                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION,
+                                                                    logs_elements_page)
                 try:
                     assert ui_validation, "The user has been created without department, it's wrong"
                 except AssertionError as err:
@@ -542,7 +552,8 @@ class Test_ElementsPage:
                 page.adding_new_record_without_email()
                 page.sending_keys_into_search_field(ElementPageLocators.EMAIL, emails)
                 page.click_on_element(ElementPageLocators.SUBMIT_BUTTON)
-                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION, logs_elements_page)
+                ui_validation = page.is_element_present_on_the_page(ElementPageLocators.FIELD_VALIDATION,
+                                                                    logs_elements_page)
                 try:
                     assert ui_validation, f"The user has been created with incorrect email -> {emails}"
                 except AssertionError as err:
@@ -577,7 +588,7 @@ class Test_ElementsPage:
             page.double_clicking(ElementPageLocators.DOUBLE_CLICK_ME_BUTTON)
             message = page.getting_info(ElementPageLocators.INFO_AFTER_DOUBLE_CLICKING)
             try:
-                assert message == TestDataElementsPage.MESSAGE_AFTER_DOUBLE_CLICKING,\
+                assert message == TestDataElementsPage.MESSAGE_AFTER_DOUBLE_CLICKING, \
                     "There is no information message(or incorrect message) after double clicking"
             except AssertionError as err:
                 logs_elements_page.error("There is no information message(or incorrect message) after double clicking")
@@ -592,7 +603,7 @@ class Test_ElementsPage:
             page.right_click(ElementPageLocators.RIGHT_CLICK_BUTTON)
             message = page.getting_info(ElementPageLocators.INFO_AFTER_RIGHT_CLICKING)
             try:
-                assert message == TestDataElementsPage.MESSAGE_AFTER_RIGHT_CLICKING,\
+                assert message == TestDataElementsPage.MESSAGE_AFTER_RIGHT_CLICKING, \
                     "There is no information message(or incorrect message) after clicking on right click button"
             except AssertionError as err:
                 logs_elements_page.error("There is no information message(or incorrect message)"
@@ -609,7 +620,7 @@ class Test_ElementsPage:
             message = page.getting_info(ElementPageLocators.INFO_AFTER_CLICKING_BUTTON)
             time.sleep(5)
             try:
-                assert message == TestDataElementsPage.MESSAGE_AFTER_CLICK_BUTTON,\
+                assert message == TestDataElementsPage.MESSAGE_AFTER_CLICK_BUTTON, \
                     "There is no information message(or incorrect message) after clicking on button"
             except AssertionError as err:
                 logs_elements_page.error("There is no information message(or incorrect message)"
@@ -645,11 +656,14 @@ class Test_ElementsPage:
             page.open_page(link)
             # adding function for blocking advertisement if it is
             page.removing_advertisement()
+            page.browser.refresh()
             page.click_on_element(links)
             page.switching_to_the_second_browser_tab()
             current_url = page.getting_current_url()
+            page.browser.close()
+            page.switching_to_the_first_browser_tab()
             try:
-                assert current_url == TestDataElementsPage.MAIN_URL,\
+                assert current_url == TestDataElementsPage.MAIN_URL, \
                     "The url in second tab doesn't match with https://demoqa.com/"
             except AssertionError as err:
                 raise err
@@ -659,7 +673,7 @@ class Test_ElementsPage:
             response = requests.get(requests_api)
             status_code = response.status_code
             try:
-                assert status_code == response_api,\
+                assert status_code == response_api, \
                     f"The item hasn't been created, status code {status_code}"
             except AssertionError as err:
                 logs_elements_page.error(f"The item hasn't been created, status code {status_code}")
@@ -668,8 +682,10 @@ class Test_ElementsPage:
         req_ids = [f'Locator{t}, code({i}), text({x})' for t, i, x in TestDataElementsPage.REQUESTS_FOR_GETTING_INFO]
 
         @pytest.mark.webtest
-        @pytest.mark.parametrize('locator, status_code, status_text', TestDataElementsPage.REQUESTS_FOR_GETTING_INFO, ids=req_ids)
-        def test_getting_message_after_api_request(self, browser, logs_elements_page, locator, status_code, status_text):
+        @pytest.mark.parametrize('locator, status_code, status_text', TestDataElementsPage.REQUESTS_FOR_GETTING_INFO,
+                                 ids=req_ids)
+        def test_getting_message_after_api_request(self, browser, logs_elements_page, locator, status_code,
+                                                   status_text):
             link = TestDataElementsPage.LINKS_URL
             page = ElementsPage(browser, link)
             page.open_page(link)
@@ -679,24 +695,65 @@ class Test_ElementsPage:
             page.click_on_element(locator)
             info = page.getting_info(ElementPageLocators.INFO_MESSAGE)
             try:
-                assert info == f"Link has responded with staus {status_code} and status text {status_text}",\
+                assert info == f"Link has responded with staus {status_code} and status text {status_text}", \
                     f"There is no info after clicking on link, user gets {status_code} {status_text}"
             except AssertionError as err:
-                logs_elements_page.error(f"There is no info after clicking on link, user gets {status_code} {status_text}")
+                logs_elements_page.error(
+                    f"There is no info after clicking on link, user gets {status_code} {status_text}")
                 raise err
 
+    @pytest.mark.UploadDownloadSection
+    class TestUploadDownload:
+        def test_user_on_the_uploaddownload_page(self, browser, logs_elements_page):
+            link = TestDataMainPage.MAIN_PAGE_URL
+            page = ElementsPage(browser, link)
+            page.open_page(link)
+            # adding function for blocking advertisement if it is
+            page.removing_advertisement()
+            page.click_on_element(MainPageLocators.ELEMENTS_BUTTON)
+            page.scrolling_for_one_screen()
+            page.go_to_section(ElementPageLocators.UPLOAD_SECTION)
+            upload_url = page.getting_current_url()
+            try:
+                assert upload_url == TestDataElementsPage.UPLOAD_URL, \
+                    "User isn't on the upload page https://demoqa.com/upload-download"
+            except AssertionError as err:
+                logs_elements_page.error("User isn't on the upload page https://demoqa.com/upload-download")
+                raise err
 
+        def test_downloading_file(self, browser, logs_elements_page, removing_file_after_downloading):
+            link = TestDataElementsPage.UPLOAD_URL
+            page = ElementsPage(browser, link)
+            page.open_page(link)
+            # adding function for blocking advertisement if it is
+            page.removing_advertisement()
+            page.click_on_element(ElementPageLocators.DOWNLOAD_BUTTON)
+            # necessary time for downloading file from the site
+            time.sleep(4)
+            content = page.getting_content_list_from_downloading_folder()
+            downloads_folder_content = page.generating_text_to_list(content)
+            try:
+                assert TestDataElementsPage.DOWNLOAD_FILE_NAME in downloads_folder_content,\
+                    f"There is no '{TestDataElementsPage.DOWNLOAD_FILE_NAME}" \
+                    f" in download folder' file hasn't been download"
+            except AssertionError as err:
+                logs_elements_page.error(
+                    f"There is no '{TestDataElementsPage.DOWNLOAD_FILE_NAME}'"
+                    f" in download folder' file hasn't been download")
+                raise err
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        def test_uploading_file(self, browser, logs_elements_page):
+            link = TestDataElementsPage.UPLOAD_URL
+            page = ElementsPage(browser, link)
+            page.open_page(link)
+            # adding function for blocking advertisement if it is
+            page.removing_advertisement()
+            upload_button = page.search_element(ElementPageLocators.UPLOAD_BUTTON)
+            upload_button.send_keys('/Volumes/Work/AQA_practice/eng.srt')
+            info = page.getting_info_after_uploading_file(logs_elements_page)
+            try:
+                assert info == TestDataElementsPage.UPLOAD_PATH,\
+                    "There is no any info after uploading file"
+            except AssertionError as err:
+                logs_elements_page.error("There is no any info after uploading file")
+                raise err
