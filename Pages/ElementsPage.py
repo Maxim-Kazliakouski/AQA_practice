@@ -4,6 +4,7 @@ from Pages.BasePage import BasePage
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException
 from selenium.webdriver import ActionChains
 from Tests.tests_ElementsPage.data_ElementsPage import TestDataElementsPage
+import subprocess
 
 
 class ElementsPage(BasePage):
@@ -157,3 +158,18 @@ class ElementsPage(BasePage):
         action = ActionChains(self.browser)
         element = self.browser.find_element(*locator)
         action.context_click(element).perform()
+
+    def getting_content_list_from_downloading_folder(self):
+        with open('/Users/max_kazliakouski/Downloads/text.txt', 'w') as f:
+            subprocess.run(['ls', '/Users/max_kazliakouski/Downloads'], stdout=f, text=True)
+        with open('/Users/max_kazliakouski/Downloads/text.txt', 'r') as l:
+            text = l.read()
+        return text
+
+    def getting_info_after_uploading_file(self, logs_elements_page):
+        try:
+            info = self.search_element(ElementPageLocators.INFO_MESSAGE_AFTER_UPLOADING_FILE).text
+        except AssertionError as err:
+            logs_elements_page.error('There is no any info about uploaded file')
+            raise err
+        return info
