@@ -1,0 +1,497 @@
+﻿[Script Info]
+Title: LOST 5 E02 en
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+Video Aspect Ratio: 0
+Video Zoom: 2
+Video Position: 558
+Last Style Storage: Default
+Original Script: english
+Original Timing: Blu-Ray
+Collisions: Normal
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Bottom,Tahoma,65,&H00EBEBEB,&H00F0F0F0,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.35,5.4,2,30,30,90,204
+Style: Top,Tahoma,65,&H00EBEBEB,&H00F0F0F0,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.35,5.4,8,30,30,90,204
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:25.27,0:00:29.19,Bottom,,0000,0000,0000,,- Dude, they'll find out.\N- Not if we stick to the story.
+Dialogue: 0,0:00:29.27,0:00:31.99,Bottom,,0000,0000,0000,,I don't know, Jack.\NIt could be a risk.
+Dialogue: 0,0:00:32.07,0:00:35.11,Bottom,,0000,0000,0000,,It's the only way.\NWe have to do this.
+Dialogue: 0,0:00:36.11,0:00:37.37,Bottom,,0000,0000,0000,,They're still at it, huh?
+Dialogue: 0,0:00:37.45,0:00:41.12,Bottom,,0000,0000,0000,,Look, we're running out of time.\NWe've gotta make a decision now.
+Dialogue: 0,0:00:41.20,0:00:44.12,Bottom,,0000,0000,0000,,So are we all OK with this?
+Dialogue: 0,0:00:44.21,0:00:47.21,Bottom,,0000,0000,0000,,This is a decision that\Nwill a¤ct the rest of our lives.
+Dialogue: 0,0:00:47.79,0:00:49.25,Bottom,,0000,0000,0000,,I'm not taking it lightly.
+Dialogue: 0,0:00:51.51,0:00:53.05,Bottom,,0000,0000,0000,,Kate?
+Dialogue: 0,0:00:53.13,0:00:54.47,Bottom,,0000,0000,0000,,Yeah.
+Dialogue: 0,0:00:55.05,0:00:56.64,Bottom,,0000,0000,0000,,Sun?
+Dialogue: 0,0:01:00.10,0:01:02.10,Bottom,,0000,0000,0000,,- Frank?\N- What?
+Dialogue: 0,0:01:02.18,0:01:05.14,Bottom,,0000,0000,0000,,Sorry you got dragged in.\NWe need to know you're with us.
+Dialogue: 0,0:01:05.23,0:01:07.94,Bottom,,0000,0000,0000,,Whatever you guys decide\NI'll just roll with.
+Dialogue: 0,0:01:09.31,0:01:11.11,Bottom,,0000,0000,0000,,Hurley, what about you?
+Dialogue: 0,0:01:12.48,0:01:15.20,Bottom,,0000,0000,0000,,I don't think we should lie, dude.
+Dialogue: 0,0:01:15.28,0:01:18.70,Bottom,,0000,0000,0000,,We need to protect the people\Nthat we left behind, Hurley.
+Dialogue: 0,0:01:18.78,0:01:20.70,Bottom,,0000,0000,0000,,How does lying protect them?
+Dialogue: 0,0:01:20.78,0:01:24.96,Bottom,,0000,0000,0000,,It protects them from Charles Widmore.\NThe guy hired people to kill us.
+Dialogue: 0,0:01:25.04,0:01:29.71,Bottom,,0000,0000,0000,,He faked a plane crash. Telling him\Nthe truth, he's gonna leave them alone?
+Dialogue: 0,0:01:31.63,0:01:35.59,Bottom,,0000,0000,0000,,Look, he's your dad, right?\NCan't you, like, call him off?
+Dialogue: 0,0:01:35.67,0:01:38.26,Bottom,,0000,0000,0000,,There's no calling my father off.
+Dialogue: 0,0:01:38.34,0:01:41.01,Bottom,,0000,0000,0000,,He'll never find them.\NThe island disappeared.
+Dialogue: 0,0:01:41.10,0:01:43.10,Bottom,,0000,0000,0000,,We all saw it, it's gone.
+Dialogue: 0,0:01:46.44,0:01:50.06,Bottom,,0000,0000,0000,,You think anyone's gonna\Nbelieve that? Believe any of it?
+Dialogue: 0,0:01:50.15,0:01:52.15,Bottom,,0000,0000,0000,,They're gonna think you're crazy.
+Dialogue: 0,0:01:53.19,0:01:54.94,Bottom,,0000,0000,0000,,Not if someone backs me up.
+Dialogue: 0,0:01:59.20,0:02:00.78,Bottom,,0000,0000,0000,,Sayid, come on.
+Dialogue: 0,0:02:00.87,0:02:04.16,Bottom,,0000,0000,0000,,They'll think I'm nuts if I tell\Nthe truth, but what if we all do?
+Dialogue: 0,0:02:04.24,0:02:07.41,Bottom,,0000,0000,0000,,If we can stick together,\Nwe can make them believe us.
+Dialogue: 0,0:02:08.67,0:02:11.04,Bottom,,0000,0000,0000,,I don't want to spend my life lying.\NDo you?
+Dialogue: 0,0:02:11.13,0:02:12.42,Bottom,,0000,0000,0000,,No.
+Dialogue: 0,0:02:12.50,0:02:13.71,Bottom,,0000,0000,0000,,But...
+Dialogue: 0,0:02:14.46,0:02:16.67,Bottom,,0000,0000,0000,,I don't believe we have a better choice.
+Dialogue: 0,0:02:20.80,0:02:23.22,Bottom,,0000,0000,0000,,I'm sorry, Hurley, but we have to lie.
+Dialogue: 0,0:02:26.18,0:02:27.73,Bottom,,0000,0000,0000,,You know what, dude?
+Dialogue: 0,0:02:28.85,0:02:30.56,Bottom,,0000,0000,0000,,I'm gonna remember this.
+Dialogue: 0,0:02:32.11,0:02:35.82,Bottom,,0000,0000,0000,,And someday you're gonna need my help\Nand I'm telling you right now...
+Dialogue: 0,0:02:37.74,0:02:39.24,Bottom,,0000,0000,0000,,...you're not getting it.
+Dialogue: 0,0:02:51.17,0:02:53.17,Bottom,,0000,0000,0000,,Wake up, Sayid!
+Dialogue: 0,0:02:53.25,0:02:55.30,Bottom,,0000,0000,0000,,Sayid!
+Dialogue: 0,0:02:55.38,0:02:57.13,Bottom,,0000,0000,0000,,Sayid, wake up!
+Dialogue: 0,0:02:57.80,0:02:58.84,Bottom,,0000,0000,0000,,Sayid!
+Dialogue: 0,0:03:19.78,0:03:21.99,Bottom,,0000,0000,0000,,No, no, no, no, no! What do I do?
+Dialogue: 0,0:03:23.78,0:03:25.74,Bottom,,0000,0000,0000,,What am I supposed to do?!
+Dialogue: 0,0:03:38.13,0:03:39.76,Bottom,,0000,0000,0000,,OK, OK, OK.
+Dialogue: 0,0:03:39.84,0:03:41.34,Bottom,,0000,0000,0000,,Just stay calm.
+Dialogue: 0,0:03:46.97,0:03:48.77,Bottom,,0000,0000,0000,,What the hell were you thinking?
+Dialogue: 0,0:03:51.81,0:03:54.35,Bottom,,0000,0000,0000,,- Ana Lucia?\N- You were driving like a maniac.
+Dialogue: 0,0:03:54.44,0:03:55.98,Bottom,,0000,0000,0000,,Now why'd you pull over?
+Dialogue: 0,0:03:57.15,0:03:58.69,Bottom,,0000,0000,0000,,I just...
+Dialogue: 0,0:03:58.78,0:04:00.99,Bottom,,0000,0000,0000,,- I thought...\N- You didn't think.
+Dialogue: 0,0:04:01.07,0:04:02.70,Bottom,,0000,0000,0000,,What if I were real?
+Dialogue: 0,0:04:02.78,0:04:05.28,Bottom,,0000,0000,0000,,What if a real cop stopped you?
+Dialogue: 0,0:04:05.37,0:04:08.99,Bottom,,0000,0000,0000,,They have pictures of you covered\Nin blood with a gun in your hand.
+Dialogue: 0,0:04:09.08,0:04:14.25,Bottom,,0000,0000,0000,,Actually, it's ketchup.\NWe went through a drive-through, and...
+Dialogue: 0,0:04:14.33,0:04:18.38,Bottom,,0000,0000,0000,,Bro, you need to pull it together.\NYou've got a lot of work to do.
+Dialogue: 0,0:04:19.38,0:04:21.92,Bottom,,0000,0000,0000,,- I do?\N- Let's start with the basics.
+Dialogue: 0,0:04:22.01,0:04:23.84,Bottom,,0000,0000,0000,,First off, you need new clothes.
+Dialogue: 0,0:04:24.51,0:04:28.76,Bottom,,0000,0000,0000,,Then you need to go to a safe place.\NAnd take Sayid to somebody you trust.
+Dialogue: 0,0:04:28.85,0:04:31.60,Bottom,,0000,0000,0000,,- You getting all this?\N- Yeah.
+Dialogue: 0,0:04:31.68,0:04:34.19,Bottom,,0000,0000,0000,,Then get to it.
+Dialogue: 0,0:04:34.27,0:04:35.85,Bottom,,0000,0000,0000,,And stay away from the cops.
+Dialogue: 0,0:04:37.61,0:04:40.03,Bottom,,0000,0000,0000,,Do not get arrested.
+Dialogue: 0,0:04:42.61,0:04:44.15,Bottom,,0000,0000,0000,,Thanks, Ana Lucia.
+Dialogue: 0,0:04:47.53,0:04:49.66,Bottom,,0000,0000,0000,,Oh, yeah. Libby says hi.
+Dialogue: 0,0:05:08.26,0:05:11.26,Bottom,,0000,0000,0000,,Well... you heard her.
+Dialogue: 0,0:05:35.91,0:05:38.50,Top,,0000,0000,0000,,You really think\Nthat thing's gonna work?
+Dialogue: 0,0:05:38.58,0:05:42.75,Top,,0000,0000,0000,,Of course it's gonna work. It's better\Nthan rubbing two sticks together.
+Dialogue: 0,0:05:42.84,0:05:46.34,Top,,0000,0000,0000,,- That's what you're supposed to do.\N- This will work better.
+Dialogue: 0,0:05:46.42,0:05:49.55,Bottom,,0000,0000,0000,,You've got too much wood inside,\Ngonna smother the leaves.
+Dialogue: 0,0:05:49.64,0:05:52.68,Top,,0000,0000,0000,,If you don't have enough wood,\Nthe leaves burn out.
+Dialogue: 0,0:05:52.76,0:05:56.73,Top,,0000,0000,0000,,Fire? Who cares about fire?\NAny minute the sky could light up.
+Dialogue: 0,0:05:56.81,0:05:59.27,Top,,0000,0000,0000,,- Who knows what'll happen this time?\N- Neil,
+Dialogue: 0,0:05:59.35,0:06:03.90,Top,,0000,0000,0000,,we are trying to focus on what\Nwe can control. Help or be quiet.
+Dialogue: 0,0:06:05.40,0:06:07.65,Top,,0000,0000,0000,,- Whose shirt is this?\N- Mine.
+Dialogue: 0,0:06:08.20,0:06:10.12,Top,,0000,0000,0000,,- Can I have it?\N- What does it matter?
+Dialogue: 0,0:06:10.20,0:06:13.99,Top,,0000,0000,0000,,- We're all gonna be dead by sundown.\N- I'll take that as a yes, Frogurt.
+Dialogue: 0,0:06:14.08,0:06:15.79,Top,,0000,0000,0000,,- It's Neil.\N- Yeah, yeah.
+Dialogue: 0,0:06:21.29,0:06:24.30,Top,,0000,0000,0000,,- Still in one piece?\N- As far as I can tell.
+Dialogue: 0,0:06:24.38,0:06:26.72,Bottom,,0000,0000,0000,,I figured it would\Ndisappear with our stuff.
+Dialogue: 0,0:06:26.80,0:06:30.55,Top,,0000,0000,0000,,I guess whatever we had with us\Nwhen we moved is along for the ride.
+Dialogue: 0,0:06:32.18,0:06:35.60,Top,,0000,0000,0000,,- What?\N- Look who's back.
+Dialogue: 0,0:06:46.15,0:06:49.07,Bottom,,0000,0000,0000,,- Welcome back, Dr. Wizard.\N- I think it's Mr. Wizard.
+Dialogue: 0,0:06:49.15,0:06:51.49,Bottom,,0000,0000,0000,,Shut up. You've been gone for two hours.
+Dialogue: 0,0:06:51.57,0:06:54.41,Top,,0000,0000,0000,,- What the hell were you doing?\N- You're right. Sorry.
+Dialogue: 0,0:06:54.49,0:06:57.58,Top,,0000,0000,0000,,I left my pack in the jungle,\Nand I was coming back...
+Dialogue: 0,0:06:58.54,0:07:01.58,Top,,0000,0000,0000,,It was a while before\NI realized that I was really lost.
+Dialogue: 0,0:07:01.67,0:07:05.00,Top,,0000,0000,0000,,Well, you figure out when the sky's\Ngonna light up again?
+Dialogue: 0,0:07:05.67,0:07:07.51,Top,,0000,0000,0000,,- I don't know.\N- You got a plan?
+Dialogue: 0,0:07:07.59,0:07:10.51,Bottom,,0000,0000,0000,,We should take the Zodiac,\Nhead to a shipping lane.
+Dialogue: 0,0:07:10.59,0:07:12.76,Top,,0000,0000,0000,,No. We can't just sail out\Non any course.
+Dialogue: 0,0:07:12.84,0:07:17.47,Top,,0000,0000,0000,,For us to leave, I need\Nto calculate a new bearing.
+Dialogue: 0,0:07:17.56,0:07:19.14,Top,,0000,0000,0000,,And to do that...
+Dialogue: 0,0:07:20.35,0:07:22.65,Top,,0000,0000,0000,,...I need to determine\Nwhere we are now...
+Dialogue: 0,0:07:25.23,0:07:26.61,Bottom,,0000,0000,0000,,...in time.
+Dialogue: 0,0:07:27.94,0:07:29.94,Bottom,,0000,0000,0000,,What are the rest of us supposed to do?
+Dialogue: 0,0:07:30.03,0:07:31.70,Bottom,,0000,0000,0000,,I'll go find something to eat.
+Dialogue: 0,0:07:32.20,0:07:35.58,Bottom,,0000,0000,0000,,- How are you planning on doing that?\N- Don't worry about it.
+Dialogue: 0,0:07:38.70,0:07:40.87,Top,,0000,0000,0000,,I guess we'll get the water.
+Dialogue: 0,0:07:41.71,0:07:42.83,Bottom,,0000,0000,0000,,Dude, wake up.
+Dialogue: 0,0:07:42.92,0:07:44.92,Top,,0000,0000,0000,,I can't do this on my own.
+Dialogue: 0,0:07:49.21,0:07:51.22,Bottom,,0000,0000,0000,,I promise I'll pay you back.
+Dialogue: 0,0:07:59.31,0:08:00.98,Bottom,,0000,0000,0000,,Wait right here.
+Dialogue: 0,0:08:22.58,0:08:24.83,Bottom,,0000,0000,0000,,- Shih tzus?\N- I like shih tzus.
+Dialogue: 0,0:08:24.92,0:08:27.42,Bottom,,0000,0000,0000,,It looks like you "heart" them.
+Dialogue: 0,0:08:28.25,0:08:30.80,Top,,0000,0000,0000,,- Rough night?\N- Yeah.
+Dialogue: 0,0:08:32.51,0:08:35.39,Top,,0000,0000,0000,,- Your friend's pretty wasted.\N- Yeah.
+Dialogue: 0,0:08:36.18,0:08:38.39,Top,,0000,0000,0000,,I know you from somewhere, don't I?
+Dialogue: 0,0:08:41.52,0:08:42.89,Bottom,,0000,0000,0000,,No.
+Dialogue: 0,0:08:42.98,0:08:46.02,Bottom,,0000,0000,0000,,I think I do. Yeah,\Nyou definitely look familiar.
+Dialogue: 0,0:08:46.10,0:08:48.86,Bottom,,0000,0000,0000,,- I just have one of those faces?\N- You're lying.
+Dialogue: 0,0:08:52.61,0:08:54.70,Bottom,,0000,0000,0000,,I don't believe in lying.
+Dialogue: 0,0:08:55.49,0:08:56.78,Bottom,,0000,0000,0000,,I remember!
+Dialogue: 0,0:08:58.78,0:09:00.95,Top,,0000,0000,0000,,You're the guy who won the lottery.
+Dialogue: 0,0:09:01.54,0:09:03.71,Bottom,,0000,0000,0000,,And you crashed in that plane.
+Dialogue: 0,0:09:03.79,0:09:05.92,Bottom,,0000,0000,0000,,No, I must look like him.
+Dialogue: 0,0:09:06.00,0:09:09.09,Bottom,,0000,0000,0000,,You're him. Buy a ticket here.\NYou win, we get a commission.
+Dialogue: 0,0:09:09.17,0:09:12.51,Bottom,,0000,0000,0000,,- You're good luck.\N- Sorry. Wrong dude. Keep the change.
+Dialogue: 0,0:09:19.51,0:09:21.47,Bottom,,0000,0000,0000,,OK.
+Dialogue: 0,0:09:23.73,0:09:25.31,Top,,0000,0000,0000,,OK, we're out of here.
+Dialogue: 0,0:09:53.51,0:09:56.55,Bottom,,0000,0000,0000,,Mommy, I wanna go home.
+Dialogue: 0,0:09:58.72,0:10:00.01,Bottom,,0000,0000,0000,,Look at your book, baby.
+Dialogue: 0,0:10:35.46,0:10:36.63,Bottom,,0000,0000,0000,,Hello?
+Dialogue: 0,0:10:41.05,0:10:43.05,Bottom,,0000,0000,0000,,I can't believe it's you.
+Dialogue: 0,0:10:43.81,0:10:46.85,Bottom,,0000,0000,0000,,No. Hi, how are you?
+Dialogue: 0,0:10:50.44,0:10:52.23,Bottom,,0000,0000,0000,,Wait. You're in LA?
+Dialogue: 0,0:10:54.52,0:10:56.99,Bottom,,0000,0000,0000,,Of course I can meet. Where...
+Dialogue: 0,0:10:57.07,0:11:00.36,Bottom,,0000,0000,0000,,I know exactly where that is.\NI'll be there in a half an hour.
+Dialogue: 0,0:11:00.45,0:11:02.37,Bottom,,0000,0000,0000,,Mommy, where are we going?
+Dialogue: 0,0:11:03.41,0:11:04.99,Bottom,,0000,0000,0000,,To see a friend.
+Dialogue: 0,0:11:44.78,0:11:46.62,Bottom,,0000,0000,0000,,Looking for your pills, Jack?
+Dialogue: 0,0:11:50.71,0:11:52.42,Bottom,,0000,0000,0000,,I flushed them down the toilet.
+Dialogue: 0,0:11:58.80,0:12:02.09,Bottom,,0000,0000,0000,,Thank you. I was just\Ngoing to do that myself.
+Dialogue: 0,0:12:02.63,0:12:04.30,Bottom,,0000,0000,0000,,Yeah, I figured you were.
+Dialogue: 0,0:12:05.85,0:12:08.64,Bottom,,0000,0000,0000,,- Going somewhere?\N- I'm checking out.
+Dialogue: 0,0:12:09.14,0:12:10.73,Bottom,,0000,0000,0000,,Where are we going?
+Dialogue: 0,0:12:10.81,0:12:12.89,Bottom,,0000,0000,0000,,You're going home
+Dialogue: 0,0:12:12.98,0:12:14.90,Bottom,,0000,0000,0000,,and find yourself a suitcase.
+Dialogue: 0,0:12:14.98,0:12:18.65,Bottom,,0000,0000,0000,,If there's anything in this life\Nyou want, pack it in there...
+Dialogue: 0,0:12:20.28,0:12:22.49,Bottom,,0000,0000,0000,,...because you're never coming back.
+Dialogue: 0,0:12:28.95,0:12:30.50,Bottom,,0000,0000,0000,,Good.
+Dialogue: 0,0:12:32.25,0:12:34.04,Bottom,,0000,0000,0000,,Good.
+Dialogue: 0,0:12:34.12,0:12:37.46,Bottom,,0000,0000,0000,,- I'll pick you up in six hours.\N- And where will you be going?
+Dialogue: 0,0:12:37.54,0:12:40.88,Bottom,,0000,0000,0000,,John's casket is outside\Nin a carpet van.
+Dialogue: 0,0:12:40.96,0:12:42.67,Bottom,,0000,0000,0000,,I need to move it somewhere safe.
+Dialogue: 0,0:12:45.51,0:12:47.10,Bottom,,0000,0000,0000,,Safe?
+Dialogue: 0,0:12:48.64,0:12:50.35,Bottom,,0000,0000,0000,,He's dead, isn't he?
+Dialogue: 0,0:12:52.85,0:12:54.56,Bottom,,0000,0000,0000,,I'll see you in six hours, Jack.
+Dialogue: 0,0:13:27.09,0:13:29.18,Bottom,,0000,0000,0000,,{\i1}Previously on{\i0} Expose:
+Dialogue: 0,0:13:29.39,0:13:32.52,Bottom,,0000,0000,0000,,{\i1}Looks like the Scorpion is taking over\Nall the Cobra's business.{\i0}
+Dialogue: 0,0:13:32.60,0:13:35.81,Bottom,,0000,0000,0000,,{\i1}You want me to work with Tsunami,\Nthe Dragon Lady of Van Nuys?{\i0}
+Dialogue: 0,0:13:35.89,0:13:38.35,Bottom,,0000,0000,0000,,- Yeah.\N- {\i1}I'm here to capture the Scorpion,{\i0}
+Dialogue: 0,0:13:38.44,0:13:41.94,Bottom,,0000,0000,0000,,{\i1}so if you got a problem with that,\Nyou can go work stage three.{\i0}
+Dialogue: 0,0:13:43.07,0:13:44.61,Bottom,,0000,0000,0000,,{\i1}She's hit!{\i0}
+Dialogue: 0,0:13:44.69,0:13:47.32,Bottom,,0000,0000,0000,,{\i1}Someone call an ambulance...{\i0}
+Dialogue: 0,0:14:02.25,0:14:03.80,Bottom,,0000,0000,0000,,Hey, Dad.
+Dialogue: 0,0:14:05.59,0:14:07.34,Bottom,,0000,0000,0000,,How's it going?
+Dialogue: 0,0:14:11.35,0:14:13.68,Bottom,,0000,0000,0000,,- Have you seen the news?\N- No, I just got up.
+Dialogue: 0,0:14:13.77,0:14:17.27,Bottom,,0000,0000,0000,,- You on it again?\N- Yeah. Kind of.
+Dialogue: 0,0:14:17.35,0:14:19.44,Bottom,,0000,0000,0000,,- Is Mom here?\N- No, she's out shopping.
+Dialogue: 0,0:14:19.52,0:14:20.94,Bottom,,0000,0000,0000,,Set him over here.
+Dialogue: 0,0:14:23.65,0:14:26.19,Bottom,,0000,0000,0000,,- Oh, man, he's out.\N- Is he breathing?
+Dialogue: 0,0:14:26.28,0:14:28.36,Bottom,,0000,0000,0000,,Barely. What happened?
+Dialogue: 0,0:14:28.45,0:14:31.87,Bottom,,0000,0000,0000,,- He got shot by a dart.\N- A dart? Where were you, the zoo?
+Dialogue: 0,0:14:31.95,0:14:34.58,Bottom,,0000,0000,0000,,- No, we were at the safe house.\N- The safe house?
+Dialogue: 0,0:14:34.66,0:14:36.70,Bottom,,0000,0000,0000,,Sayid took me there. To protect me.
+Dialogue: 0,0:14:36.79,0:14:40.88,Bottom,,0000,0000,0000,,These two guys jumped out and shot him\Nwith darts, and now he's in a coma.
+Dialogue: 0,0:14:40.96,0:14:44.38,Bottom,,0000,0000,0000,,This doesn't make sense. What are\Nyou doing out of the institution?
+Dialogue: 0,0:14:44.46,0:14:46.96,Bottom,,0000,0000,0000,,Sayid pulled me out.\NI'm in danger, we both are.
+Dialogue: 0,0:14:47.05,0:14:48.84,Bottom,,0000,0000,0000,,Danger from who?
+Dialogue: 0,0:14:50.97,0:14:52.51,Bottom,,0000,0000,0000,,I'm not sure, exactly.
+Dialogue: 0,0:14:58.31,0:15:00.56,Bottom,,0000,0000,0000,,- Hello?\N- {\i1}Mr. Reyes?{\i0}
+Dialogue: 0,0:15:00.65,0:15:03.48,Bottom,,0000,0000,0000,,{\i1}LAPD. Could you open the gate, please?{\i0}
+Dialogue: 0,0:15:04.40,0:15:08.36,Bottom,,0000,0000,0000,,- What kind of trouble are you in?\N- Don't tell them I'm here.
+Dialogue: 0,0:15:09.70,0:15:12.16,Bottom,,0000,0000,0000,,All right. But you're gonna\Ntell me the truth.
+Dialogue: 0,0:15:32.34,0:15:35.10,Bottom,,0000,0000,0000,,- You killed three people?\N- No.
+Dialogue: 0,0:15:35.18,0:15:37.93,Bottom,,0000,0000,0000,,- Sayid did.\N- Oh, well, that's better.
+Dialogue: 0,0:15:38.02,0:15:40.18,Bottom,,0000,0000,0000,,- Let's get him to the couch.\N- He saved me.
+Dialogue: 0,0:15:40.27,0:15:43.31,Bottom,,0000,0000,0000,,- I think we should call a lawyer now.\N- No, no, no.
+Dialogue: 0,0:15:43.40,0:15:45.94,Bottom,,0000,0000,0000,,We can't go public. They're after us.
+Dialogue: 0,0:15:46.02,0:15:49.53,Bottom,,0000,0000,0000,,- Who? Who is after you?\N- I don't know.
+Dialogue: 0,0:15:49.61,0:15:53.28,Bottom,,0000,0000,0000,,- Sayid knows. He can explain.\N- Sayid ain't explaining nothing.
+Dialogue: 0,0:15:53.36,0:15:55.53,Bottom,,0000,0000,0000,,We need to get him to a hospital.
+Dialogue: 0,0:15:55.62,0:15:58.04,Bottom,,0000,0000,0000,,Did you hear me?\NPeople are trying to kill us!
+Dialogue: 0,0:15:58.12,0:16:00.96,Bottom,,0000,0000,0000,,If we go there, they'll find us.\NLike {\i1}The Godfather.{\i0}
+Dialogue: 0,0:16:01.04,0:16:03.54,Bottom,,0000,0000,0000,,It's the last place you go.\NEveryone knows it.
+Dialogue: 0,0:16:03.62,0:16:07.96,Bottom,,0000,0000,0000,,They smother you with pillows and\Nmake it look like an accident. Wake up!
+Dialogue: 0,0:16:08.05,0:16:10.55,Bottom,,0000,0000,0000,,That's not gonna work.\NWe need a doctor.
+Dialogue: 0,0:16:12.22,0:16:13.72,Bottom,,0000,0000,0000,,I think I know what to do.
+Dialogue: 0,0:16:21.14,0:16:25.90,Bottom,,0000,0000,0000,,- Mommy, can I push the button?\N- Sure, you can, sweetie.
+Dialogue: 0,0:16:25.98,0:16:30.49,Bottom,,0000,0000,0000,,We're going all the way to the top, OK?\NI want you to press number 31. See it?
+Dialogue: 0,0:16:30.57,0:16:33.53,Bottom,,0000,0000,0000,,You see it? OK, 31 .
+Dialogue: 0,0:16:33.61,0:16:35.49,Bottom,,0000,0000,0000,,Yeah!
+Dialogue: 0,0:16:35.57,0:16:39.08,Bottom,,0000,0000,0000,,You pressed it. You pressed it.
+Dialogue: 0,0:16:58.51,0:17:00.10,Bottom,,0000,0000,0000,,Hi.
+Dialogue: 0,0:17:02.77,0:17:04.27,Bottom,,0000,0000,0000,,Hello, Kate.
+Dialogue: 0,0:17:19.62,0:17:22.29,Bottom,,0000,0000,0000,,Have a nice day.\NI'll be right with you.
+Dialogue: 0,0:17:29.13,0:17:30.92,Bottom,,0000,0000,0000,,Hello, Ben.
+Dialogue: 0,0:17:34.92,0:17:37.97,Bottom,,0000,0000,0000,,If it's the porterhouse\Nyou're looking for, we're out.
+Dialogue: 0,0:17:38.68,0:17:40.89,Bottom,,0000,0000,0000,,No, no porterhouse.
+Dialogue: 0,0:17:40.97,0:17:43.98,Bottom,,0000,0000,0000,,I do, however, have something\Nimportant in my van, Jill.
+Dialogue: 0,0:17:44.06,0:17:46.89,Bottom,,0000,0000,0000,,- I need you to watch it for me.\N- Is it what I think it is?
+Dialogue: 0,0:17:46.98,0:17:48.27,Bottom,,0000,0000,0000,,It is.
+Dialogue: 0,0:17:49.94,0:17:51.73,Bottom,,0000,0000,0000,,He'll be safe with me.
+Dialogue: 0,0:17:51.82,0:17:55.74,Bottom,,0000,0000,0000,,- Have Gabriel and Jeffrey checked in?\N- Everything's moving on schedule.
+Dialogue: 0,0:17:55.82,0:17:58.24,Bottom,,0000,0000,0000,,- How's it going with Shephard?\N- He's with us.
+Dialogue: 0,0:17:58.32,0:18:02.41,Bottom,,0000,0000,0000,,- Really? Did you bribe him with pills?\N- Cut the man some slack.
+Dialogue: 0,0:18:02.49,0:18:07.12,Bottom,,0000,0000,0000,,- He's been through a lot. We all have.\N- Right. Of course.
+Dialogue: 0,0:18:07.58,0:18:08.92,Bottom,,0000,0000,0000,,Sorry.
+Dialogue: 0,0:18:09.42,0:18:11.67,Bottom,,0000,0000,0000,,So keep him safe, Jill.
+Dialogue: 0,0:18:11.75,0:18:13.63,Bottom,,0000,0000,0000,,Because if you don't...
+Dialogue: 0,0:18:15.01,0:18:18.47,Bottom,,0000,0000,0000,,...everything we're about to do\Nwon't matter at all.
+Dialogue: 0,0:18:35.07,0:18:37.86,Bottom,,0000,0000,0000,,You got it, you got it,\Nyou got it, you got it!
+Dialogue: 0,0:18:40.70,0:18:43.33,Bottom,,0000,0000,0000,,- Why did you do that?\N- You're supposed to fan it.
+Dialogue: 0,0:18:43.41,0:18:46.95,Bottom,,0000,0000,0000,,- You said you knew how to start a fire.\N- You said you didn't care.
+Dialogue: 0,0:18:47.04,0:18:51.38,Bottom,,0000,0000,0000,,- I care about surviving.\N- You need to take a timeout, Neil.
+Dialogue: 0,0:18:53.71,0:18:57.38,Bottom,,0000,0000,0000,,You'll get it, Bernard. You will.\NJust... just try again.
+Dialogue: 0,0:18:58.42,0:19:01.09,Bottom,,0000,0000,0000,,Hey.
+Dialogue: 0,0:19:01.18,0:19:03.39,Bottom,,0000,0000,0000,,Hi. Give me one second.
+Dialogue: 0,0:19:05.14,0:19:06.52,Bottom,,0000,0000,0000,,I got you something.
+Dialogue: 0,0:19:08.27,0:19:10.52,Bottom,,0000,0000,0000,,- Found these in the jungle.\N- Thank you.
+Dialogue: 0,0:19:10.60,0:19:13.98,Bottom,,0000,0000,0000,,There was only two. I thought we could\Nboth do with a bite to eat.
+Dialogue: 0,0:19:14.07,0:19:15.90,Bottom,,0000,0000,0000,,Thank you very much.
+Dialogue: 0,0:19:18.40,0:19:20.40,Bottom,,0000,0000,0000,,You all right?
+Dialogue: 0,0:19:20.49,0:19:23.41,Bottom,,0000,0000,0000,,I just can't seem to shake\Nthis bloody headache.
+Dialogue: 0,0:19:28.75,0:19:32.75,Bottom,,0000,0000,0000,,- I'm sure it'll pass.\N- It's not just that.
+Dialogue: 0,0:19:32.83,0:19:35.21,Bottom,,0000,0000,0000,,It was the weirdest thing,\Nearlier I was...
+Dialogue: 0,0:19:36.21,0:19:38.30,Bottom,,0000,0000,0000,,I was thinking about my mom,
+Dialogue: 0,0:19:38.38,0:19:42.43,Bottom,,0000,0000,0000,,and... all of a sudden I\Ncouldn't remember her maiden name.
+Dialogue: 0,0:19:42.51,0:19:45.47,Bottom,,0000,0000,0000,,- Isn't that odd?\N- Don't worry about it.
+Dialogue: 0,0:19:45.55,0:19:48.43,Bottom,,0000,0000,0000,,All of us have been\Nunder a lot of stress.
+Dialogue: 0,0:19:48.93,0:19:50.43,Bottom,,0000,0000,0000,,OK?
+Dialogue: 0,0:19:53.81,0:19:55.31,Bottom,,0000,0000,0000,,Daniel...
+Dialogue: 0,0:19:56.36,0:19:58.65,Bottom,,0000,0000,0000,,...do you know what's happening to me?
+Dialogue: 0,0:20:01.99,0:20:03.45,Bottom,,0000,0000,0000,,Dinner!
+Dialogue: 0,0:20:08.62,0:20:11.37,Bottom,,0000,0000,0000,,That's great!\NWhere did you get that?
+Dialogue: 0,0:20:11.46,0:20:13.58,Bottom,,0000,0000,0000,,I found it.
+Dialogue: 0,0:20:13.67,0:20:15.63,Bottom,,0000,0000,0000,,What do you mean, you found it?
+Dialogue: 0,0:20:16.59,0:20:18.88,Bottom,,0000,0000,0000,,It died in the jungle. I found it.
+Dialogue: 0,0:20:20.13,0:20:23.09,Bottom,,0000,0000,0000,,Don't worry, it's fine.\NIt's only been dead three hours.
+Dialogue: 0,0:20:23.18,0:20:26.35,Bottom,,0000,0000,0000,,- What?\N- Who's got a knife?
+Dialogue: 0,0:20:26.43,0:20:28.93,Bottom,,0000,0000,0000,,A knife? You need a knife?
+Dialogue: 0,0:20:29.01,0:20:31.14,Bottom,,0000,0000,0000,,It's by the Cuisinart next to the stove.
+Dialogue: 0,0:20:31.23,0:20:33.39,Bottom,,0000,0000,0000,,- What's your problem?\N- My problem is...
+Dialogue: 0,0:20:33.48,0:20:36.48,Bottom,,0000,0000,0000,,...we don't have a knife.\NWe don't have anything.
+Dialogue: 0,0:20:36.56,0:20:39.98,Bottom,,0000,0000,0000,,It wouldn't matter if we did\N'cause the dentist can't start a fire.
+Dialogue: 0,0:20:40.07,0:20:43.40,Bottom,,0000,0000,0000,,- Ease up there, Frogurt.\N- It's Neil, you inbred!
+Dialogue: 0,0:20:43.49,0:20:46.45,Bottom,,0000,0000,0000,,And I'm not gonna ease up,\N'cause I'm tired,
+Dialogue: 0,0:20:46.53,0:20:49.58,Bottom,,0000,0000,0000,,- hungry and screwed! We're all screwed!\N- Calm down.
+Dialogue: 0,0:20:49.66,0:20:52.08,Bottom,,0000,0000,0000,,- We're gonna get through this.\N- How?!
+Dialogue: 0,0:20:52.16,0:20:55.54,Bottom,,0000,0000,0000,,Didn't you hear what I just said!?\NWe can't even get fire!
+Dialogue: 0,0:21:01.38,0:21:02.67,Bottom,,0000,0000,0000,,Run!
+Dialogue: 0,0:21:20.02,0:21:22.19,Bottom,,0000,0000,0000,,Come on. Get up, get up!
+Dialogue: 0,0:21:36.12,0:21:39.21,Bottom,,0000,0000,0000,,Come on, split up!\NEverybody get to the creek!
+Dialogue: 0,0:21:44.47,0:21:46.05,Bottom,,0000,0000,0000,,Dan!
+Dialogue: 0,0:21:47.22,0:21:49.05,Bottom,,0000,0000,0000,,Keep moving!
+Dialogue: 0,0:22:06.20,0:22:09.41,Bottom,,0000,0000,0000,,Come on, he's dead. Come on,\Nyou wanna be dead too? Come on!
+Dialogue: 0,0:22:12.03,0:22:14.87,Bottom,,0000,0000,0000,,There's nothing you could have done.\NWe got to go now!
+Dialogue: 0,0:22:21.17,0:22:25.17,Bottom,,0000,0000,0000,,- Dude, they're on a stakeout?\N- You escaped from a mental institution.
+Dialogue: 0,0:22:25.26,0:22:28.47,Bottom,,0000,0000,0000,,There are dead bodies!\NOf course they're on a stakeout.
+Dialogue: 0,0:22:28.55,0:22:30.84,Bottom,,0000,0000,0000,,They think you're crazy enough\Nto come home.
+Dialogue: 0,0:22:34.72,0:22:36.60,Bottom,,0000,0000,0000,,So are you...
+Dialogue: 0,0:22:37.77,0:22:38.81,Bottom,,0000,0000,0000,,...crazy?
+Dialogue: 0,0:22:43.36,0:22:44.61,Bottom,,0000,0000,0000,,Do you think I am?
+Dialogue: 0,0:22:46.49,0:22:48.57,Bottom,,0000,0000,0000,,Either that or you're lying to me.
+Dialogue: 0,0:22:55.12,0:22:56.75,Bottom,,0000,0000,0000,,Well, I'm not crazy.
+Dialogue: 0,0:22:56.83,0:22:59.79,Bottom,,0000,0000,0000,,And I have a really good reason\Nwhy I'm lying to you.
+Dialogue: 0,0:23:01.75,0:23:03.59,Bottom,,0000,0000,0000,,What is it?
+Dialogue: 0,0:23:07.09,0:23:10.63,Bottom,,0000,0000,0000,,Why is there a dead Pakistani\Non my couch?
+Dialogue: 0,0:23:12.93,0:23:14.39,Bottom,,0000,0000,0000,,He's not dead, Ma.
+Dialogue: 0,0:23:14.47,0:23:16.22,Bottom,,0000,0000,0000,,Well, he's not breathing.
+Dialogue: 0,0:23:16.31,0:23:17.73,Bottom,,0000,0000,0000,,He's not?!
+Dialogue: 0,0:23:20.85,0:23:25.32,Bottom,,0000,0000,0000,,- It's OK, Carmen, we have a plan.\N- A plan? What are you talking about?
+Dialogue: 0,0:23:25.57,0:23:28.61,Bottom,,0000,0000,0000,,He is breathing. Kind of.\NDad, we gotta go now!
+Dialogue: 0,0:23:28.69,0:23:30.57,Bottom,,0000,0000,0000,,- What is happening?\N- Mom, please!
+Dialogue: 0,0:23:30.65,0:23:34.20,Bottom,,0000,0000,0000,,No "Mom, please" me!\NWhy are you all over the news?
+Dialogue: 0,0:23:34.28,0:23:36.08,Bottom,,0000,0000,0000,,Do you know what they are saying?
+Dialogue: 0,0:23:36.16,0:23:39.29,Bottom,,0000,0000,0000,,Yeah, I know. Everything's gonna\Nmake sense, I promise.
+Dialogue: 0,0:23:39.37,0:23:40.66,Bottom,,0000,0000,0000,,It better!
+Dialogue: 0,0:23:55.26,0:23:56.97,Bottom,,0000,0000,0000,,Officers.
+Dialogue: 0,0:24:02.48,0:24:03.85,Bottom,,0000,0000,0000,,So how long are you in LA?
+Dialogue: 0,0:24:05.02,0:24:06.48,Bottom,,0000,0000,0000,,Just a few days.
+Dialogue: 0,0:24:06.57,0:24:09.19,Bottom,,0000,0000,0000,,I have some business to attend to.
+Dialogue: 0,0:24:09.28,0:24:10.53,Bottom,,0000,0000,0000,,But I wanted to see you.
+Dialogue: 0,0:24:12.57,0:24:14.07,Bottom,,0000,0000,0000,,Here it is.
+Dialogue: 0,0:24:14.16,0:24:17.70,Bottom,,0000,0000,0000,,Her name's Ji Yeon.\NHere's a baby picture.
+Dialogue: 0,0:24:18.91,0:24:21.04,Bottom,,0000,0000,0000,,- She's beautiful.\N- Thank you.
+Dialogue: 0,0:24:21.71,0:24:23.62,Bottom,,0000,0000,0000,,She's with her grandmother in Seoul.
+Dialogue: 0,0:24:23.71,0:24:26.38,Bottom,,0000,0000,0000,,I hope someday you get to meet her.
+Dialogue: 0,0:24:26.46,0:24:29.17,Bottom,,0000,0000,0000,,It would be nice to see her\Nand Aaron play together.
+Dialogue: 0,0:24:30.67,0:24:32.05,Bottom,,0000,0000,0000,,Yeah.
+Dialogue: 0,0:24:33.93,0:24:35.93,Bottom,,0000,0000,0000,,Kate, are you all right?
+Dialogue: 0,0:24:36.76,0:24:38.51,Bottom,,0000,0000,0000,,Yeah, I'm fine.
+Dialogue: 0,0:24:39.56,0:24:41.23,Bottom,,0000,0000,0000,,Are you?
+Dialogue: 0,0:24:52.57,0:24:55.99,Bottom,,0000,0000,0000,,- Somebody knows we're lying.\N- What?
+Dialogue: 0,0:24:56.07,0:24:59.08,Bottom,,0000,0000,0000,,- Some lawyers came to see me.\N- Who?
+Dialogue: 0,0:24:59.91,0:25:03.83,Bottom,,0000,0000,0000,,Two men. They came to my house\Nand they asked for a blood sample.
+Dialogue: 0,0:25:03.91,0:25:05.37,Bottom,,0000,0000,0000,,Some kind of lawsuit.
+Dialogue: 0,0:25:05.46,0:25:07.50,Bottom,,0000,0000,0000,,They wanted to test to see if...
+Dialogue: 0,0:25:09.34,0:25:11.26,Bottom,,0000,0000,0000,,To see if Aaron's my son.
+Dialogue: 0,0:25:13.09,0:25:14.88,Bottom,,0000,0000,0000,,Who do these lawyers represent?
+Dialogue: 0,0:25:16.26,0:25:19.22,Bottom,,0000,0000,0000,,I don't know. They wouldn't tell me\Nwho their client is.
+Dialogue: 0,0:25:21.06,0:25:24.10,Bottom,,0000,0000,0000,,Then they're not interested\Nin exposing the lie.
+Dialogue: 0,0:25:24.85,0:25:28.61,Bottom,,0000,0000,0000,,- How do you know?\N- If they were, they would just do it.
+Dialogue: 0,0:25:28.69,0:25:30.65,Bottom,,0000,0000,0000,,They wouldn't come to you in private.
+Dialogue: 0,0:25:30.73,0:25:33.19,Bottom,,0000,0000,0000,,They don't care we're lying.\NThey want Aaron.
+Dialogue: 0,0:25:33.28,0:25:36.53,Bottom,,0000,0000,0000,,But who would do that?
+Dialogue: 0,0:25:36.61,0:25:39.83,Bottom,,0000,0000,0000,,I don't know,\Nbut you need to take care of them.
+Dialogue: 0,0:25:40.99,0:25:43.25,Bottom,,0000,0000,0000,,What do you mean,\N"take care of them"?
+Dialogue: 0,0:25:43.66,0:25:47.50,Bottom,,0000,0000,0000,,Wouldn't you do anything you had to\Nin order to keep Aaron?
+Dialogue: 0,0:25:51.00,0:25:53.96,Bottom,,0000,0000,0000,,What kind of a person\Ndo you think I am?
+Dialogue: 0,0:26:04.31,0:26:07.56,Bottom,,0000,0000,0000,,The kind of person who makes\Nhard decisions when she has to.
+Dialogue: 0,0:26:11.65,0:26:13.53,Bottom,,0000,0000,0000,,Like you did on the freighter.
+Dialogue: 0,0:26:18.03,0:26:22.49,Bottom,,0000,0000,0000,,You told me to get on the helicopter,\Nand you said you'd get Jin.
+Dialogue: 0,0:26:24.83,0:26:26.66,Bottom,,0000,0000,0000,,Sun, I hope you don't think...
+Dialogue: 0,0:26:26.75,0:26:28.37,Bottom,,0000,0000,0000,,You did what you had to do.
+Dialogue: 0,0:26:30.33,0:26:31.46,Bottom,,0000,0000,0000,,And if you hadn't...
+Dialogue: 0,0:26:33.25,0:26:37.05,Bottom,,0000,0000,0000,,...we probably all would have died,\Ninstead of just my husband.
+Dialogue: 0,0:26:44.06,0:26:45.85,Bottom,,0000,0000,0000,,I'm sorry...
+Dialogue: 0,0:26:47.14,0:26:48.98,Bottom,,0000,0000,0000,,I'm so sorry.
+Dialogue: 0,0:26:52.02,0:26:53.61,Bottom,,0000,0000,0000,,I don't blame you.
+Dialogue: 0,0:27:01.57,0:27:04.54,Bottom,,0000,0000,0000,,So... how's Jack?
+Dialogue: 0,0:27:09.62,0:27:12.75,Bottom,,0000,0000,0000,,Hugo said I could trust you.\NI wasn't so sure.
+Dialogue: 0,0:27:12.84,0:27:15.50,Bottom,,0000,0000,0000,,But he swore I could. So... can I?
+Dialogue: 0,0:27:16.71,0:27:18.88,Bottom,,0000,0000,0000,,- Yes. Of course.\N- All right.
+Dialogue: 0,0:27:26.77,0:27:30.48,Bottom,,0000,0000,0000,,- What happened to him?\N- Hugo said he got hit with some dart.
+Dialogue: 0,0:27:30.56,0:27:33.31,Bottom,,0000,0000,0000,,- Must've been some drugs.\N- And where is Hurley?
+Dialogue: 0,0:27:33.40,0:27:35.40,Bottom,,0000,0000,0000,,At our house, freaking out.
+Dialogue: 0,0:27:35.48,0:27:37.94,Bottom,,0000,0000,0000,,I'm gonna get my car,\Nhelp me move him over.
+Dialogue: 0,0:27:38.03,0:27:40.57,Bottom,,0000,0000,0000,,- I have to get him to the hospital.\N- No.
+Dialogue: 0,0:27:40.65,0:27:42.95,Bottom,,0000,0000,0000,,Hugo said whoever did this\Nwill come back.
+Dialogue: 0,0:27:43.03,0:27:46.79,Bottom,,0000,0000,0000,,All due respect, Mr. Reyes, you brought\Nhim to me. I'm gonna do what's best.
+Dialogue: 0,0:27:46.87,0:27:48.70,Bottom,,0000,0000,0000,,Fine. Take him to the hospital.
+Dialogue: 0,0:27:48.79,0:27:51.50,Bottom,,0000,0000,0000,,All due respect, Dr. Shephard,\Nwhen this is over,
+Dialogue: 0,0:27:51.58,0:27:54.21,Bottom,,0000,0000,0000,,- you're gonna do something for me.\N- What?
+Dialogue: 0,0:27:54.29,0:27:56.38,Bottom,,0000,0000,0000,,Stay away from Hugo.
+Dialogue: 0,0:27:56.46,0:28:01.22,Bottom,,0000,0000,0000,,Whatever you talked him into, you don't\Nhave his best interests at heart.
+Dialogue: 0,0:28:01.30,0:28:03.39,Bottom,,0000,0000,0000,,So stay away from my son.
+Dialogue: 0,0:28:15.61,0:28:17.36,Bottom,,0000,0000,0000,,{\i1}Hello.{\i0}
+Dialogue: 0,0:28:17.44,0:28:21.19,Bottom,,0000,0000,0000,,Ben... you'll never guess\Nwho just showed up at my door.
+Dialogue: 0,0:28:21.74,0:28:24.45,Bottom,,0000,0000,0000,,- Who?\N- Sayid.
+Dialogue: 0,0:28:41.22,0:28:42.47,Bottom,,0000,0000,0000,,Who is Sayid?
+Dialogue: 0,0:28:42.55,0:28:44.64,Bottom,,0000,0000,0000,,I thought he was your friend.
+Dialogue: 0,0:28:45.01,0:28:46.51,Bottom,,0000,0000,0000,,He is my friend.
+Dialogue: 0,0:28:46.60,0:28:50.85,Bottom,,0000,0000,0000,,But he's also got this double life where\Nhe does crazy ninja moves and spy stuff.
+Dialogue: 0,0:28:51.81,0:28:55.40,Bottom,,0000,0000,0000,,- But he's a good guy.\N- A good guy doesn't kill three men.
+Dialogue: 0,0:28:55.48,0:28:58.40,Bottom,,0000,0000,0000,,- A good guy doesn't kill any men.\N- Mom...
+Dialogue: 0,0:28:58.48,0:29:00.82,Bottom,,0000,0000,0000,,Don't "Mom" me.
+Dialogue: 0,0:29:00.90,0:29:03.36,Bottom,,0000,0000,0000,,You are in terrible trouble, Hugo.
+Dialogue: 0,0:29:03.45,0:29:06.11,Bottom,,0000,0000,0000,,The news thinks you did this.
+Dialogue: 0,0:29:06.20,0:29:09.49,Bottom,,0000,0000,0000,,And if the news does, everyone does.
+Dialogue: 0,0:29:10.49,0:29:12.45,Bottom,,0000,0000,0000,,Why is this happening?
+Dialogue: 0,0:29:12.54,0:29:15.04,Bottom,,0000,0000,0000,,How can anybody want to hurt you?
+Dialogue: 0,0:29:21.42,0:29:22.42,Bottom,,0000,0000,0000,,I don't know.
+Dialogue: 0,0:29:28.01,0:29:30.51,Bottom,,0000,0000,0000,,Tell your mother the truth.
+Dialogue: 0,0:29:36.19,0:29:37.90,Bottom,,0000,0000,0000,,We lied, Ma.
+Dialogue: 0,0:29:42.03,0:29:44.07,Bottom,,0000,0000,0000,,- What do you mean, you lied?\N- All of us.
+Dialogue: 0,0:29:44.15,0:29:47.57,Bottom,,0000,0000,0000,,The Oceanic Six. We lied about\Nwhat happened after the crash.
+Dialogue: 0,0:29:50.03,0:29:52.04,Bottom,,0000,0000,0000,,And what did happen?
+Dialogue: 0,0:29:59.54,0:30:01.71,Bottom,,0000,0000,0000,,OK.
+Dialogue: 0,0:30:01.80,0:30:03.63,Bottom,,0000,0000,0000,,See, we did crash.
+Dialogue: 0,0:30:04.30,0:30:06.59,Bottom,,0000,0000,0000,,But it was on this crazy island.
+Dialogue: 0,0:30:06.68,0:30:09.55,Bottom,,0000,0000,0000,,And we waited for rescue,\Nand there wasn't any rescue.
+Dialogue: 0,0:30:09.64,0:30:12.64,Bottom,,0000,0000,0000,,There was a smoke monster\Nand other people on the island.
+Dialogue: 0,0:30:12.72,0:30:14.27,Bottom,,0000,0000,0000,,We called them "the Others."
+Dialogue: 0,0:30:14.35,0:30:16.85,Bottom,,0000,0000,0000,,They started attacking us.
+Dialogue: 0,0:30:16.94,0:30:21.11,Bottom,,0000,0000,0000,,And we found hatches. There was a button\Nyou had to push every 108 minutes or...
+Dialogue: 0,0:30:22.61,0:30:24.69,Bottom,,0000,0000,0000,,Well, I was never really clear on that.
+Dialogue: 0,0:30:24.78,0:30:27.82,Bottom,,0000,0000,0000,,The Others didn't have\Nanything to do with the hatches.
+Dialogue: 0,0:30:27.90,0:30:31.49,Bottom,,0000,0000,0000,,That was the Dharma Initiative.\NBut the Others killed them.
+Dialogue: 0,0:30:31.58,0:30:35.29,Bottom,,0000,0000,0000,,Now they're trying to kill us.\NAnd then we teamed up with the Others
+Dialogue: 0,0:30:35.37,0:30:37.21,Bottom,,0000,0000,0000,,because worse people were coming.
+Dialogue: 0,0:30:37.29,0:30:40.13,Bottom,,0000,0000,0000,,Desmond's girlfriend's father\Nsent them to kill us.
+Dialogue: 0,0:30:40.21,0:30:44.00,Bottom,,0000,0000,0000,,We stole their helicopter,\Nflew to their freighter, but it blew up.
+Dialogue: 0,0:30:44.09,0:30:46.72,Bottom,,0000,0000,0000,,We couldn't go to the island.\NIt disappeared.
+Dialogue: 0,0:30:46.80,0:30:51.26,Bottom,,0000,0000,0000,,So we crashed in the ocean, and floated\Na while until a boat picked us up.
+Dialogue: 0,0:30:51.35,0:30:54.60,Bottom,,0000,0000,0000,,By then there were six of us.\NThat part was true.
+Dialogue: 0,0:31:03.27,0:31:04.94,Bottom,,0000,0000,0000,,But the re...
+Dialogue: 0,0:31:09.65,0:31:11.32,Bottom,,0000,0000,0000,,But the rest of the people...
+Dialogue: 0,0:31:14.03,0:31:15.66,Bottom,,0000,0000,0000,,...who were on the plane...
+Dialogue: 0,0:31:19.00,0:31:20.92,Bottom,,0000,0000,0000,,They're still on that island.
+Dialogue: 0,0:31:35.64,0:31:37.56,Bottom,,0000,0000,0000,,I believe you.
+Dialogue: 0,0:31:43.36,0:31:45.57,Bottom,,0000,0000,0000,,I don't understand you,
+Dialogue: 0,0:31:45.65,0:31:47.36,Bottom,,0000,0000,0000,,but I believe you.
+Dialogue: 0,0:31:52.95,0:31:54.91,Bottom,,0000,0000,0000,,A lot of people died, Ma.
+Dialogue: 0,0:31:57.83,0:32:00.83,Bottom,,0000,0000,0000,,Now this bad stuff\Nis happening because...
+Dialogue: 0,0:32:02.21,0:32:03.67,Bottom,,0000,0000,0000,,Well...
+Dialogue: 0,0:32:08.21,0:32:10.05,Bottom,,0000,0000,0000,,We shouldn't have lied.
+Dialogue: 0,0:32:20.64,0:32:22.19,Bottom,,0000,0000,0000,,You OK?
+Dialogue: 0,0:32:22.27,0:32:24.77,Bottom,,0000,0000,0000,,Yeah, I'm fine.\NJust stepped on something.
+Dialogue: 0,0:32:24.86,0:32:26.90,Bottom,,0000,0000,0000,,Something jammed...
+Dialogue: 0,0:32:32.57,0:32:34.41,Bottom,,0000,0000,0000,,Son of a bitch.
+Dialogue: 0,0:32:35.82,0:32:39.04,Bottom,,0000,0000,0000,,Keep moving, we gotta hook up\Nwith everybody at the creek.
+Dialogue: 0,0:32:39.12,0:32:41.12,Bottom,,0000,0000,0000,,It's a long creek, James.\NWhich part?
+Dialogue: 0,0:32:41.20,0:32:44.17,Bottom,,0000,0000,0000,,The wet part. Sorry if my plan's\Nnot up to Other...
+Dialogue: 0,0:33:19.62,0:33:22.08,Bottom,,0000,0000,0000,,Who were those people? Were they yours?
+Dialogue: 0,0:33:22.16,0:33:25.33,Bottom,,0000,0000,0000,,- Did they shoot the arrows?\N- Want me to crawl out and ask?
+Dialogue: 0,0:33:25.42,0:33:28.54,Bottom,,0000,0000,0000,,You don't have to be a wise-ass.\NI'm just trying to...
+Dialogue: 0,0:33:38.93,0:33:40.76,Bottom,,0000,0000,0000,,What are you doing on our island?
+Dialogue: 0,0:33:45.31,0:33:48.36,Bottom,,0000,0000,0000,,{\i1}Respiratory therapist to ICU.{\i0}
+Dialogue: 0,0:33:48.44,0:33:49.94,Bottom,,0000,0000,0000,,{\i1}Respiratory therapist...{\i0}
+Dialogue: 0,0:34:01.74,0:34:06.41,Bottom,,0000,0000,0000,,{\i1}Transport to Radiology.\NTransport to Radiology.{\i0}
+Dialogue: 0,0:34:30.98,0:34:32.90,Bottom,,0000,0000,0000,,Come on.
+Dialogue: 0,0:34:33.69,0:34:35.24,Bottom,,0000,0000,0000,,Son of a bitch.
+Dialogue: 0,0:34:35.32,0:34:36.90,Bottom,,0000,0000,0000,,Come on, Sayid.
+Dialogue: 0,0:34:37.78,0:34:39.16,Bottom,,0000,0000,0000,,Come on.
+Dialogue: 0,0:34:41.53,0:34:43.83,Bottom,,0000,0000,0000,,Sayid! Sayid!
+Dialogue: 0,0:34:45.16,0:34:47.46,Bottom,,0000,0000,0000,,It's me. It's Jack.
+Dialogue: 0,0:34:50.33,0:34:52.04,Bottom,,0000,0000,0000,,It's OK. It's all right.
+Dialogue: 0,0:34:52.13,0:34:54.38,Bottom,,0000,0000,0000,,You're OK. You're all right.
+Dialogue: 0,0:35:05.47,0:35:07.93,Bottom,,0000,0000,0000,,What happened?
+Dialogue: 0,0:35:08.02,0:35:11.48,Bottom,,0000,0000,0000,,You're fine. You're in the hospital.
+Dialogue: 0,0:35:12.86,0:35:15.32,Bottom,,0000,0000,0000,,Hurley's father brought you to me.
+Dialogue: 0,0:35:15.40,0:35:16.74,Bottom,,0000,0000,0000,,Hurley's father?
+Dialogue: 0,0:35:19.65,0:35:22.12,Bottom,,0000,0000,0000,,He said you'd been attacked.
+Dialogue: 0,0:35:22.91,0:35:26.29,Bottom,,0000,0000,0000,,- Where's Hurley?\N- He's at his parents' house.
+Dialogue: 0,0:35:26.37,0:35:30.54,Bottom,,0000,0000,0000,,- Who's with him?\N- I don't know. His mother, maybe?
+Dialogue: 0,0:35:31.54,0:35:33.46,Bottom,,0000,0000,0000,,Does anyone else know he's there?
+Dialogue: 0,0:35:46.22,0:35:47.81,Bottom,,0000,0000,0000,,Hello, Hugo.
+Dialogue: 0,0:35:50.89,0:35:53.15,Bottom,,0000,0000,0000,,Get away from me! Get away!
+Dialogue: 0,0:35:53.23,0:35:55.52,Bottom,,0000,0000,0000,,Hugo, I know you're in trouble.
+Dialogue: 0,0:35:56.40,0:36:00.03,Bottom,,0000,0000,0000,,And I can assure you,\NI've taken care of everything.
+Dialogue: 0,0:36:00.11,0:36:02.53,Bottom,,0000,0000,0000,,I have a car waiting for us out back.
+Dialogue: 0,0:36:02.61,0:36:05.41,Bottom,,0000,0000,0000,,The police didn't see me.\NI can get you out of here.
+Dialogue: 0,0:36:07.66,0:36:10.46,Bottom,,0000,0000,0000,,No way, dude.\NSayid warned me about you.
+Dialogue: 0,0:36:10.54,0:36:12.83,Bottom,,0000,0000,0000,,I'm taking you to Sayid.
+Dialogue: 0,0:36:12.92,0:36:15.88,Bottom,,0000,0000,0000,,He's with Jack. That's why I'm here.\NJack called me.
+Dialogue: 0,0:36:18.21,0:36:20.67,Bottom,,0000,0000,0000,,How else would I know\Nthat they're together?
+Dialogue: 0,0:36:23.76,0:36:27.47,Bottom,,0000,0000,0000,,No! You're playing\None of your mind games.
+Dialogue: 0,0:36:27.56,0:36:29.52,Bottom,,0000,0000,0000,,They would never trust you.
+Dialogue: 0,0:36:29.60,0:36:33.52,Bottom,,0000,0000,0000,,In their defense,\NI'm not an easy person to trust.
+Dialogue: 0,0:36:33.60,0:36:38.44,Bottom,,0000,0000,0000,,But they came around when they realized\Nthat we all want the same thing.
+Dialogue: 0,0:36:40.94,0:36:42.45,Bottom,,0000,0000,0000,,And what's that?
+Dialogue: 0,0:36:43.86,0:36:45.78,Bottom,,0000,0000,0000,,To go back to the island.
+Dialogue: 0,0:36:50.41,0:36:53.00,Bottom,,0000,0000,0000,,Come with us, Hugo.
+Dialogue: 0,0:36:53.08,0:36:55.33,Bottom,,0000,0000,0000,,And this will be over.\NYou can stop hiding.
+Dialogue: 0,0:36:55.42,0:36:58.46,Bottom,,0000,0000,0000,,You can stop worrying about\Nthe stories and deceptions.
+Dialogue: 0,0:37:00.51,0:37:02.51,Bottom,,0000,0000,0000,,If you come with me...
+Dialogue: 0,0:37:02.59,0:37:05.05,Bottom,,0000,0000,0000,,...you won't ever have to lie again.
+Dialogue: 0,0:37:14.31,0:37:16.02,Bottom,,0000,0000,0000,,Please...
+Dialogue: 0,0:37:19.48,0:37:20.48,Bottom,,0000,0000,0000,,Let me help you.
+Dialogue: 0,0:37:33.62,0:37:34.91,Bottom,,0000,0000,0000,,Never, dude.
+Dialogue: 0,0:37:39.50,0:37:41.63,Bottom,,0000,0000,0000,,You got me! That's right, you got me!
+Dialogue: 0,0:37:41.71,0:37:44.84,Bottom,,0000,0000,0000,,- That's right, I'm the killer!\N- Stop! Police!
+Dialogue: 0,0:37:44.92,0:37:47.68,Bottom,,0000,0000,0000,,I'm crazy! I'm a murderer!\NI killed four people!
+Dialogue: 0,0:37:47.76,0:37:51.85,Bottom,,0000,0000,0000,,Three people... However many are\Ndead, I killed them! I killed them all.
+Dialogue: 0,0:37:51.93,0:37:54.64,Bottom,,0000,0000,0000,,Just get me away from here!
+Dialogue: 0,0:37:55.19,0:37:58.69,Bottom,,0000,0000,0000,,You have the right to remain silent.\NAnything you say can and will be used
+Dialogue: 0,0:37:58.77,0:38:01.90,Bottom,,0000,0000,0000,,against you in a court of law. You have\Nthe right to speak to an attorney...
+Dialogue: 0,0:38:01.98,0:38:03.23,Bottom,,0000,0000,0000,,Just get me out of here.
+Dialogue: 0,0:38:03.90,0:38:06.99,Bottom,,0000,0000,0000,,If you can't afford a lawyer,\None will be provided for you.
+Dialogue: 0,0:38:14.33,0:38:16.00,Bottom,,0000,0000,0000,,I'm gonna make this simple.
+Dialogue: 0,0:38:16.08,0:38:19.96,Bottom,,0000,0000,0000,,Tell me what you're doing, how many\Nof you there are and how you got here.
+Dialogue: 0,0:38:20.04,0:38:22.59,Bottom,,0000,0000,0000,,- Let her go.\N- Unless you're answering questions,
+Dialogue: 0,0:38:22.67,0:38:24.63,Bottom,,0000,0000,0000,,don't speak.
+Dialogue: 0,0:38:24.71,0:38:26.67,Bottom,,0000,0000,0000,,Tell me, or I cut off her other hand.
+Dialogue: 0,0:38:26.76,0:38:28.51,Bottom,,0000,0000,0000,,- What?\N- Other?
+Dialogue: 0,0:38:28.59,0:38:33.68,Bottom,,0000,0000,0000,,The first one isn't negotiable, it's\Njust to illustrate how serious I am.
+Dialogue: 0,0:38:33.77,0:38:36.27,Bottom,,0000,0000,0000,,Hold on. Chill out!\NWe're not supposed to be here.
+Dialogue: 0,0:38:36.35,0:38:39.35,Bottom,,0000,0000,0000,,- The island, there are these flashes...\N- Do it.
+Dialogue: 0,0:38:39.44,0:38:41.31,Bottom,,0000,0000,0000,,I'll tell you what you want to know!
+Dialogue: 0,0:38:41.40,0:38:43.36,Bottom,,0000,0000,0000,,- Do it!\N- No!
+Dialogue: 0,0:39:14.26,0:39:16.64,Bottom,,0000,0000,0000,,James. Juliet.
+Dialogue: 0,0:39:21.65,0:39:23.23,Bottom,,0000,0000,0000,,Nice to see you.
+Dialogue: 0,0:40:45.44,0:40:47.48,Bottom,,0000,0000,0000,,- Any luck?\N- Yes.
+Dialogue: 0,0:40:49.03,0:40:51.24,Bottom,,0000,0000,0000,,- Really?\N- Really.
+Dialogue: 0,0:40:52.53,0:40:55.87,Bottom,,0000,0000,0000,,- What about you?\N- I'm having some difficulties.
+Dialogue: 0,0:40:55.95,0:40:57.62,Bottom,,0000,0000,0000,,Well, you'd better get busy
+Dialogue: 0,0:40:57.70,0:40:59.58,Bottom,,0000,0000,0000,,'cause you only have 70 hours.
+Dialogue: 0,0:40:59.66,0:41:01.62,Bottom,,0000,0000,0000,,That's not enough! I need at least...
+Dialogue: 0,0:41:01.70,0:41:03.96,Bottom,,0000,0000,0000,,What you need is irrelevant.
+Dialogue: 0,0:41:05.92,0:41:08.38,Bottom,,0000,0000,0000,,Seventy hours is what you've got.
+Dialogue: 0,0:41:09.55,0:41:11.21,Bottom,,0000,0000,0000,,Look, I lost Reyes tonight.
+Dialogue: 0,0:41:15.43,0:41:18.05,Bottom,,0000,0000,0000,,What happens if I can't\Nget them all to come back?
+Dialogue: 0,0:41:20.93,0:41:22.98,Bottom,,0000,0000,0000,,Then God help us all.
