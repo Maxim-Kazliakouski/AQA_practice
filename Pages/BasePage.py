@@ -69,3 +69,12 @@ class BasePage:
     def scaling_window(self, value_in_percent):
         self.browser.execute_script(f"document.body.style.transform = 'scale({value_in_percent})'")
 
+    def is_element_present_on_the_page(self, locator, logs_elements_page):
+        try:
+            self.search_element(locator)
+        except NoSuchElementException:
+            logs_elements_page.error(f"There is no element on the page by the following locators{locator}")
+        except TimeoutException:
+            logs_elements_page.error(f"There is no element on the page by the following locators{locator}")
+            return False
+        return True
