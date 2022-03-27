@@ -19,3 +19,6 @@ class AlertsFrameWindows(BasePage):
         alert = self.switch_to_alert_window()
         alert.send_keys(text_for_alert)
         alert.accept()
+
+    def switch_to_iframe(self, locator):
+        self.browser.switch_to.frame(self.search_element(locator))
