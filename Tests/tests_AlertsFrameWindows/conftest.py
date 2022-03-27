@@ -41,7 +41,7 @@ def logs_alerts_frame_page():
 #                      help='Choose language: ru, en...(etc)')
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='class')
 def browser(request):
     browser_name = request.config.getoption('browser.name')
     headless = request.config.getoption('headmode')
