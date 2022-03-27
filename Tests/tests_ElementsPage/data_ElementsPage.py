@@ -83,6 +83,7 @@ class TestDataElementsPage:
         (ElementPageLocators.FORBIDDEN_LINK, 403, 'Forbidden'),
         (ElementPageLocators.INVALID_URL_LINK, 404, 'Not Found')
     ]
+    HOME_LINKS_NAMES = ['SIMPLE_LINK', 'DYNAMIC_LINK']
 
     # for upload and download page
     DOWNLOAD_FILE_NAME = 'sampleFile.jpeg'
