@@ -647,9 +647,9 @@ class Test_ElementsPage:
                 raise err
 
         # for beautifully displaying test data in console
-        link_ids = [f'Link{t}' for t in ElementPageLocators.HOME_LINK]
+        link_ids = [f'{t}' for t in TestDataElementsPage.HOME_LINKS_NAMES]
 
-        @pytest.mark.parametrize('links', ElementPageLocators.HOME_LINK, ids=link_ids)
+        @pytest.mark.parametrize('links', ElementPageLocators.HOME_LINKS_NAMES, ids=link_ids)
         def test_open_links_in_new_tabs(self, browser, logs_elements_page, links):
             link = TestDataElementsPage.LINKS_URL
             page = ElementsPage(browser, link)
