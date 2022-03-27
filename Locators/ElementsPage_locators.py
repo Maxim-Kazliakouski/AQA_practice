@@ -66,7 +66,7 @@ class ElementPageLocators:
     # links section
     SIMPLE_LINK = By.ID, 'simpleLink'
     DYNAMIC_LINK = By.ID, 'dynamicLink'
-    HOME_LINK = [SIMPLE_LINK, DYNAMIC_LINK]
+    HOME_LINKS_NAMES = [SIMPLE_LINK, DYNAMIC_LINK]
     CREATED_LINK = By.ID, 'created'
     NO_CONTENT_LINK = By.ID, 'no-content'
     MOVED_LINK = By.ID, 'moved'
