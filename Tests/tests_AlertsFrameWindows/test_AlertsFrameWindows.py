@@ -7,6 +7,7 @@ from Tests.tests_AlertsFrameWindows.data_AlertsFrameWindows import TestDataAlert
 from Tests.tests_MainPage.data_MainPage import TestDataMainPage
 
 
+@pytest.mark.AlertsFrameWindows
 class Test_AlertsFrameWindows:
     @pytest.mark.BrowserWindows
     class Test_BrowserWindows:
@@ -16,7 +17,8 @@ class Test_AlertsFrameWindows:
             page.open_page(link)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.ALERTS_FRAMES_BUTTON)
-            page.scrolling_for_one_screen()
+            # page.scrolling_for_one_screen()
+            page.scaling_window(0.5)
             page.go_to_section(AlertsFrameWindowsLocators.BROWSER_WINDOW)
             browser_windows_page_url = page.getting_current_url()
             try:
@@ -66,13 +68,14 @@ class Test_AlertsFrameWindows:
 
     @pytest.mark.Alerts
     class Test_Alerts:
-        def test_user_on_the_browser_windows_page(self, browser, logs_alerts_frame_page):
+        def test_user_on_the_alerts_page(self, browser, logs_alerts_frame_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = AlertsFrameWindows(browser, link)
             page.open_page(link)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.ALERTS_FRAMES_BUTTON)
-            page.scrolling_for_one_screen()
+            # page.scrolling_for_one_screen()
+            page.scaling_window(0.5)
             page.go_to_section(AlertsFrameWindowsLocators.ALERTS)
             alerts_page_url = page.getting_current_url()
             try:
@@ -166,10 +169,113 @@ class Test_AlertsFrameWindows:
                 logs_alerts_frame_page.error("The alert text doesn't match with entered or alert window doesn't appear")
                 raise err
 
+    @pytest.mark.iFrame
+    class Test_iFrame:
+        @pytest.mark.xfail(reason='If failed, check with headmode=false')
+        def test_user_on_the_iframe_page(self, browser, logs_alerts_frame_page):
+            link = TestDataMainPage.MAIN_PAGE_URL
+            page = AlertsFrameWindows(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            page.click_on_element(MainPageLocators.ALERTS_FRAMES_BUTTON)
+            # page.scrolling_for_one_screen()
+            # page.scaling_window(0.7)
+            page.go_to_section(AlertsFrameWindowsLocators.FRAMES)
+            alerts_page_url = page.getting_current_url()
+            try:
+                assert alerts_page_url == TestDataAlertsFrameWindows.FRAMES_URL, \
+                    "User isn't on Frames Page"
+            except AssertionError as err:
+                logs_alerts_frame_page.error("User isn't on Frames Page")
+                raise err
 
+        def test_first_iframe(self, browser, logs_alerts_frame_page):
+            link = TestDataAlertsFrameWindows.FRAMES_URL
+            page = AlertsFrameWindows(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            page.switch_to_iframe(AlertsFrameWindowsLocators.FIRST_IFRAME)
+            text_iframe1 = page.search_element(AlertsFrameWindowsLocators.TEXT_FIRST_IFRAME).text
+            try:
+                assert text_iframe1 == TestDataAlertsFrameWindows.TEXT_FIRST_IFRAME, \
+                    f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_FIRST_IFRAME}'," \
+                    f"or there is no iframe"
+            except AssertionError as err:
+                logs_alerts_frame_page.error(
+                    f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_FIRST_IFRAME}'," \
+                    f"or there is no iframe")
+                raise err
 
+        def test_second_iframe(self, browser, logs_alerts_frame_page):
+            link = TestDataAlertsFrameWindows.FRAMES_URL
+            page = AlertsFrameWindows(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            page.switch_to_iframe(AlertsFrameWindowsLocators.SECOND_IFRAME)
+            text_iframe2 = page.search_element(AlertsFrameWindowsLocators.TEXT_SECOND_IFRAME).text
+            try:
+                assert text_iframe2 == TestDataAlertsFrameWindows.TEXT_SECOND_IFRAME, \
+                    f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_SECOND_IFRAME}'," \
+                    f"or there is no iframe"
+            except AssertionError as err:
+                logs_alerts_frame_page.error(
+                    f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_SECOND_IFRAME}'," \
+                    f"or there is no iframe")
+                raise err
 
+    @pytest.mark.ModalDialogs
+    class Test_ModalDialogs:
+        def test_user_on_the_modaldialogs_page(self, browser, logs_alerts_frame_page):
+            link = TestDataMainPage.MAIN_PAGE_URL
+            page = AlertsFrameWindows(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            page.click_on_element(MainPageLocators.ALERTS_FRAMES_BUTTON)
+            # page.scrolling_for_one_screen()
+            # page.scaling_window(0.5)
+            page.go_to_section(AlertsFrameWindowsLocators.MODAL_DIALOGS)
+            modal_dialogs_page_url = page.getting_current_url()
+            try:
+                assert modal_dialogs_page_url == TestDataAlertsFrameWindows.MODAL_WINDOW_URL, \
+                    "User isn't on Frames Page"
+            except AssertionError as err:
+                logs_alerts_frame_page.error("User isn't on Frames Page")
+                raise err
 
+        def test_small_modal(self, browser, logs_alerts_frame_page):
+            link = TestDataAlertsFrameWindows.MODAL_WINDOW_URL
+            page = AlertsFrameWindows(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            page.click_on_element(AlertsFrameWindowsLocators.SMALL_MODAL_BUTTON)
+            small_modal_text = page.search_element(AlertsFrameWindowsLocators.INFO_SMALL_MODAL).text
+            try:
+                assert small_modal_text == TestDataAlertsFrameWindows.TEXT_SMALL_MODAL, \
+                    f"There is no modal window or text '{TestDataAlertsFrameWindows.TEXT_SMALL_MODAL}'" \
+                    f"doesn't match with test text"
+            except AssertionError as err:
+                logs_alerts_frame_page.error(
+                    f"There is no modal window or text '{TestDataAlertsFrameWindows.TEXT_SMALL_MODAL}'"
+                    f"doesn't match with test text")
+                raise err
 
+        close_buttons_ids = [f'{t}' for t in TestDataAlertsFrameWindows.CLOSE_BUTTONS_NAMES]
+
+        @pytest.mark.parametrize('close_buttons',
+                                 [AlertsFrameWindowsLocators.CLOSE_BUTTON, AlertsFrameWindowsLocators.CLOSE_X_BUTTON], ids=close_buttons_ids)
+        def test_closing_small_modal(self, browser, logs_alerts_frame_page, close_buttons):
+            link = TestDataAlertsFrameWindows.MODAL_WINDOW_URL
+            page = AlertsFrameWindows(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            page.click_on_element(AlertsFrameWindowsLocators.SMALL_MODAL_BUTTON)
+            page.click_on_element(close_buttons)
+            time.sleep(0.5)
+            modal_on_page = page.is_element_present_on_the_page(AlertsFrameWindowsLocators.SMALL_MODAL_WINDOW, logs_alerts_frame_page)
+            try:
+                assert modal_on_page == False, "The modal window still on the page"
+            except AssertionError as err:
+                logs_alerts_frame_page.error("The modal window still on the page")
+                raise err
 
 
