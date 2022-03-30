@@ -74,6 +74,13 @@ class TestDataElementsPage:
                 (FORBIDDEN_URL, 403),
                 (INVALID_URL, 404)
                 ]
+    REQUESTS_FOR_GETTING_INFO_IDS = ['Created',
+                                     'No Content',
+                                     'Moved Permanently',
+                                     'Bad Request',
+                                     'Unauthorized',
+                                     'Forbidden',
+                                     'Not Found']
     REQUESTS_FOR_GETTING_INFO = [
         (ElementPageLocators.CREATED_LINK, 201, 'Created'),
         (ElementPageLocators.NO_CONTENT_LINK, 204, 'No Content'),

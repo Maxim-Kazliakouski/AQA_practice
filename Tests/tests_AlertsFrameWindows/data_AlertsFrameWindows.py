@@ -20,6 +20,7 @@ class TestDataAlertsFrameWindows:
     # for modal dialogs
     TEXT_SMALL_MODAL = 'This is a small modal. It has very less content'
     CLOSE_BUTTONS_NAMES = ['CLOSE_BUTTON', 'CLOSE_X_BUTTON']
+    MODALS = ['SMALL MODAL', 'BIG MODAL']
 
 
 
