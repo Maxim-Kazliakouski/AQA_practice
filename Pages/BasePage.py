@@ -2,7 +2,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException, \
     ElementClickInterceptedException
-
 from Locators.MainPage_locators import MainPageLocators
 
 
@@ -36,7 +35,6 @@ class BasePage:
         except ElementClickInterceptedException as err:
             print('The element not clickable')
             raise err
-
 
     def getting_current_url(self):
         current_url = self.browser.current_url
@@ -78,3 +76,11 @@ class BasePage:
             logs_elements_page.error(f"There is no element on the page by the following locators{locator}")
             return False
         return True
+
+    def sending_keys_into_field(self, locator, content):
+        field = self.search_element(locator)
+        field.send_keys(content)
+
+    def generating_text_to_list(self, output):
+        generating_output = output.split('\n')
+        return generating_output
