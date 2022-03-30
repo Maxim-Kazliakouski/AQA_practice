@@ -29,7 +29,7 @@ class BasePage:
 
     def click_on_element(self, locator, time=5):
         try:
-            element = WebDriverWait(self.browser, time).until(EC.presence_of_element_located(locator),
+            element = WebDriverWait(self.browser, time).until(EC.element_to_be_clickable(locator),
                                                           message=f"Can't find element by locator {locator}.")
             element.click()
         except ElementClickInterceptedException as err:
