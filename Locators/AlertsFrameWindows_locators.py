@@ -30,7 +30,9 @@ class AlertsFrameWindowsLocators:
 
     # for modal dialogs
     SMALL_MODAL_BUTTON = By.ID, 'showSmallModal'
+    BIG_MODAL_BUTTON = By.ID, 'showLargeModal'
     SMALL_MODAL_WINDOW = By.XPATH, '//body/div[4]/div[1]/div[1]'
+    BIG_MODAL_WINDOW = By.XPATH, '//body/div[4]/div[1]/div[1]'
     INFO_SMALL_MODAL = By.XPATH, '/html[1]/body[1]/div[4]/div[1]/div[1]/div[2]'
     CLOSE_BUTTON = By.ID, 'closeSmallModal'
     CLOSE_X_BUTTON = By.XPATH, "//span[contains(text(),'×')]"
