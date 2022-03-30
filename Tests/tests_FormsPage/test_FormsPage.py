@@ -7,12 +7,14 @@ from Pages.FormsPage import FormsPage
 from Tests.tests_FormsPage.data_FormsPage import TestDataFormsPage
 from Tests.tests_MainPage.data_MainPage import TestDataMainPage
 from selenium.webdriver.common.by import By
+from Tests.tests_MainPage.conftest import browser
 
 
 class Test_FormsPage:
     @pytest.mark.FormsSection
     class Test_Forms:
         class Test_positive:
+            @pytest.mark.user_on_page
             def test_user_on_the_forms_page(self, browser, logs_forms_page):
                 link = TestDataMainPage.MAIN_PAGE_URL
                 page = FormsPage(browser, link)

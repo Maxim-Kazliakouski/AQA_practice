@@ -11,12 +11,15 @@ from Locators.MainPage_locators import MainPageLocators
 from Pages.ElementsPage import ElementsPage
 from Tests.tests_ElementsPage.data_ElementsPage import TestDataElementsPage
 from Tests.tests_MainPage.data_MainPage import TestDataMainPage
+from Tests.tests_MainPage.conftest import browser
 
 
+@pytest.mark.ElementsPage
 class Test_ElementsPage:
     @pytest.mark.TextBoxSection
     class Test_TextBox:
         class Test_positive:
+            @pytest.mark.user_on_page
             def test_user_is_on_the_text_box_section(self, browser, logs_elements_page):
                 link = TestDataMainPage.MAIN_PAGE_URL
                 page = ElementsPage(browser, link)
@@ -196,6 +199,7 @@ class Test_ElementsPage:
     @pytest.mark.CheckBoxSection
     class Test_CheckBox:
         class Test_positive:
+            @pytest.mark.user_on_page
             def test_user_is_on_the_check_box_section(self, browser, logs_elements_page):
                 link = TestDataMainPage.MAIN_PAGE_URL
                 page = ElementsPage(browser, link)
@@ -290,6 +294,7 @@ class Test_ElementsPage:
 
     @pytest.mark.RadioButtonSection
     class Test_RadioButton:
+        @pytest.mark.user_on_page
         def test_user_on_the_radiobutton_page(self, browser, logs_elements_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = ElementsPage(browser, link)
@@ -326,6 +331,7 @@ class Test_ElementsPage:
     @pytest.mark.WebTablesSection
     class Test_WebTablesSection:
         class Test_positive:
+            @pytest.mark.user_on_page
             def test_user_on_the_radiobutton_page(self, browser, logs_elements_page):
                 link = TestDataMainPage.MAIN_PAGE_URL
                 page = ElementsPage(browser, link)
@@ -562,6 +568,7 @@ class Test_ElementsPage:
 
     @pytest.mark.ButtonsSection
     class Test_ButtonsSection:
+        @pytest.mark.user_on_page
         def test_user_on_the_buttons_page(self, browser, logs_elements_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = ElementsPage(browser, link)
@@ -629,6 +636,7 @@ class Test_ElementsPage:
 
     @pytest.mark.LinksSection
     class Test_LinksSection:
+        @pytest.mark.user_on_page
         def test_user_on_the_links_page(self, browser, logs_elements_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = ElementsPage(browser, link)
@@ -679,7 +687,7 @@ class Test_ElementsPage:
                 logs_elements_page.error(f"The item hasn't been created, status code {status_code}")
                 raise err
 
-        req_ids = [f'Locator{t}, code({i}), text({x})' for t, i, x in TestDataElementsPage.REQUESTS_FOR_GETTING_INFO]
+        req_ids = [f'{t}' for t in TestDataElementsPage.REQUESTS_FOR_GETTING_INFO_IDS]
 
         @pytest.mark.webtest
         @pytest.mark.parametrize('locator, status_code, status_text', TestDataElementsPage.REQUESTS_FOR_GETTING_INFO,
@@ -704,6 +712,7 @@ class Test_ElementsPage:
 
     @pytest.mark.UploadDownloadSection
     class TestUploadDownload:
+        @pytest.mark.user_on_page
         def test_user_on_the_uploaddownload_page(self, browser, logs_elements_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = ElementsPage(browser, link)

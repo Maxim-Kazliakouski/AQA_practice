@@ -5,12 +5,15 @@ from Locators.MainPage_locators import MainPageLocators
 from Pages.AlertsFrameWindows import AlertsFrameWindows
 from Tests.tests_AlertsFrameWindows.data_AlertsFrameWindows import TestDataAlertsFrameWindows
 from Tests.tests_MainPage.data_MainPage import TestDataMainPage
+from Tests.tests_MainPage.conftest import browser
+from Tests.tests_MainPage.conftest import browser_xfail
 
 
 @pytest.mark.AlertsFrameWindows
 class Test_AlertsFrameWindows:
     @pytest.mark.BrowserWindows
     class Test_BrowserWindows:
+        @pytest.mark.user_on_page
         def test_user_on_the_browser_windows_page(self, browser, logs_alerts_frame_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = AlertsFrameWindows(browser, link)
@@ -68,6 +71,7 @@ class Test_AlertsFrameWindows:
 
     @pytest.mark.Alerts
     class Test_Alerts:
+        @pytest.mark.user_on_page
         def test_user_on_the_alerts_page(self, browser, logs_alerts_frame_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = AlertsFrameWindows(browser, link)
@@ -100,15 +104,16 @@ class Test_AlertsFrameWindows:
                 raise err
 
         @pytest.mark.xfail(reason='This case better launch with headmode=true')
-        def test_alert_with_delay(self, browser, logs_alerts_frame_page):
+        def test_alert_with_delay(self, browser_xfail, logs_alerts_frame_page):
             link = TestDataAlertsFrameWindows.ALERTS_URL
-            page = AlertsFrameWindows(browser, link)
+            page = AlertsFrameWindows(browser_xfail, link)
             page.open_page(link)
             page.removing_advertisement()
             page.click_on_element(AlertsFrameWindowsLocators.DELAY_ALERT_BUTTON)
             # use time sleep, because of appearing alert with delay
-            time.sleep(6)
+            time.sleep(7)
             alert_text = page.getting_info_from_alert()
+            time.sleep(3)
             try:
                 assert alert_text == TestDataAlertsFrameWindows.DELAY_ALERT_INFO, \
                     "User doesn't click on button or there is no any alert window"
@@ -171,15 +176,16 @@ class Test_AlertsFrameWindows:
 
     @pytest.mark.iFrame
     class Test_iFrame:
+        @pytest.mark.user_on_page
         @pytest.mark.xfail(reason='If failed, check with headmode=false')
         def test_user_on_the_iframe_page(self, browser, logs_alerts_frame_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = AlertsFrameWindows(browser, link)
             page.open_page(link)
+            page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.ALERTS_FRAMES_BUTTON)
             # page.scrolling_for_one_screen()
-            # page.scaling_window(0.7)
             page.go_to_section(AlertsFrameWindowsLocators.FRAMES)
             alerts_page_url = page.getting_current_url()
             try:
@@ -225,6 +231,7 @@ class Test_AlertsFrameWindows:
 
     @pytest.mark.ModalDialogs
     class Test_ModalDialogs:
+        @pytest.mark.user_on_page
         def test_user_on_the_modaldialogs_page(self, browser, logs_alerts_frame_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = AlertsFrameWindows(browser, link)
@@ -242,21 +249,22 @@ class Test_AlertsFrameWindows:
                 logs_alerts_frame_page.error("User isn't on Frames Page")
                 raise err
 
-        def test_small_modal(self, browser, logs_alerts_frame_page):
+        modal_ids = [f'{t}' for t in TestDataAlertsFrameWindows.MODALS]
+
+        @pytest.mark.parametrize('modal_size, appearance',
+                                 [(AlertsFrameWindowsLocators.SMALL_MODAL_BUTTON, AlertsFrameWindowsLocators.SMALL_MODAL_WINDOW), (AlertsFrameWindowsLocators.BIG_MODAL_BUTTON, AlertsFrameWindowsLocators.BIG_MODAL_WINDOW)], ids=modal_ids)
+        def test_small_modal(self, browser, logs_alerts_frame_page, modal_size, appearance):
             link = TestDataAlertsFrameWindows.MODAL_WINDOW_URL
             page = AlertsFrameWindows(browser, link)
             page.open_page(link)
             page.removing_advertisement()
-            page.click_on_element(AlertsFrameWindowsLocators.SMALL_MODAL_BUTTON)
-            small_modal_text = page.search_element(AlertsFrameWindowsLocators.INFO_SMALL_MODAL).text
+            page.click_on_element(modal_size)
+            modal_on_page = page.is_element_present_on_the_page(appearance,
+                                                                logs_alerts_frame_page)
             try:
-                assert small_modal_text == TestDataAlertsFrameWindows.TEXT_SMALL_MODAL, \
-                    f"There is no modal window or text '{TestDataAlertsFrameWindows.TEXT_SMALL_MODAL}'" \
-                    f"doesn't match with test text"
+                assert modal_on_page, "There is no modal window"
             except AssertionError as err:
-                logs_alerts_frame_page.error(
-                    f"There is no modal window or text '{TestDataAlertsFrameWindows.TEXT_SMALL_MODAL}'"
-                    f"doesn't match with test text")
+                logs_alerts_frame_page.error("There is no modal window")
                 raise err
 
         close_buttons_ids = [f'{t}' for t in TestDataAlertsFrameWindows.CLOSE_BUTTONS_NAMES]
