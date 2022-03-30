@@ -9,6 +9,7 @@ class WidgetsLocators:
     SLIDER = 'Slider'
     PROGRESS_BAR = 'Progress Bar'
     TOOL_TIPS = 'Tool Tips'
+    MENU = 'Menu'
 
     # accordian section
     SECOND_ACCORDIAN = By.ID, 'section2Heading'
@@ -48,6 +49,9 @@ class WidgetsLocators:
     HOVER_LINK1 = By.XPATH, "//a[contains(text(),'Contrary')]"
     HOVER_LINK2 = By.XPATH, "//a[contains(text(),'1.10.32')]"
     TOOLTIP_TEXT = By.CLASS_NAME, 'tooltip-inner'
+
+    # for menu section
+    # MENU_SECTION = By.XPATH, "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/ul[1]/li[8]"
 
 
 
