@@ -6,6 +6,7 @@ class TestDataWidgetsPage:
     SLIDER_URL = 'https://demoqa.com/slider'
     PROGRESS_BAR_URL = 'https://demoqa.com/progress-bar'
     TOOL_TIPS_URL = 'https://demoqa.com/tool-tips'
+    MENU_URL = 'https://demoqa.com/menu'
 
     # data for autocomplete section
     LETTER_LIST = ['b', 'e']
