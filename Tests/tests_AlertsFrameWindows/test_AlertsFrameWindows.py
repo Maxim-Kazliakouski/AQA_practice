@@ -182,10 +182,9 @@ class Test_AlertsFrameWindows:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = AlertsFrameWindows(browser, link)
             page.open_page(link)
-            page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.ALERTS_FRAMES_BUTTON)
-            # page.scrolling_for_one_screen()
+            page.browser.refresh()
             page.go_to_section(AlertsFrameWindowsLocators.FRAMES)
             alerts_page_url = page.getting_current_url()
             try:
@@ -238,8 +237,7 @@ class Test_AlertsFrameWindows:
             page.open_page(link)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.ALERTS_FRAMES_BUTTON)
-            # page.scrolling_for_one_screen()
-            # page.scaling_window(0.5)
+            page.browser.refresh()
             page.go_to_section(AlertsFrameWindowsLocators.MODAL_DIALOGS)
             modal_dialogs_page_url = page.getting_current_url()
             try:
