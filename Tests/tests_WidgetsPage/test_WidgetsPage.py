@@ -68,9 +68,10 @@ class Test_WidgetsPage:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            page.scaling_window(0.5)
+            # page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
+            page.browser.refresh()
             page.go_to_section(WidgetsLocators.AUTO_COMPLETE)
             accordian_url = page.getting_current_url()
             try:
@@ -111,9 +112,9 @@ class Test_WidgetsPage:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
+            page.browser.refresh()
             page.go_to_section(WidgetsLocators.DATE_PICKER)
             date_picker_url = page.getting_current_url()
             try:
@@ -159,10 +160,11 @@ class Test_WidgetsPage:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            page.scaling_window(0.5)
+            # page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
-            page.scrolling_for_one_screen()
+            page.browser.refresh()
+            # page.scrolling_for_one_screen()
             page.go_to_section(WidgetsLocators.SLIDER)
             slider_url = page.getting_current_url()
             try:
@@ -198,9 +200,10 @@ class Test_WidgetsPage:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            page.scaling_window(0.5)
+            # page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
+            page.browser.refresh()
             # page.scrolling_for_one_screen()
             page.go_to_section(WidgetsLocators.PROGRESS_BAR)
             pr_bar = page.getting_current_url()
@@ -267,9 +270,10 @@ class Test_WidgetsPage:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            page.scaling_window(0.5)
+            # page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
+            page.browser.refresh()
             # page.scrolling_for_one_screen()
             page.go_to_section(WidgetsLocators.TOOL_TIPS)
             tool_tips_page = page.getting_current_url()
@@ -298,12 +302,12 @@ class Test_WidgetsPage:
             link = TestDataWidgetsPage.TOOL_TIPS_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            page.scaling_window(0.5)
+            page.scaling_window(0.95)
             page.removing_advertisement()
             action = ActionChains(browser)
             hover_me_button = page.search_element(hovered_elements)
             action.move_to_element(hover_me_button).perform()
-            time.sleep(2)
+            time.sleep(1)
             hover_text = page.search_element(tooltip_text).text
             try:
                 assert hover_text == output_text, \
@@ -314,4 +318,22 @@ class Test_WidgetsPage:
                                         f" doesn't match with test text {output_text}")
                 raise err
 
-
+    @pytest.mark.Menu
+    class Test_menu:
+        @pytest.mark.user_on_page
+        @pytest.mark.xfail(reason='Necessary to restart again after test session')
+        def test_user_on_menu_page(self, browser, logs_widgets_page):
+            link = TestDataMainPage.MAIN_PAGE_URL
+            page = WidgetsPage(browser, link)
+            page.open_page(link)
+            # adding function for blocking advertisement if it is
+            page.removing_advertisement()
+            page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
+            page.browser.refresh()
+            page.go_to_section(WidgetsLocators.MENU)
+            text_box_section_url = page.getting_current_url()
+            try:
+                assert text_box_section_url == TestDataWidgetsPage.MENU_URL, "User isn't on menu section..."
+            except AssertionError as err:
+                logs_widgets_page.error("User isn't on menu section...")
+                raise err
