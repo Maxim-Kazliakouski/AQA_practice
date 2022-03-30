@@ -12,7 +12,9 @@ class AlertsFrameWindows(BasePage):
         return alert
 
     def getting_info_from_alert(self):
-        alert_text = self.switch_to_alert_window().text
+        alert = self.switch_to_alert_window()
+        alert_text = alert.text
+        alert.accept()
         return alert_text
 
     def input_text_into_alert(self, text_for_alert):
