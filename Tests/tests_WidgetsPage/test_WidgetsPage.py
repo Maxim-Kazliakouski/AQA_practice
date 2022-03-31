@@ -337,3 +337,41 @@ class Test_WidgetsPage:
             except AssertionError as err:
                 logs_widgets_page.error("User isn't on menu section...")
                 raise err
+
+        def test_dropdown_after_hovering1(self, browser, logs_widgets_page):
+            link = TestDataWidgetsPage.MENU_URL
+            page = WidgetsPage(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            action = ActionChains(browser)
+            main_item2_tab = page.search_element(WidgetsLocators.MAIN_ITEM_2)
+            action.move_to_element(main_item2_tab).perform()
+            dropdown_1 = page.search_element(WidgetsLocators.DROPDOWN_LIST1).text
+            new_dropdown1_list = page.generating_text_to_list(dropdown_1)
+            try:
+                assert new_dropdown1_list == TestDataWidgetsPage.DROPDOWN_1,\
+                    f"The current dropdown is '{new_dropdown1_list}', but should be '{TestDataWidgetsPage.DROPDOWN_1}'"
+            except AssertionError as err:
+                logs_widgets_page.error(f"The current dropdown is '{new_dropdown1_list}',"
+                                        f" but should be {TestDataWidgetsPage.DROPDOWN_1}")
+                raise err
+
+        def test_dropdown_after_hovering2(self, browser, logs_widgets_page):
+            link = TestDataWidgetsPage.MENU_URL
+            page = WidgetsPage(browser, link)
+            page.open_page(link)
+            page.removing_advertisement()
+            action = ActionChains(browser)
+            main_item2_tab = page.search_element(WidgetsLocators.MAIN_ITEM_2)
+            action.move_to_element(main_item2_tab).perform()
+            sub_sub_list = page.search_element(WidgetsLocators.SUB_SUB_LIST)
+            action.move_to_element(sub_sub_list).perform()
+            dropdown_2 = page.search_element(WidgetsLocators.DROPDOWN_LIST2).text
+            new_dropdown2_list = page.generating_text_to_list(dropdown_2)
+            try:
+                assert new_dropdown2_list == TestDataWidgetsPage.DROPDOWN_2, \
+                    f"The current dropdown is '{new_dropdown2_list}', but should be '{TestDataWidgetsPage.DROPDOWN_2}'"
+            except AssertionError as err:
+                logs_widgets_page.error(f"The current dropdown is '{new_dropdown2_list}',"
+                                        f" but should be '{TestDataWidgetsPage.DROPDOWN_2}'")
+                raise err
