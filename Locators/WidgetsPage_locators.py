@@ -51,7 +51,11 @@ class WidgetsLocators:
     TOOLTIP_TEXT = By.CLASS_NAME, 'tooltip-inner'
 
     # for menu section
-    # MENU_SECTION = By.XPATH, "//body/div[@id='app']/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/ul[1]/li[8]"
+    MAIN_ITEM_2 = By.XPATH, "//a[contains(text(),'Main Item 2')]"
+    SUB_SUB_LIST = By.XPATH, "//a[contains(text(),'SUB SUB LIST »')]"
+    DROPDOWN_LIST1 = By.XPATH, '//*[@id="nav"]/li[2]'
+    DROPDOWN_LIST2 = By.XPATH, '//*[@id="nav"]/li[2]/ul/li[3]/ul'
+
 
 
 
