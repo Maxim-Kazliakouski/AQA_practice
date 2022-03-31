@@ -27,6 +27,10 @@ class TestDataWidgetsPage:
     TOOL_TIP_TEXT_HOVER_ON_LINK2 = 'You hovered over the 1.10.32'
     ELEMENTS_NAMES = ['HOVER_ME_BUTTON', 'HOVER_ME_FIELD', "HOVER_ME_LINK1", "HOVER_ME_LINK2"]
 
+    # menu section
+    DROPDOWN_1 = ['Main Item 2', 'Sub Item', 'Sub Item', 'SUB SUB LIST »']
+    DROPDOWN_2 = ['Sub Sub Item 1', 'Sub Sub Item 2']
+
 
 
 
