@@ -18,7 +18,7 @@ class TestDataWidgetsPage:
     DATE_AND_TIME = 'September 5, 1991 3:15 PM'
 
     # slider section
-    RUNNER_POSITION = '70'
+    RUNNER_POSITION = '58'
 
     # tool tips section
     TOOL_TIP_TEXT_HOVER_ON_ME_BUTTON = 'You hovered over the Button'
