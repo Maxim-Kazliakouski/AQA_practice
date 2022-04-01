@@ -21,10 +21,10 @@ class TestDataToolsQaMainPage:
                           'Programming Language']
     # tutorial sections:
     content = ToolsQaMainPageLocators.LIST_OF_SECTION_CONTENT
-    QA_PRACTICES = ['ISTQB Preparation111', 'Software Testing', 'Agile & Scrum']
+    QA_PRACTICES = ['ISTQB Preparation', 'Software Testing', 'Agile & Scrum']
     FE_TEST_AUTOMATION = ['Cypress', 'Protractor', 'Selenium in Java', 'TestProject', 'Katalon Studio', 'Selenium C Sharp']
     BE_TEST_AUTOMATION = ['Rest Assured', 'Postman', 'SOAPUI']
-    MOBILE_TEST_AUTOMATION = ['Appium Studio111']
+    MOBILE_TEST_AUTOMATION = ['Appium Studio']
     FRAMEWORKS_LIB = ['Cucumber', 'TestNG', 'SpecFlow', 'Junit', 'Extent report - Cucumber (TestNG)']
     DEVOPS_TOOLS = ['Maven', 'Git', 'Docker']
     CROSS_BROWSER_TEST = ['LambdaTest', 'Cross Browser Testing - Smartbear', 'Browserling']

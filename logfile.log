@@ -1,6 +1,0 @@
-[2022-03-19 23:19:30,787] -- [ERROR][(See error near the line -> 80]--[Tests.tests_ElementsPage.conftest->tests_ElementPage]: 
-There is no element on the page by the following locators('xpath', "//div[contains(text(),'Compliance')]")
-[2022-03-19 23:29:08,442] -- [ERROR][(See error near the line -> 80]--[Tests.tests_ElementsPage.conftest->tests_ElementPage]: 
-There is no element on the page by the following locators('xpath', "//div[contains(text(),'Compliance')]")
-[2022-03-19 23:37:41,427] -- [ERROR][(See error near the line -> 80]--[Tests.tests_ElementsPage.conftest->tests_ElementPage]: 
-There is no element on the page by the following locators('xpath', "//div[contains(text(),'Compliance')]")
