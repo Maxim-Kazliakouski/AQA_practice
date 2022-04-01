@@ -27,6 +27,7 @@ class Test_FormsPage:
                     assert forms_page_url == TestDataFormsPage.FORMS_PAGE_URL,\
                         "User isn't on Forms Page"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_forms_page.error("User isn't on Forms Page")
                     raise err
 
@@ -40,5 +41,6 @@ class Test_FormsPage:
                 try:
                     assert modal_window, "There is no modal window after clicking on submit button"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_forms_page.error("There is no modal window after clicking on submit button")
                     raise err
