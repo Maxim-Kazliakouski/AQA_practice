@@ -29,6 +29,7 @@ class Test_WidgetsPage:
                 assert accordian_url == TestDataWidgetsPage.ACCORDIAN_URL, \
                     "The user isn't on the Accordian page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("The user isn't on the Accordian page")
                 raise err
 
@@ -44,6 +45,7 @@ class Test_WidgetsPage:
             try:
                 assert second_accordion_on_page, "There is no second accordion after clicking on it"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("There is no second accordion after clicking on it")
                 raise err
 
@@ -57,6 +59,7 @@ class Test_WidgetsPage:
             try:
                 assert first_accordion_on_page, "There is no first accordion after getting on the page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("There is no first accordion after getting on the page")
                 raise err
 
@@ -78,6 +81,7 @@ class Test_WidgetsPage:
                 assert accordian_url == TestDataWidgetsPage.AUTO_COMPLETE_URL, \
                     "The user isn't on the AutoComplete page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("The user isn't on the AutoComplete page")
                 raise err
 
@@ -100,6 +104,7 @@ class Test_WidgetsPage:
                     f"There were getting the following list {new_text}, " \
                     f"but test list is following {output_list}"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(f"There were getting the following list {new_text}, "
                                         f"but test list is following {output_list}")
                 raise err
@@ -121,6 +126,7 @@ class Test_WidgetsPage:
                 assert date_picker_url == TestDataWidgetsPage.DATE_PICKER_URL, \
                     "The user isn't on the Picker Date page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("The user isn't on the Picker Date page")
                 raise err
 
@@ -135,6 +141,7 @@ class Test_WidgetsPage:
                 assert date == TestDataWidgetsPage.DATE, f"The getting date is '{date}'," \
                                                          f" but should be '{TestDataWidgetsPage.DATE}'"
             except AssertionError as err:
+                page.making_screenshot()
                 raise err
 
         def test_select_date_and_time(self, browser_xfail, logs_widgets_page):
@@ -148,6 +155,7 @@ class Test_WidgetsPage:
                 assert date_and_time == TestDataWidgetsPage.DATE_AND_TIME, \
                     f"Getting date '{date_and_time}', doesn't match with test date '{TestDataWidgetsPage.DATE_AND_TIME}'"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(f"Getting date '{date_and_time}',"
                                         f" doesn't match with test date '{TestDataWidgetsPage.DATE_AND_TIME}'")
                 raise err
@@ -160,17 +168,16 @@ class Test_WidgetsPage:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            # page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
             page.browser.refresh()
-            # page.scrolling_for_one_screen()
             page.go_to_section(WidgetsLocators.SLIDER)
             slider_url = page.getting_current_url()
             try:
                 assert slider_url == TestDataWidgetsPage.SLIDER_URL, \
                     f"User isn't on the Slider page {TestDataWidgetsPage.SLIDER_URL}"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(f"User isn't on the Slider page {TestDataWidgetsPage.SLIDER_URL}")
                 raise err
 
@@ -188,6 +195,7 @@ class Test_WidgetsPage:
                 assert runner_value == TestDataWidgetsPage.RUNNER_POSITION, \
                     f"The runner on the '{runner_value}' position, but should be on '{TestDataWidgetsPage.RUNNER_POSITION}'"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(
                     f"The runner on the '{runner_value}' position, but should be on '{TestDataWidgetsPage.RUNNER_POSITION}'")
                 raise err
@@ -212,6 +220,7 @@ class Test_WidgetsPage:
                     f"User isn't on the Progress Bar page {TestDataWidgetsPage.PROGRESS_BAR_URL}, " \
                     f"currently user locates on the {pr_bar}"
             except AssertionError as err:
+                page.making_screenshot()
                 f"User isn't on the Progress Bar page '{TestDataWidgetsPage.PROGRESS_BAR_URL}', "
                 f"currently user locates on the '{pr_bar}'"
                 raise err
@@ -229,6 +238,7 @@ class Test_WidgetsPage:
                 assert reset_button_on_page, "The progress bar isn't filled till the end, and 'Start' button " \
                                              "doesn't change on 'Reset' button"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("The progress bar isn't filled till the end, and 'Start' button "
                                         "doesn't change on 'Reset' button")
                 raise err
@@ -246,6 +256,7 @@ class Test_WidgetsPage:
             try:
                 assert process == '0', f"The process hasn't been reset, because of the 'Reset' button doesn't appear"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(f"The process hasn't been reset, because of the 'Reset' button doesn't appear")
                 raise err
 
@@ -259,6 +270,7 @@ class Test_WidgetsPage:
             try:
                 assert stop_button_on_page, "The 'Stop' button doesnt appear after clicking on 'Start' button"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("The 'Stop' button doesnt appear after clicking on 'Start' button")
                 raise err
 
@@ -270,11 +282,10 @@ class Test_WidgetsPage:
             link = TestDataMainPage.MAIN_PAGE_URL
             page = WidgetsPage(browser, link)
             page.open_page(link)
-            # page.scaling_window(0.5)
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
             page.browser.refresh()
-            # page.scrolling_for_one_screen()
+            page.scroll_screen(parameters='0, 800')
             page.go_to_section(WidgetsLocators.TOOL_TIPS)
             tool_tips_page = page.getting_current_url()
             try:
@@ -282,6 +293,7 @@ class Test_WidgetsPage:
                     f"User isn't on the Progress Bar page {TestDataWidgetsPage.TOOL_TIPS_URL}, " \
                     f"currently user locates on the {tool_tips_page}"
             except AssertionError as err:
+                page.making_screenshot()
                 f"User isn't on the Progress Bar page '{TestDataWidgetsPage.TOOL_TIPS_URL}', "
                 f"currently user locates on the '{tool_tips_page}'"
                 raise err
@@ -314,6 +326,7 @@ class Test_WidgetsPage:
                     f"The text after hovering on button '{hover_text}'" \
                     f" doesn't match with test text '{output_text}'"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(f"The text after hovering on button '{hover_text}'"
                                         f" doesn't match with test text {output_text}")
                 raise err
@@ -330,11 +343,13 @@ class Test_WidgetsPage:
             page.removing_advertisement()
             page.click_on_element(MainPageLocators.WIDGETS_BUTTON)
             page.browser.refresh()
+            page.scroll_screen(parameters='0, 800')
             page.go_to_section(WidgetsLocators.MENU)
             text_box_section_url = page.getting_current_url()
             try:
                 assert text_box_section_url == TestDataWidgetsPage.MENU_URL, "User isn't on menu section..."
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error("User isn't on menu section...")
                 raise err
 
@@ -352,6 +367,7 @@ class Test_WidgetsPage:
                 assert new_dropdown1_list == TestDataWidgetsPage.DROPDOWN_1,\
                     f"The current dropdown is '{new_dropdown1_list}', but should be '{TestDataWidgetsPage.DROPDOWN_1}'"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(f"The current dropdown is '{new_dropdown1_list}',"
                                         f" but should be {TestDataWidgetsPage.DROPDOWN_1}")
                 raise err
@@ -372,6 +388,7 @@ class Test_WidgetsPage:
                 assert new_dropdown2_list == TestDataWidgetsPage.DROPDOWN_2, \
                     f"The current dropdown is '{new_dropdown2_list}', but should be '{TestDataWidgetsPage.DROPDOWN_2}'"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_widgets_page.error(f"The current dropdown is '{new_dropdown2_list}',"
                                         f" but should be '{TestDataWidgetsPage.DROPDOWN_2}'")
                 raise err
