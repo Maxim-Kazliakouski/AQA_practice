@@ -28,6 +28,7 @@ class Test_AlertsFrameWindows:
                 assert browser_windows_page_url == TestDataAlertsFrameWindows.BROWSER_WINDOWS_URL, \
                     "User isn't on Browser Windows Page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("User isn't on Browser Windows")
                 raise err
 
@@ -46,6 +47,7 @@ class Test_AlertsFrameWindows:
                     f"There is no such text like '{TestDataAlertsFrameWindows.INFO_NEW_TAB}' or user" \
                     f"isn't on the new tab"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error(
                     f"There is no such text like '{TestDataAlertsFrameWindows.INFO_NEW_TAB}' or user" \
                     f"isn't on the new tab")
@@ -64,6 +66,7 @@ class Test_AlertsFrameWindows:
                     f"There is no such text like '{TestDataAlertsFrameWindows.INFO_NEW_TAB}' or user" \
                     f"isn't on the new window"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error(
                     f"There is no such text like '{TestDataAlertsFrameWindows.INFO_NEW_TAB}' or user"
                     f"isn't on the new window")
@@ -86,6 +89,7 @@ class Test_AlertsFrameWindows:
                 assert alerts_page_url == TestDataAlertsFrameWindows.ALERTS_URL, \
                     "User isn't on Alerts Page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("User isn't on Alerts Windows")
                 raise err
 
@@ -100,6 +104,7 @@ class Test_AlertsFrameWindows:
                 assert alert_text == TestDataAlertsFrameWindows.ORDINARY_ALERT_INFO, \
                     "User doesn't click on button or there is no any alert window"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("User doesn't click on button or there is no any alert window")
                 raise err
 
@@ -118,6 +123,7 @@ class Test_AlertsFrameWindows:
                 assert alert_text == TestDataAlertsFrameWindows.DELAY_ALERT_INFO, \
                     "User doesn't click on button or there is no any alert window"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("User doesn't click on button or there is no any alert window")
                 raise err
 
@@ -135,6 +141,7 @@ class Test_AlertsFrameWindows:
                     f"User doesn't click on confirm button in alert message and there is no any confirmation" \
                     f" message like '{TestDataAlertsFrameWindows.CONFIRM_ALERT_RESULT_OK}'"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error(f"User doesn't click on confirm button in alert message and there is"
                                              f" no any confirmation message like"
                                              f" '{TestDataAlertsFrameWindows.CONFIRM_ALERT_RESULT_OK}'")
@@ -154,6 +161,7 @@ class Test_AlertsFrameWindows:
                     f"User doesn't click on confirm button in alert message and there is no any confirmation" \
                     f" message like '{TestDataAlertsFrameWindows.CONFIRM_ALERT_RESULT_CANCEL}'"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error(f"User doesn't click on confirm button in alert message and there is"
                                              f" no any confirmation message like"
                                              f" '{TestDataAlertsFrameWindows.CONFIRM_ALERT_RESULT_CANCEL}'")
@@ -171,6 +179,7 @@ class Test_AlertsFrameWindows:
                 assert result == f'You entered {TestDataAlertsFrameWindows.TEXT_FOR_ALERT}', \
                     "The alert text doesn't match with entered or alert window doesn't appear"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("The alert text doesn't match with entered or alert window doesn't appear")
                 raise err
 
@@ -191,6 +200,7 @@ class Test_AlertsFrameWindows:
                 assert alerts_page_url == TestDataAlertsFrameWindows.FRAMES_URL, \
                     "User isn't on Frames Page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("User isn't on Frames Page")
                 raise err
 
@@ -206,6 +216,7 @@ class Test_AlertsFrameWindows:
                     f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_FIRST_IFRAME}'," \
                     f"or there is no iframe"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error(
                     f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_FIRST_IFRAME}'," \
                     f"or there is no iframe")
@@ -223,6 +234,7 @@ class Test_AlertsFrameWindows:
                     f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_SECOND_IFRAME}'," \
                     f"or there is no iframe"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error(
                     f"There is no such text like '{TestDataAlertsFrameWindows.TEXT_SECOND_IFRAME}'," \
                     f"or there is no iframe")
@@ -244,6 +256,7 @@ class Test_AlertsFrameWindows:
                 assert modal_dialogs_page_url == TestDataAlertsFrameWindows.MODAL_WINDOW_URL, \
                     "User isn't on Frames Page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("User isn't on Frames Page")
                 raise err
 
@@ -262,6 +275,7 @@ class Test_AlertsFrameWindows:
             try:
                 assert modal_on_page, "There is no modal window"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("There is no modal window")
                 raise err
 
@@ -281,6 +295,7 @@ class Test_AlertsFrameWindows:
             try:
                 assert modal_on_page == False, "The modal window still on the page"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_alerts_frame_page.error("The modal window still on the page")
                 raise err
 
