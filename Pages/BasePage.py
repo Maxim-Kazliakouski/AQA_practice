@@ -3,6 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException, \
     ElementClickInterceptedException
 from Locators.MainPage_locators import MainPageLocators
+import datetime
 
 
 class BasePage:
@@ -20,7 +21,7 @@ class BasePage:
 
     def search_element(self, locator, time=5):
         try:
-            finding_element = WebDriverWait(self.browser, time).until(EC.presence_of_element_located(locator),
+            finding_element = WebDriverWait(self.browser, time).until(EC.visibility_of_element_located(locator),
                                                        message=f"Can't find element by locator {locator}.")
             return finding_element
         except TimeoutException as err:
@@ -46,6 +47,13 @@ class BasePage:
             self.click_on_element(close_adv_button)
         else:
             print('There is no advertisement')
+
+    def scroll_screen(self, parameters):
+        # where necessary to set parameter by X-axis(1st value) and Y-axis(2nd value)
+        self.browser.execute_script(f"window.scrollTo({parameters})")
+
+    def browser_window_size(self, x, y):
+        self.browser.set_window_size(x, y)
 
     def scrolling_for_one_screen(self):
         self.browser.execute_script("window.scrollTo(0, 1080)")
@@ -84,3 +92,7 @@ class BasePage:
     def generating_text_to_list(self, output):
         generating_output = output.split('\n')
         return generating_output
+
+    def making_screenshot(self):
+        timestamp = datetime.datetime.now().strftime('%d_%m_%Y_%H_%M_%S')
+        self.browser.save_screenshot(f'/Volumes/Work/AQA_practice/Screenshots_error/{timestamp}.png')
