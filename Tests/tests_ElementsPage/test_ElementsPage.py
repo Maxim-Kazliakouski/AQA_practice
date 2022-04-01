@@ -32,6 +32,7 @@ class Test_ElementsPage:
                 try:
                     assert text_box_section_url == TestDataElementsPage.TEXT_BOX_URL, "User isn't on text book section..."
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("User isn't on text book section...")
                     raise err
 
@@ -51,6 +52,7 @@ class Test_ElementsPage:
                 try:
                     assert full_name == f'Name:{full_names}', "The entering username and outputting doesn't match"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The entering username and outputting doesn't match")
                     raise err
 
@@ -71,6 +73,7 @@ class Test_ElementsPage:
                     assert email == f'Email:{emails}', \
                         "The entering username and outputting doesn't match"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The entering username and outputting doesn't match")
                     raise err
 
@@ -90,6 +93,7 @@ class Test_ElementsPage:
                     assert current_address == f'Current Address :{TestDataElementsPage.CURRENT_ADDRESS}', \
                         "The entering current address and outputting doesn't match"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The entering current address and outputting doesn't match")
                     raise err
 
@@ -109,6 +113,7 @@ class Test_ElementsPage:
                     assert current_address == f'Permananet Address :{TestDataElementsPage.PERMANENT_ADDRESS}', \
                         "The entering current address and outputting doesn't match"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The entering current address and outputting doesn't match")
                     raise err
 
@@ -122,6 +127,7 @@ class Test_ElementsPage:
                 try:
                     page.search_element(ElementPageLocators.OUTPUT_NAME)
                     logs_elements_page.error('The output fullname still displaying')
+                    page.making_screenshot()
                     email = True
                 except TimeoutException:
                     email = False
@@ -192,6 +198,7 @@ class Test_ElementsPage:
                     assert red_field, \
                         "The entering email was accepted by validation email field, but shouldn't be"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error(
                         "The entering email was accepted by validation email field, but shouldn't be")
                     raise err
@@ -213,6 +220,7 @@ class Test_ElementsPage:
                     assert check_box_section_url == TestDataElementsPage.CHECK_BOX_URL, \
                         "User isn't on check box section..."
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("User isn't on check box section...")
                     raise err
 
@@ -229,6 +237,7 @@ class Test_ElementsPage:
                     assert enable_checkbox == TestDataElementsPage.ENABLE_CHECKBOX_HOME, \
                         "The checkbox 'HOME' still unchecked"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The checkbox 'HOME' still unchecked")
                     raise err
 
@@ -241,6 +250,7 @@ class Test_ElementsPage:
                     assert new_checkbox_list == TestDataElementsPage.CHECKBOX_LIST, \
                         "The checkbox lists doesn't match with testdata, check test data and data on the website"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error(
                         "The checkbox lists doesn't match with testdata, check test data and data on the website")
                     raise err
@@ -256,6 +266,7 @@ class Test_ElementsPage:
                     assert status_plus_button == TestDataElementsPage.ENABLE_PLUS_BUTTON, \
                         "The plus button doesn't expand the all checkboxes list"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The plus button doesn't expand the all checkboxes list")
                     raise err
 
@@ -273,6 +284,7 @@ class Test_ElementsPage:
                     assert status_minus_button == TestDataElementsPage.ENABLE_MINUS_BUTTON, \
                         "The minus button doesn't work and checkboxes list still appears"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The minus button doesn't work and checkboxes list still appears")
                     raise err
 
@@ -287,6 +299,7 @@ class Test_ElementsPage:
                         "The checkbox list doesn't match with test data, please compare the checkbox list on the " \
                         "webpage and in test data "
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error(
                         "The checkbox list doesn't match with test data, please compare the checkbox list on the "
                         "webpage and in test data ")
@@ -308,6 +321,7 @@ class Test_ElementsPage:
                 assert radio_button_url == TestDataElementsPage.RADIO_BUTTON_URL, \
                     "User isn't on the radio button page https://demoqa.com/radio-button"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("User isn't on the radio button page https://demoqa.com/radio-button")
                 raise err
 
@@ -325,6 +339,7 @@ class Test_ElementsPage:
                 assert text_result == ElementPageLocators.RB_YES, \
                     f"The radio button {ElementPageLocators.RB_YES} hasn't been chosen"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error(f"The radio button {ElementPageLocators.RB_YES} hasn't been chosen")
                 raise err
 
@@ -346,6 +361,7 @@ class Test_ElementsPage:
                     assert web_tables_url == TestDataElementsPage.WEB_TABLES_URL, \
                         "User isn't on the web tables page https://demoqa.com/webtables"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("User isn't on the web tables page https://demoqa.com/webtables")
                     raise err
 
@@ -361,6 +377,7 @@ class Test_ElementsPage:
                 try:
                     assert element_on_page, "The registration form isn't appeared"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The registration form isn't appeared")
                     raise err
 
@@ -376,6 +393,7 @@ class Test_ElementsPage:
                 try:
                     assert department == False, "The 'COMPLIANCE' department still on the page"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The 'COMPLIANCE' department still on the page")
                     raise err
 
@@ -391,6 +409,7 @@ class Test_ElementsPage:
                 try:
                     assert reg_form, "The Registration form doesn't appear, 'ADD' button doesn't work"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The Registration form doesn't appear, 'ADD' button doesn't work")
                     raise err
 
@@ -409,11 +428,13 @@ class Test_ElementsPage:
                 try:
                     assert amount_of_records == 1, "There is should be 1 record with Name=Kierra"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("There is should be 1 record with Name=Kierra")
                     raise err
                 try:
                     assert final_table_content[0][0] == 'Kierra', "There in no such incoming after searching"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error(f"There in no such incoming '{final_table_content[0][0]}' after searching")
                     raise err
 
@@ -434,11 +455,13 @@ class Test_ElementsPage:
                 try:
                     assert amount_of_records == 4, "The record wasn't added"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The record wasn't added")
                     raise err
                 try:
                     assert final_table_content[3][0] == TestDataElementsPage.FIRST_NAME, "The record wasn't added"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error(
                         f"The added name '{final_table_content[3][0]}' doesn't match with test data name"
                         f" '{TestDataElementsPage.FIRST_NAME}'")
@@ -459,6 +482,7 @@ class Test_ElementsPage:
                 try:
                     assert ui_validation, "The user has been created without first name, it's wrong"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The user has been created without first name, it's wrong")
                     raise err
 
@@ -476,6 +500,7 @@ class Test_ElementsPage:
                 try:
                     assert ui_validation, "The user has been created without last name, it's wrong"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The user has been created without last name, it's wrong")
                     raise err
 
@@ -493,6 +518,7 @@ class Test_ElementsPage:
                 try:
                     assert ui_validation, "The user has been created without email, it's wrong"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The user has been created without email, it's wrong")
                     raise err
 
@@ -510,6 +536,7 @@ class Test_ElementsPage:
                 try:
                     assert ui_validation, "The user has been created without age, it's wrong"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The user has been created without age, it's wrong")
                     raise err
 
@@ -527,6 +554,7 @@ class Test_ElementsPage:
                 try:
                     assert ui_validation, "The user has been created without salary, it's wrong"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The user has been created without salary, it's wrong")
                     raise err
 
@@ -544,6 +572,7 @@ class Test_ElementsPage:
                 try:
                     assert ui_validation, "The user has been created without department, it's wrong"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error("The user has been created without department, it's wrong")
                     raise err
 
@@ -563,6 +592,7 @@ class Test_ElementsPage:
                 try:
                     assert ui_validation, f"The user has been created with incorrect email -> {emails}"
                 except AssertionError as err:
+                    page.making_screenshot()
                     logs_elements_page.error(f"The user has been created with incorrect email -> {emails}")
                     raise err
 
@@ -583,6 +613,7 @@ class Test_ElementsPage:
                 assert buttons_url == TestDataElementsPage.BUTTONS_URL, \
                     "User isn't on the buttons page https://demoqa.com/buttons"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("User isn't on the buttons page https://demoqa.com/buttons")
                 raise err
 
@@ -598,6 +629,7 @@ class Test_ElementsPage:
                 assert message == TestDataElementsPage.MESSAGE_AFTER_DOUBLE_CLICKING, \
                     "There is no information message(or incorrect message) after double clicking"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("There is no information message(or incorrect message) after double clicking")
                 raise err
 
@@ -613,6 +645,7 @@ class Test_ElementsPage:
                 assert message == TestDataElementsPage.MESSAGE_AFTER_RIGHT_CLICKING, \
                     "There is no information message(or incorrect message) after clicking on right click button"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("There is no information message(or incorrect message)"
                                          " after clicking on right click button")
                 raise err
@@ -630,6 +663,7 @@ class Test_ElementsPage:
                 assert message == TestDataElementsPage.MESSAGE_AFTER_CLICK_BUTTON, \
                     "There is no information message(or incorrect message) after clicking on button"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("There is no information message(or incorrect message)"
                                          " after clicking on button")
                 raise err
@@ -651,6 +685,7 @@ class Test_ElementsPage:
                 assert links_url == TestDataElementsPage.LINKS_URL, \
                     "User isn't on the links page https://demoqa.com/links"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("User isn't on the links page https://demoqa.com/links")
                 raise err
 
@@ -674,6 +709,7 @@ class Test_ElementsPage:
                 assert current_url == TestDataElementsPage.MAIN_URL, \
                     "The url in second tab doesn't match with https://demoqa.com/"
             except AssertionError as err:
+                page.making_screenshot()
                 raise err
 
         @pytest.mark.parametrize('requests_api, response_api', TestDataElementsPage.REQUESTS)
@@ -706,6 +742,7 @@ class Test_ElementsPage:
                 assert info == f"Link has responded with staus {status_code} and status text {status_text}", \
                     f"There is no info after clicking on link, user gets {status_code} {status_text}"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error(
                     f"There is no info after clicking on link, user gets {status_code} {status_text}")
                 raise err
@@ -727,6 +764,7 @@ class Test_ElementsPage:
                 assert upload_url == TestDataElementsPage.UPLOAD_URL, \
                     "User isn't on the upload page https://demoqa.com/upload-download"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("User isn't on the upload page https://demoqa.com/upload-download")
                 raise err
 
@@ -746,6 +784,7 @@ class Test_ElementsPage:
                     f"There is no '{TestDataElementsPage.DOWNLOAD_FILE_NAME}" \
                     f" in download folder' file hasn't been download"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error(
                     f"There is no '{TestDataElementsPage.DOWNLOAD_FILE_NAME}'"
                     f" in download folder' file hasn't been download")
@@ -764,5 +803,6 @@ class Test_ElementsPage:
                 assert info == TestDataElementsPage.UPLOAD_PATH,\
                     "There is no any info after uploading file"
             except AssertionError as err:
+                page.making_screenshot()
                 logs_elements_page.error("There is no any info after uploading file")
                 raise err
