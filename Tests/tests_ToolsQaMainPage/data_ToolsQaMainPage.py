@@ -40,7 +40,40 @@ class TestDataToolsQaMainPage:
                            (TUTORIAL_MENU_LIST[6], content, CROSS_BROWSER_TEST),
                            (TUTORIAL_MENU_LIST[7], content, NON_FUNC_TESTING),
                            (TUTORIAL_MENU_LIST[8], content, PROGRAM_LANG)]
-
+    # categories on main page
+    CATEGORIES = ['Test Project', 'Katalon', 'ISTQB', 'Scrum', 'Git', 'Protractor', 'Selenium', 'Rest Assured', 'Postman', 'Cucumber']
+    TEST_PROJECT_TEXT = 'TestProject Tutorial'
+    KATALON_TEXT = 'Katalon Studio Tutorial'
+    ISTQB_TEXT = 'ISTQB Foundation Level Syllabus 2018'
+    SCRUM_TEXT = 'Agile & Scrum Tutorial'
+    GIT_TEXT = 'Git Tutorial'
+    PROTRACTOR_TEXT = 'Protractor Tutorial'
+    SELENIUM_TEXT = 'Selenium Tutorial'
+    REST_ASSURED_TEXT = 'Rest Assured Tutorial'
+    POSTMAN_TEXT = 'Postman Tutorial'
+    CUCUMBER_TEXT = 'Cucumber Tutorial'
+    # ALL_CATEGORIES_FOR_PARAMETRIZE = [(CATEGORIES[0], TEST_PROJECT_TEXT),
+    #                                   (CATEGORIES[1], KATALON_TEXT),
+    #                                   (CATEGORIES[2], ISTQB_TEXT),
+    #                                   (CATEGORIES[3], SCRUM_TEXT),
+    #                                   (CATEGORIES[4], GIT_TEXT),
+    #                                   (CATEGORIES[5], PROTRACTOR_TEXT),
+    #                                   (CATEGORIES[6], SELENIUM_TEXT),
+    #                                   (CATEGORIES[7], REST_ASSURED_TEXT),
+    #                                   (CATEGORIES[8], POSTMAN_TEXT),
+    #                                   (CATEGORIES[9], CUCUMBER_TEXT)
+    #                                   ]
+    ALL_CATEGORIES_FOR_PARAMETRIZE = [(1, TEST_PROJECT_TEXT),
+                                      (2, KATALON_TEXT),
+                                      (3, ISTQB_TEXT),
+                                      (4, SCRUM_TEXT),
+                                      (5, GIT_TEXT),
+                                      (6, PROTRACTOR_TEXT),
+                                      (7, SELENIUM_TEXT),
+                                      (8, REST_ASSURED_TEXT),
+                                      (9, POSTMAN_TEXT),
+                                      (10, CUCUMBER_TEXT)
+                                      ]
 
 
 
