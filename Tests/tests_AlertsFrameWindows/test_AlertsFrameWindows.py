@@ -186,7 +186,7 @@ class Test_AlertsFrameWindows:
     @pytest.mark.iFrame
     class Test_iFrame:
         @pytest.mark.user_on_page
-        @pytest.mark.xfail(reason='If failed, check with headmode=false')
+        @pytest.mark.xfail(reason='\nIf failed, check with headmode=false')
         def test_user_on_the_iframe_page(self, browser, logs_alerts_frame_page):
             link = TestDataMainPage.MAIN_PAGE_URL
             page = AlertsFrameWindows(browser, link)
