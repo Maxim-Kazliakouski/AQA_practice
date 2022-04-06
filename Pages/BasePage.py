@@ -21,7 +21,7 @@ class BasePage:
 
     def search_element(self, locator, time=5):
         try:
-            finding_element = WebDriverWait(self.browser, time).until(EC.visibility_of_element_located(locator),
+            finding_element = WebDriverWait(self.browser, time).until(EC.presence_of_element_located(locator),
                                                        message=f"Can't find element by locator {locator}.")
             return finding_element
         except TimeoutException as err:
