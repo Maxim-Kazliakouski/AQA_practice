@@ -4,9 +4,10 @@ from selenium.webdriver.common.by import By
 class ToolsQaMainPageLocators:
     # advertisement suggestion
     CLOSE_ADV_SUGGESTION_BUTTON = By.XPATH, '//*[@id="modal-1-content"]/button'
-    MODAL_WINDOW = By.ID, 'advertisement-modal'
+    MODAL_WINDOW = By.CSS_SELECTOR, "#advertisement-modal"
     ADVERTISE_URL = By.ID, 'advertisement-url'
-    COOKIE = By.ID, 'cookie-policy-modal'
+    # cookies
+    COOKIES = By.CLASS_NAME, 'gdpr-alert.show'
     #
     PAGEINFO = By.XPATH, "/html/body/div[1]/div[1]/div/div[1]/div[2]/div"
     IMAGE_ON_MAIN_PAGE = By.CLASS_NAME, 'learner'
@@ -24,3 +25,15 @@ class ToolsQaMainPageLocators:
     TUTORIAL_MENU_CONTENT = By.CLASS_NAME, 'first-generation'
     QA_PRACTICES = By.XPATH, "//span[contains(text(),'QA Practices')]"
     LIST_OF_SECTION_CONTENT = By.XPATH, '/html/body/nav/div/div/div[2]/div'
+    # enroll yourself button
+    ENROLL_YOURSELF_BUTTON = By.CLASS_NAME, "btn.btn-primary-shadow.btn-block"
+    READ_MORE_BUTTON = By.CLASS_NAME, "new-training__read-more"
+    # text on enroll form
+    ENROLL_FORM = By.CLASS_NAME, 'text-center.upcoming__registration--heading'
+    # text after clicking on read more button
+    TEXT_READ_MORE = By.CLASS_NAME, 'enroll__why--trainer'
+    # categories (10 items)
+    CATEGORIES = By.XPATH, '/html/body/div[1]/div[2]/div/div/div'
+    REDIRECT_TO_CATEGORY = By.XPATH, "//div[contains(text(),'Test Project')]"
+
+
