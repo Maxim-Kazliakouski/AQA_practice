@@ -43,7 +43,7 @@ def pytest_addoption(parser):
                      help="Adding another test status")
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture(scope='function')
 def browser(request):
     browser_name = request.config.getoption('browser.name')
     headless = request.config.getoption('headmode')
