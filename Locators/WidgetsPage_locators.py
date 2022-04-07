@@ -27,8 +27,8 @@ class WidgetsLocators:
     CALENDAR_DATE = By.ID, 'datePickerMonthYearInput'
     # for date and time
     DATE_AND_TIME = By.XPATH, "//input[@id='dateAndTimePickerInput']"
-    # ARROW_BUTTON_FOR_MONTH = By.CLASS_NAME, "react-datepicker__month-read-view--down-arrow"
-    ARROW_BUTTON_FOR_MONTH = By.XPATH, '//*[@id="dateAndTimePicker"]/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/span[1]'
+    ARROW_BUTTON_FOR_MONTH = By.CLASS_NAME, "react-datepicker__month-read-view--down-arrow"
+    # ARROW_BUTTON_FOR_MONTH = By.XPATH, '//*[@id="dateAndTimePicker"]/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/div/span[1]'
     ARROW_BUTTON_FOR_YEAR = By.CLASS_NAME, "react-datepicker__year-read-view--down-arrow"
     ARROW_BUTTON_FOR_YEAR2 = By.XPATH, '//*[@id="dateAndTimePicker"]/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[2]/div[1]/div[13]'
     YEAR_1991 = By.XPATH, "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[11]"
