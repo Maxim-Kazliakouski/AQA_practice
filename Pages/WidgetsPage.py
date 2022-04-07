@@ -1,3 +1,4 @@
+import time
 from Locators.FormsPage_locators import FormsPageLocators
 from Locators.WidgetsPage_locators import WidgetsLocators
 from Pages.BasePage import BasePage
@@ -19,7 +20,7 @@ class WidgetsPage(BasePage):
         # select day not dynamic, because of it's hard to choose certain day
         self.click_on_element(WidgetsLocators.FIFTH_DAY_IN_CALENDAR)
 
-    def choosing_date_and_time(self, number_of_month, year_for_choosing, time):
+    def choosing_date_and_time(self, number_of_month, year_for_choosing, time_in_schedule):
         self.click_on_element(WidgetsLocators.DATE_AND_TIME)
         time.sleep(1.5)
         self.click_on_element(WidgetsLocators.ARROW_BUTTON_FOR_MONTH)
@@ -32,7 +33,7 @@ class WidgetsPage(BasePage):
             self.click_on_element(WidgetsLocators.ARROW_BUTTON_FOR_YEAR2)
         self.click_on_element(WidgetsLocators.YEAR_1991)
         self.click_on_element(WidgetsLocators.FIFTH_DAY)
-        time_in_calendar = self.browser.find_element(By.XPATH, f"//li[contains(text(),'{time}')]")
+        time_in_calendar = self.browser.find_element(By.XPATH, f"//li[contains(text(),'{time_in_schedule}')]")
         time_in_calendar.click()
 
 
