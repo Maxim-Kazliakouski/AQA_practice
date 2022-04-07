@@ -43,7 +43,7 @@ def pytest_addoption(parser):
                      help="Adding another test status")
 
 
-@pytest.fixture(scope='function')
+@pytest.fixture(scope='class')
 def browser(request):
     browser_name = request.config.getoption('browser.name')
     headless = request.config.getoption('headmode')
@@ -64,22 +64,24 @@ def browser(request):
             # options.add_experimental_option("prefs", prefs)
             # options.add_argument("--disable-notifications")
             # options.add_argument('--remote-debugging-port=9222')
-            options.add_argument('--enable-javascript')
+            # options.add_argument('--enable-javascript')
             # options.add_argument(
             #     "--user-agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:72.0) Gecko/20100101 Firefox/72.0'")
-            options.add_argument('--ignore-certificate-errors')
+            # options.add_argument('--ignore-certificate-errors')
             # options.add_argument('--allow-insecure-localhost')
-            options.add_argument(
-                "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
+            # options.add_argument(
+            #     "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
             options.headless = True
             # params for ordinary jenkins without docker!!!
             # s = Service('Tools/chromedriver')
             # browser = webdriver.Chrome(service=s, options=options)
+
             # params for docker
             options = webdriver.ChromeOptions()
             options.add_argument('--no-sandbox')
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
+            options.add_argument('--disable-dev-shm-usage')
             s = Service('/usr/local/bin/chromedriver')
             browser = webdriver.Chrome(service=s, options=options)
             # browser.maximize_window()
