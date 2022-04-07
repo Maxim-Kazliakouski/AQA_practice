@@ -96,3 +96,4 @@ class BasePage:
     def making_screenshot(self):
         timestamp = datetime.datetime.now().strftime('%d_%m_%Y_%H_%M_%S')
         self.browser.save_screenshot(f'/Volumes/Work/AQA_practice/Screenshots_error/{timestamp}.png')
+        self.browser.save_screenshot(f'/var/jenkins_home/workspace/all_test_cases/Screenshots_error/{timestamp}.png')
