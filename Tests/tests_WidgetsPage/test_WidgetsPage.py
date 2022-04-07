@@ -150,6 +150,7 @@ class Test_WidgetsPage:
             page = WidgetsPage(browser_xfail, link)
             page.open_page(link)
             page.removing_advertisement()
+            browser_xfail.set_window_size(1920, 1080)
             page.choosing_date_and_time(number_of_month=9, year_for_choosing=1991, time_in_schedule='15:15')
             date_and_time = page.getting_attribute_from_element(WidgetsLocators.DATE_AND_TIME, 'value')
             try:
