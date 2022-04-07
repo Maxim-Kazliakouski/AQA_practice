@@ -55,8 +55,7 @@ def browser(request):
         if headless == 'true':
             options = webdriver.ChromeOptions()
             # prefs = {"download.default_directory": "/Users/max_kazliakouski/Downloads/"}
-            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
-            options.add_experimental_option("prefs", prefs)
+            # options.add_experimental_option("prefs", prefs)
             # adding browser options!!! important
             # SETTING FOR ACTIVATING GOOGLE ACCOUNT
             # options.add_argument(
@@ -79,6 +78,8 @@ def browser(request):
 
             # params for docker
             options = webdriver.ChromeOptions()
+            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
+            options.add_experimental_option("prefs", prefs)
             options.add_argument('--no-sandbox')
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
@@ -179,23 +180,25 @@ def browser_xfail(request):
     if browser_name == 'chrome':
         # here we set in commandline choosing for headless mode
         if headless == 'true':
-            options = webdriver.ChromeOptions()
-            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
+            # options = webdriver.ChromeOptions()
             # example: prefs = {"download.default_directory" : "C:\Tutorial\down"};
-            options.add_experimental_option("prefs", prefs)
+            # options.add_experimental_option("prefs", prefs)
             # adding browser options!!! important
             # options.add_argument(
             #     "user-data-dir=/Users/max_kazliakouski/Library/Application Support/Google/Chrome/Default")
             # prefs = {"profile.default_content_setting_values.notifications": 2}
             # options.add_experimental_option("prefs", prefs)
             # options.add_argument("--disable-notifications")
-            options.add_argument(
-                "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
-            options.headless = True
+            # options.add_argument(
+            #     "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
+            # options.headless = True
             # s = Service('Tools/chromedriver')
             # browser = webdriver.Chrome(service=s, options=options)
             # params for docker
             options = webdriver.ChromeOptions()
+            options.headless = True
+            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
+            options.add_experimental_option("prefs", prefs)
             options.add_argument('--no-sandbox')
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
@@ -206,17 +209,19 @@ def browser_xfail(request):
             browser.implicitly_wait(5)
         else:
             # options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-            options = webdriver.ChromeOptions()
+            # options = webdriver.ChromeOptions()
             # options.add_argument(
             #     "user-data-dir=/Users/max_kazliakouski/Library/Application Support/Google/Chrome/SeleniumProfile")
             # prefs = {"profile.default_content_setting_values.notifications": 2}
             # options.add_experimental_option("prefs", prefs)
             # options.add_argument(
             # "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
-            options.headless = False
             # s = Service('Tools/chromedriver')
             # browser = webdriver.Chrome(service=s, options=options)
             options = webdriver.ChromeOptions()
+            options.headless = False
+            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
+            options.add_experimental_option("prefs", prefs)
             options.add_argument('--no-sandbox')
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')

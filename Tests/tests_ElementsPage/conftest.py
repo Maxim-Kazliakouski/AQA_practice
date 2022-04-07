@@ -95,12 +95,16 @@ def enable_checkbox_home(browser):
 @pytest.fixture(scope='function')
 def removing_file_after_downloading():
     print('Removing files, if they are after previous tests...')
-    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/text.txt']))
-    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/sampleFile.jpeg']))
+    # subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/text.txt']))
+    # subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/sampleFile.jpeg']))
+    subprocess.run((['rm', '/var/jenkins_home/workspace/all_test_cases/text.txt']))
+    subprocess.run((['rm', '/var/jenkins_home/workspace/all_test_cases/Downloads/sampleFile.jpeg']))
     yield
     print('\nRemoving permanent files...')
-    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/text.txt']))
-    subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/sampleFile.jpeg']))
+    # subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/text.txt']))
+    # subprocess.run((['rm', '/Users/max_kazliakouski/Downloads/sampleFile.jpeg']))
+    subprocess.run((['rm', '/var/jenkins_home/workspace/all_test_cases/text.txt']))
+    subprocess.run((['rm', '/var/jenkins_home/workspace/all_test_cases/Downloads/sampleFile.jpeg']))
 
 
 @pytest.fixture(scope='session')
