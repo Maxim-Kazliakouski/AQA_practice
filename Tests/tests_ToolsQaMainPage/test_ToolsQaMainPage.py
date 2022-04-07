@@ -155,7 +155,7 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
                     "User hasn't been redirected to the read more text after clicking on read more button")
                 raise err
 
-        def test_appearing_advertisment(self, browser_xfail, logs_tool_qa_main_page):
+        def test_appearing_advertisement(self, browser_xfail, logs_tool_qa_main_page):
             link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
             page = ToolsQaMainPage(browser_xfail, link)
             page.open_page(link)
@@ -181,14 +181,6 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
                 page.making_screenshot()
                 logs_tool_qa_main_page.error(f"There is no cookies on the page.\nSee Assertion error below:\n{err}")
                 raise err
-
-
-
-
-
-
-
-
 
     @pytest.mark.Tutorials
     class Test_tutorials:
