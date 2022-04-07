@@ -159,10 +159,17 @@ class ElementsPage(BasePage):
         element = self.browser.find_element(*locator)
         action.context_click(element).perform()
 
+    # def getting_content_list_from_downloading_folder(self):
+    #     with open('/Users/max_kazliakouski/Downloads/text.txt', 'w') as f:
+    #         subprocess.run(['ls', '/Users/max_kazliakouski/Downloads'], stdout=f, text=True)
+    #     with open('/Users/max_kazliakouski/Downloads/text.txt', 'r') as l:
+    #         text = l.read()
+    #     return text
+
     def getting_content_list_from_downloading_folder(self):
-        with open('/Users/max_kazliakouski/Downloads/text.txt', 'w') as f:
-            subprocess.run(['ls', '/Users/max_kazliakouski/Downloads'], stdout=f, text=True)
-        with open('/Users/max_kazliakouski/Downloads/text.txt', 'r') as l:
+        with open('/var/jenkins_home/workspace/all_test_cases/Downloads/text.txt', 'w') as f:
+            subprocess.run(['ls', '/var/jenkins_home/workspace/all_test_cases/Downloads'], stdout=f, text=True)
+        with open('/var/jenkins_home/workspace/all_test_cases/Downloads/text.txt', 'r') as l:
             text = l.read()
         return text
 
