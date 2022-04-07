@@ -797,7 +797,8 @@ class Test_ElementsPage:
             # adding function for blocking advertisement if it is
             page.removing_advertisement()
             upload_button = page.search_element(ElementPageLocators.UPLOAD_BUTTON)
-            upload_button.send_keys('/Volumes/Work/AQA_practice/eng.srt')
+            # upload_button.send_keys('/Volumes/Work/AQA_practice/eng.srt')
+            upload_button.send_keys('/var/jenkins_home/workspace/all_test_cases/eng.srt')
             info = page.getting_info_after_uploading_file(logs_elements_page)
             try:
                 assert info == TestDataElementsPage.UPLOAD_PATH,\
