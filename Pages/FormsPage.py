@@ -46,7 +46,7 @@ class FormsPage(BasePage):
     def uploading_file(self):
         upload_button = self.search_element(FormsPageLocators.UPLOAD_BUTTON)
         upload_button.send_keys('/var/jenkins_home/workspace/all_test_cases/eng.srt')
-        upload_button.send_keys('/Volumes/Work/AQA_practice/eng.srt')
+        # upload_button.send_keys('/Volumes/Work/AQA_practice/eng.srt')
 
     def filling_form(self):
         self.browser.execute_script("document.body.style.transform = 'scale(0.55)'")
