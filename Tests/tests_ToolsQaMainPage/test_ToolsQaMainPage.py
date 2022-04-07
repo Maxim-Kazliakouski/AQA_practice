@@ -189,7 +189,8 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
             page = ToolsQaMainPage(browser, link)
             page.open_page(link)
             page.click_on_element(ToolsQaMainPageLocators.TUTORIAL_BUTTON)
-            time.sleep(2)
+            # adding time sleep for docker test, cause without time doesn't work
+            time.sleep(1)
             tutorial_list = page.search_element(ToolsQaMainPageLocators.TUTORIAL_MENU_CONTENT).text
             new_list = page.generating_text_to_list(tutorial_list)
             try:
