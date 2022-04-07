@@ -21,6 +21,7 @@ class WidgetsPage(BasePage):
 
     def choosing_date_and_time(self, number_of_month, year_for_choosing, time):
         self.click_on_element(WidgetsLocators.DATE_AND_TIME)
+        time.sleep(1.5)
         self.click_on_element(WidgetsLocators.ARROW_BUTTON_FOR_MONTH)
         month = self.browser.find_element(By.XPATH, f"//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[{number_of_month}]")
         month.click()
