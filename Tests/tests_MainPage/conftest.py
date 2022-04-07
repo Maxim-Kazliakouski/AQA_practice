@@ -82,7 +82,7 @@ def browser(request):
             options.add_argument('--disable-gpu')
             s = Service('/usr/local/bin/chromedriver')
             browser = webdriver.Chrome(service=s, options=options)
-            browser.maximize_window()
+            # browser.maximize_window()
             browser.set_window_size(1920, 1080)
             browser.implicitly_wait(5)
         else:
@@ -189,15 +189,15 @@ def browser_xfail(request):
             options.add_argument(
                 "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
             options.headless = True
-            s = Service('Tools/chromedriver')
-            browser = webdriver.Chrome(service=s, options=options)
+            # s = Service('Tools/chromedriver')
+            # browser = webdriver.Chrome(service=s, options=options)
             # params for docker
             options = webdriver.ChromeOptions()
             options.add_argument('--no-sandbox')
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
-            # s = Service('/usr/local/bin/chromedriver')
-            # browser = webdriver.Chrome(service=s, options=options)
+            s = Service('/usr/local/bin/chromedriver')
+            browser = webdriver.Chrome(service=s, options=options)
             browser.maximize_window()
             browser.implicitly_wait(5)
         else:
