@@ -118,7 +118,7 @@ class Test_AlertsFrameWindows:
             # use time sleep, because of appearing alert with delay
             time.sleep(7)
             alert_text = page.getting_info_from_alert()
-            time.sleep(3)
+            time.sleep(4)
             try:
                 assert alert_text == TestDataAlertsFrameWindows.DELAY_ALERT_INFO, \
                     "User doesn't click on button or there is no any alert window"
