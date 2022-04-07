@@ -54,7 +54,8 @@ def browser(request):
         # here we set in commandline choosing for headless mode
         if headless == 'true':
             options = webdriver.ChromeOptions()
-            prefs = {"download.default_directory": "/Users/max_kazliakouski/Downloads/"}
+            # prefs = {"download.default_directory": "/Users/max_kazliakouski/Downloads/"}
+            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
             options.add_experimental_option("prefs", prefs)
             # adding browser options!!! important
             # SETTING FOR ACTIVATING GOOGLE ACCOUNT
@@ -179,7 +180,7 @@ def browser_xfail(request):
         # here we set in commandline choosing for headless mode
         if headless == 'true':
             options = webdriver.ChromeOptions()
-            prefs = {"download.default_directory": "/Users/max_kazliakouski/Downloads/"}
+            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
             # example: prefs = {"download.default_directory" : "C:\Tutorial\down"};
             options.add_experimental_option("prefs", prefs)
             # adding browser options!!! important
