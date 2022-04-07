@@ -144,7 +144,7 @@ class Test_WidgetsPage:
                 page.making_screenshot()
                 raise err
 
-        @pytest.mark.xfail(reason='This case necessary to launch separetly on host machine')
+        # @pytest.mark.xfail(reason='This case necessary to launch separately on host machine')
         def test_select_date_and_time(self, browser_xfail, logs_widgets_page):
             link = TestDataWidgetsPage.DATE_PICKER_URL
             page = WidgetsPage(browser_xfail, link)
