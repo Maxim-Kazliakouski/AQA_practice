@@ -183,8 +183,8 @@ def browser_xfail(request):
             # example: prefs = {"download.default_directory" : "C:\Tutorial\down"};
             options.add_experimental_option("prefs", prefs)
             # adding browser options!!! important
-            options.add_argument(
-                "user-data-dir=/Users/max_kazliakouski/Library/Application Support/Google/Chrome/Default")
+            # options.add_argument(
+            #     "user-data-dir=/Users/max_kazliakouski/Library/Application Support/Google/Chrome/Default")
             # prefs = {"profile.default_content_setting_values.notifications": 2}
             # options.add_experimental_option("prefs", prefs)
             # options.add_argument("--disable-notifications")
@@ -198,6 +198,7 @@ def browser_xfail(request):
             options.add_argument('--no-sandbox')
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
+            options.add_argument('--disable-dev-shm-usage')
             s = Service('/usr/local/bin/chromedriver')
             browser = webdriver.Chrome(service=s, options=options)
             browser.maximize_window()
