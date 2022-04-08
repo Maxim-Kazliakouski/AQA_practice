@@ -78,8 +78,8 @@ def browser(request):
 
             # params for docker
             options = webdriver.ChromeOptions()
-            prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
-            options.add_experimental_option("prefs", prefs)
+            # prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
+            # options.add_experimental_option("prefs", prefs)
             options.add_argument('--no-sandbox')
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
@@ -99,6 +99,9 @@ def browser(request):
             # options.add_argument(
                 # "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
             options.headless = False
+            # options.add_argument(
+            #     "user-data-dir=/Users/max_kazliakouski/Library/Application Support/Google/Chrome/SeleniumProfile")
+            # options.add_argument("--disable-notifications")
             s = Service('Tools/chromedriver')
             browser = webdriver.Chrome(service=s, options=options)
             browser.maximize_window()
