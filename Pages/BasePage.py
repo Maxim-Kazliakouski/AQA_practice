@@ -85,6 +85,17 @@ class BasePage:
             return False
         return True
 
+    def is_element_visible_on_th_page(self, locator, logs_element_page, time=5):
+        try:
+            WebDriverWait(self.browser, time).until(EC.visibility_of_element_located(locator),
+                message="There is no such element in carousel, cause of it's hidden and doesn't appear yet")
+        except NoSuchElementException:
+            logs_element_page.error(f"The element isn't visible on the page, locator -> {locator}")
+        except TimeoutException:
+            logs_element_page.error(f"The element isn't visible on the page, locator -> {locator}")
+            return False
+        return True
+
     def sending_keys_into_field(self, locator, content):
         field = self.search_element(locator)
         field.send_keys(content)
@@ -96,4 +107,4 @@ class BasePage:
     def making_screenshot(self):
         timestamp = datetime.datetime.now().strftime('%d_%m_%Y_%H_%M_%S')
         self.browser.save_screenshot(f'/Volumes/Work/AQA_practice/Screenshots_error/{timestamp}.png')
-        self.browser.save_screenshot(f'/var/jenkins_home/workspace/all_test_cases/Screenshots_error/{timestamp}.png')
+        # self.browser.save_screenshot(f'/var/jenkins_home/workspace/all_test_cases/Screenshots_error/{timestamp}.png')
