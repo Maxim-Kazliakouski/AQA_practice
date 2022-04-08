@@ -52,17 +52,6 @@ class TestDataToolsQaMainPage:
     REST_ASSURED_TEXT = 'Rest Assured Tutorial'
     POSTMAN_TEXT = 'Postman Tutorial'
     CUCUMBER_TEXT = 'Cucumber Tutorial'
-    # ALL_CATEGORIES_FOR_PARAMETRIZE = [(CATEGORIES[0], TEST_PROJECT_TEXT),
-    #                                   (CATEGORIES[1], KATALON_TEXT),
-    #                                   (CATEGORIES[2], ISTQB_TEXT),
-    #                                   (CATEGORIES[3], SCRUM_TEXT),
-    #                                   (CATEGORIES[4], GIT_TEXT),
-    #                                   (CATEGORIES[5], PROTRACTOR_TEXT),
-    #                                   (CATEGORIES[6], SELENIUM_TEXT),
-    #                                   (CATEGORIES[7], REST_ASSURED_TEXT),
-    #                                   (CATEGORIES[8], POSTMAN_TEXT),
-    #                                   (CATEGORIES[9], CUCUMBER_TEXT)
-    #                                   ]
     ALL_CATEGORIES_FOR_PARAMETRIZE = [(1, TEST_PROJECT_TEXT),
                                       (2, KATALON_TEXT),
                                       (3, ISTQB_TEXT),
@@ -74,6 +63,16 @@ class TestDataToolsQaMainPage:
                                       (9, POSTMAN_TEXT),
                                       (10, CUCUMBER_TEXT)
                                       ]
+    # data for carousel:
+    CONTENT_LIST_IN_CAROUSEL = ['Basic Authentication', 'Error Guessing', 'What is Rest Api?', 'Rest Assured Examples',
+                                'Complete Guide for Test Automation Frameworks',
+                                'What is Fault Tolerance in Test Automation?', 'Getting started with Rest Assured',
+                                'What is REST?', 'Jenkins Backup Plugin', 'Experience Based Testing']
+    BUTTONS_IN_CAROUSEL = ['NEXT BUTTON', 'BACK BUTTON']
+    CAROUSEL_BUTTONS_FOR_PARAMETRIZE = [(ToolsQaMainPageLocators.NEXT_CAROUSEL_BUTTON, 8),
+                                        (ToolsQaMainPageLocators.BACK_CAROUSEL_BUTTON, 5)]
+
+
 
 
 
