@@ -4,9 +4,13 @@ from Locators.ToolsQaMainPage_locators import ToolsQaMainPageLocators
 from Pages.ToolsQaMainPage import ToolsQaMainPage
 from Tests.tests_ToolsQaMainPage.data_ToolsQaMainPage import TestDataToolsQaMainPage
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchFrameException, \
+    ElementClickInterceptedException
 from selenium.webdriver.common.action_chains import ActionChains
 from Tests.tests_MainPage.conftest import browser
 from Tests.tests_MainPage.conftest import browser_xfail
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 @pytest.mark.ToolsQaMainPage
@@ -161,7 +165,8 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
             page.open_page(link)
             # time sleep for appearing advertisement (appears after 5-6 secs)
             time.sleep(6)
-            hide_advert_appearing = page.getting_attribute_from_element(ToolsQaMainPageLocators.MODAL_WINDOW, 'aria-hidden')
+            hide_advert_appearing = page.getting_attribute_from_element(ToolsQaMainPageLocators.MODAL_WINDOW,
+                                                                        'aria-hidden')
             try:
                 assert hide_advert_appearing == 'false', "The advertisement doesn't appear"
             except AssertionError as err:
@@ -173,7 +178,6 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
             link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
             page = ToolsQaMainPage(browser, link)
             page.open_page(link)
-            page.making_screenshot()
             cookies = page.is_element_present_on_the_page(ToolsQaMainPageLocators.COOKIES, logs_tool_qa_main_page)
             try:
                 assert cookies, "There is no cookies on the page"
@@ -250,23 +254,96 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
 
         cat_ids = [f'Category: {t}' for t in TestDataToolsQaMainPage.CATEGORIES]
 
-        @pytest.mark.parametrize('category_name, text_on_category_page', TestDataToolsQaMainPage.ALL_CATEGORIES_FOR_PARAMETRIZE, ids=cat_ids)
-        def test_redirection_to_all_categories(self, browser, logs_tool_qa_main_page, category_name, text_on_category_page):
+        @pytest.mark.parametrize('category_name, text_on_category_page',
+                                 TestDataToolsQaMainPage.ALL_CATEGORIES_FOR_PARAMETRIZE, ids=cat_ids)
+        def test_redirection_to_all_categories(self, browser, logs_tool_qa_main_page, category_name,
+                                               text_on_category_page):
             link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
             page = ToolsQaMainPage(browser, link)
             page.open_page(link)
             page.scroll_screen('0, 700')
-            page.browser.find_element(By.XPATH, f"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/a[{category_name}]/div[2]/div[1]").click()
+            page.browser.find_element(By.XPATH,
+                                      f"/html[1]/body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/a[{category_name}]/div[2]/div[1]").click()
             categ_text_locator = By.XPATH, f"//h1[contains(text(),'{text_on_category_page}')]"
             cat_text_on_page = page.is_element_present_on_the_page(categ_text_locator, logs_tool_qa_main_page)
             try:
                 assert cat_text_on_page, f"There is no such text '{text_on_category_page}'"
             except AssertionError as err:
                 page.making_screenshot()
-                logs_tool_qa_main_page.error(f"There is no such text '{text_on_category_page}' \nSee assertion error:\n{err}")
+                logs_tool_qa_main_page.error(
+                    f"There is no such text '{text_on_category_page}' \nSee assertion error:\n{err}")
                 raise err
 
+    @pytest.mark.ArticlesCarousel
+    class Test_articles_carousel:
+        def test_redirection_to_latest_articles(self, browser, logs_tool_qa_main_page):
+            link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
+            page = ToolsQaMainPage(browser, link)
+            page.open_page(link)
+            page.scrolling_for_one_screen()
+            page.click_on_element(ToolsQaMainPageLocators.LATEST_ARTICLES_BUTTON)
+            last_articles_info = page.is_element_present_on_the_page(ToolsQaMainPageLocators.LATEST_ARTICLES_INFO,
+                                                                     logs_tool_qa_main_page)
+            try:
+                assert last_articles_info, "User isn't on the last articles page"
+            except AssertionError as err:
+                page.making_screenshot()
+                logs_tool_qa_main_page.error(f"User isn't on the last articles page. See Assertion error:\n{err}")
+                raise err
 
+        def test_carousel_with_topics(self, capsys, browser, logs_tool_qa_main_page):
+            link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
+            page = ToolsQaMainPage(browser, link)
+            page.open_page(link)
+            page.scroll_screen('0, 1350')
+            appearance = []
+            n = 0
+            while n < 10:
+                page.removing_advertisement()
+                try:
+                    visible_element_in_carousel = WebDriverWait(page.browser, 1).until(
+                        EC.visibility_of_element_located((By.XPATH, f'//*[@id="tns1-item{n}"]')),
+                        message="There is no such element in carousel, cause of it's hidden and doesn't appear yet")
+                    with capsys.disabled():
+                        print(f'\nYes, there is "{n}" element in carousel!!!', end='')
+                    print(page.search_element((By.XPATH, f'//*[@id="tns1-item{n}"]')).text)
+                    title = page.generating_text_to_list(visible_element_in_carousel.text)
+                    appearance.append(title[0])
+                    n += 1
+                    time.sleep(4)
+                except TimeoutException as err:
+                    page.making_screenshot()
+                    logs_tool_qa_main_page.error('There is no such element in carousel')
+                    raise err
+            try:
+                assert appearance == TestDataToolsQaMainPage.CONTENT_LIST_IN_CAROUSEL, "The content in carousel " \
+                                            "and in test data is different, please check web-site and test data"
+            except AssertionError as err:
+                page.making_screenshot()
+                logs_tool_qa_main_page.error(f"The content in carousel and in test data is different,"
+                                             f" please check web-site and test data.\nSee Assertion error:\n{err}")
+                raise err
 
+        buttons_ids = [f'Button-{t}' for t in TestDataToolsQaMainPage.BUTTONS_IN_CAROUSEL]
 
-
+        @pytest.mark.parametrize('buttons, article', TestDataToolsQaMainPage.CAROUSEL_BUTTONS_FOR_PARAMETRIZE,
+                                 ids=buttons_ids)
+        def test_next_button_in_carousel(self, browser, logs_tool_qa_main_page, buttons, article):
+            link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
+            page = ToolsQaMainPage(browser, link)
+            page.open_page(link)
+            page.scroll_screen('0, 1350')
+            n = 0
+            while n < 5:
+                page.removing_advertisement()
+                page.click_on_element(buttons)
+                n += 1
+            visible_el_in_carousel = page.is_element_visible_on_th_page((By.XPATH, f'//*[@id="tns1-item{article}"]'),
+                                                                        logs_tool_qa_main_page)
+            try:
+                assert visible_el_in_carousel, "There is no such element after clicking on Next carousel button"
+            except AssertionError as err:
+                page.making_screenshot()
+                logs_tool_qa_main_page.error(f"There is no such element after clicking on Next carousel button."
+                                             f"\nSee Assertion error:\n{err}")
+                raise err
