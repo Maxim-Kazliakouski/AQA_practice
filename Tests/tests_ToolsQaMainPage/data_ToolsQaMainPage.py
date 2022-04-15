@@ -71,7 +71,17 @@ class TestDataToolsQaMainPage:
     BUTTONS_IN_CAROUSEL = ['NEXT BUTTON', 'BACK BUTTON']
     CAROUSEL_BUTTONS_FOR_PARAMETRIZE = [(ToolsQaMainPageLocators.NEXT_CAROUSEL_BUTTON, 8),
                                         (ToolsQaMainPageLocators.BACK_CAROUSEL_BUTTON, 5)]
-
+    # CHECKING_CONTENT_IN_CAROUSEL = [(CONTENT_LIST_IN_CAROUSEL[0]),
+    #                                 (1, CONTENT_LIST_IN_CAROUSEL[1]),
+    #                                 (2, CONTENT_LIST_IN_CAROUSEL[2]),
+    #                                 (3, CONTENT_LIST_IN_CAROUSEL[3]),
+    #                                 (),
+    #                                 (),
+    #                                 (),
+    #                                 (),
+    #                                 (),
+    #                                 (),
+    #                                 ]
 
 
 
