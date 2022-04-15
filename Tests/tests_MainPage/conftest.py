@@ -73,8 +73,8 @@ def browser(request):
             #     "user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36")
             options.headless = True
             # params for ordinary jenkins without docker!!!
-            # s = Service('Tools/chromedriver')
-            # browser = webdriver.Chrome(service=s, options=options)
+            s = Service('Tools/chromedriver')
+            browser = webdriver.Chrome(service=s, options=options)
 
             # params for docker
             options = webdriver.ChromeOptions()
@@ -84,8 +84,8 @@ def browser(request):
             options.add_argument('--headless')
             options.add_argument('--disable-gpu')
             options.add_argument('--disable-dev-shm-usage')
-            s = Service('/usr/local/bin/chromedriver')
-            browser = webdriver.Chrome(service=s, options=options)
+            # s = Service('/usr/local/bin/chromedriver')
+            # browser = webdriver.Chrome(service=s, options=options)
             # browser.maximize_window()
             browser.set_window_size(1920, 1080)
             browser.implicitly_wait(5)
