@@ -226,10 +226,12 @@ def browser_xfail(request):
             prefs = {"download.default_directory": "/var/jenkins_home/workspace/all_test_cases/Downloads/"}
             options.add_experimental_option("prefs", prefs)
             options.add_argument('--no-sandbox')
-            options.add_argument('--headless')
+            # options.add_argument('--headless')
             options.add_argument('--disable-gpu')
             s = Service('/usr/local/bin/chromedriver')
             browser = webdriver.Chrome(service=s, options=options)
+            # s = Service('Tools/chromedriver')
+            # browser = webdriver.Chrome(service=s, options=options)
             browser.maximize_window()
             browser.implicitly_wait(5)
     elif browser_name == 'mozila':
