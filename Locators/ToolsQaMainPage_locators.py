@@ -35,11 +35,12 @@ class ToolsQaMainPageLocators:
     # categories (10 items)
     CATEGORIES = By.XPATH, '/html/body/div[1]/div[2]/div/div/div'
     REDIRECT_TO_CATEGORY = By.XPATH, "//div[contains(text(),'Test Project')]"
-    # articles carousel
+    # articles carousel, carousel content
     LATEST_ARTICLES_BUTTON = By.XPATH, "//a[contains(text(),'Latest Articles')]"
     LATEST_ARTICLES_INFO = By.XPATH, "//h1[contains(text(),'Recent Articles')]"
     NEXT_CAROUSEL_BUTTON = By.XPATH, "//button[contains(text(),'>')]"
     BACK_CAROUSEL_BUTTON = By.XPATH, "//button[contains(text(),'<')]"
+    BASIC_AUTH = By.XPATH, "//h1[contains(text(),'Basic Authentication')]"
 
 
 
