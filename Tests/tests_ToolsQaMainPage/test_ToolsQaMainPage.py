@@ -159,6 +159,7 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
                     "User hasn't been redirected to the read more text after clicking on read more button")
                 raise err
 
+        @pytest.mark.skip(reason='In this site version there is no advertisement')
         def test_appearing_advertisement(self, browser_xfail, logs_tool_qa_main_page):
             link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
             page = ToolsQaMainPage(browser_xfail, link)
