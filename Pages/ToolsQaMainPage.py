@@ -31,23 +31,24 @@ class ToolsQaMainPage(BasePage):
         else:
             pass
 
-    def checking_carousel(self, capsys, logs_tool_qa_main_page):
-        appearance = []
-        n = 0
-        while n < 10:
+    def choosing_element_in_carousel(self, content_name, logs_tool_qa_main_page):
+        titles_list = []
+        item = 0
+        while content_name not in titles_list:
             self.removing_advertisement()
-            try:
-                visible_element_in_carousel = WebDriverWait(self.browser, 1).until(
-                    EC.visibility_of_element_located((By.XPATH, f'//*[@id="tns1-item{n}"]')),
-                    message="There is no such element in carousel, cause of it's hidden and doesn't appear yet")
-                print(f'\nYes, there is "{n}" element!!!')
-                print(self.search_element((By.XPATH, f'//*[@id="tns1-item{n}"]')).text)
-                title = self.generating_text_to_list(visible_element_in_carousel.text)
-                appearance.append(title[0])
-                n += 1
-                time.sleep(4)
-            except TimeoutException as err:
-                self.making_screenshot()
-                logs_tool_qa_main_page.error('There is no such element in carousel')
-                raise err
-
+            content_list = self.search_element((By.XPATH, f'//*[@id="tns1-item{item}"]')).text
+            title = self.generating_text_to_list(content_list)
+            titles_list.append(title[0])
+            self.click_on_element(ToolsQaMainPageLocators.NEXT_CAROUSEL_BUTTON)
+            item += 1
+            if item >= 10:
+                break
+        if content_name in titles_list:
+            self.removing_advertisement()
+            self.click_on_element(ToolsQaMainPageLocators.BACK_CAROUSEL_BUTTON)
+            self.click_on_element((By.XPATH, f'//*[@id="tns1-item{item-1}"]'))
+            el_on_page = self.is_element_visible_on_th_page((By.XPATH, f"//h1[contains(text(),'{content_name}')]"),
+                                                            logs_tool_qa_main_page)
+        else:
+            el_on_page = 'There is no such content title in carousel'
+        return el_on_page
