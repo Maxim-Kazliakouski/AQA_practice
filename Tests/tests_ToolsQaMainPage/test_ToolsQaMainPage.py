@@ -304,9 +304,9 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
                     visible_element_in_carousel = WebDriverWait(page.browser, 1).until(
                         EC.visibility_of_element_located((By.XPATH, f'//*[@id="tns1-item{n}"]')),
                         message="There is no such element in carousel, cause of it's hidden and doesn't appear yet")
-                    with capsys.disabled():
-                        print(f'\nYes, there is "{n}" element in carousel!!!', end='')
-                    print(page.search_element((By.XPATH, f'//*[@id="tns1-item{n}"]')).text)
+                    # with capsys.disabled():
+                    #     print(f'\nYes, there is "{n}" element in carousel!!!', end='\n')
+                    #     print(page.search_element((By.XPATH, f'//*[@id="tns1-item{n}"]')).text)
                     title = page.generating_text_to_list(visible_element_in_carousel.text)
                     appearance.append(title[0])
                     n += 1
@@ -328,7 +328,7 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
 
         @pytest.mark.parametrize('buttons, article', TestDataToolsQaMainPage.CAROUSEL_BUTTONS_FOR_PARAMETRIZE,
                                  ids=buttons_ids)
-        def test_next_button_in_carousel(self, browser, logs_tool_qa_main_page, buttons, article):
+        def test_next_back_button_in_carousel(self, browser, logs_tool_qa_main_page, buttons, article):
             link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
             page = ToolsQaMainPage(browser, link)
             page.open_page(link)
@@ -345,5 +345,20 @@ class Suite_for_ToolsQaMainPage:  # checking that 'Suite' accepts for class name
             except AssertionError as err:
                 page.making_screenshot()
                 logs_tool_qa_main_page.error(f"There is no such element after clicking on Next carousel button."
+                                             f"\nSee Assertion error:\n{err}")
+                raise
+
+        @pytest.mark.parametrize('articles', TestDataToolsQaMainPage.CONTENT_LIST_IN_CAROUSEL)
+        def test_checking_articles_content(self, browser, logs_tool_qa_main_page, articles):
+            link = TestDataToolsQaMainPage.TOOLS_QA_MAIN_PAGE_URL
+            page = ToolsQaMainPage(browser, link)
+            page.open_page(link)
+            page.scroll_screen('0, 1350')
+            el_in_carousel = page.choosing_element_in_carousel(articles, logs_tool_qa_main_page)
+            try:
+                assert el_in_carousel == True, "There is no such element in carousel or redirection doesn't work"
+            except AssertionError as err:
+                page.making_screenshot()
+                logs_tool_qa_main_page.error(f"There is no such element in carousel or redirection doesn't work."
                                              f"\nSee Assertion error:\n{err}")
                 raise err
