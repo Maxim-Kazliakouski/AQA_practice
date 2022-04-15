@@ -108,7 +108,7 @@ class Test_AlertsFrameWindows:
                 logs_alerts_frame_page.error("User doesn't click on button or there is no any alert window")
                 raise err
 
-        @pytest.mark.xfail(reason='This case better launch with headmode=true')
+        @pytest.mark.xfail(reason='This case better launch with headmode=true, cause of a lot of advertisement')
         def test_alert_with_delay(self, browser_xfail, logs_alerts_frame_page):
             link = TestDataAlertsFrameWindows.ALERTS_URL
             page = AlertsFrameWindows(browser_xfail, link)
